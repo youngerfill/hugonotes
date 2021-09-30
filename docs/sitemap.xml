@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/posts/firstpost/</loc>
+    <loc>https://youngerfill.github.io/posts/firstpost/</loc>
     <lastmod>2021-09-30T22:41:54+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://youngerfill.github.io/</loc>
     <lastmod>2021-09-30T22:41:54+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://youngerfill.github.io/posts/</loc>
     <lastmod>2021-09-30T22:41:54+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://youngerfill.github.io/tags/</loc>
   </url>
 </urlset>
