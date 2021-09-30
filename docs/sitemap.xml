@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://youngerfill.github.io/hugonotes/posts/firstpost/</loc>
-    <lastmod>2021-09-30T22:41:54+02:00</lastmod>
-  </url><url>
     <loc>https://youngerfill.github.io/hugonotes/</loc>
-    <lastmod>2021-09-30T22:41:54+02:00</lastmod>
+    <lastmod>2021-09-30T23:31:27+02:00</lastmod>
   </url><url>
     <loc>https://youngerfill.github.io/hugonotes/posts/</loc>
+    <lastmod>2021-09-30T23:31:27+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/posts/secondpost/</loc>
+    <lastmod>2021-09-30T23:31:27+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/posts/firstpost/</loc>
     <lastmod>2021-09-30T22:41:54+02:00</lastmod>
   </url><url>
     <loc>https://youngerfill.github.io/hugonotes/tags/</loc>
