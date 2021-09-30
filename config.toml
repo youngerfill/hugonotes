@@ -1,4 +1,4 @@
-baseURL = 'https://youngerfill.github.io/'
+baseURL = 'https://youngerfill.github.io/hugonotes/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'geekdoc'
