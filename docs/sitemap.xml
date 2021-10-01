@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://youngerfill.github.io/hugonotes/tags/bash/</loc>
+    <lastmod>2021-10-01T13:26:18+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/cheatsheet/</loc>
+    <lastmod>2021-10-01T13:26:18+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/cheatsheet/cheatsheet/</loc>
+    <lastmod>2021-10-01T13:26:18+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/</loc>
+    <lastmod>2021-10-01T13:26:18+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/tags/</loc>
+    <lastmod>2021-10-01T13:26:18+02:00</lastmod>
+  </url><url>
     <loc>https://youngerfill.github.io/hugonotes/asciidoc/</loc>
     <lastmod>2021-10-01T10:37:14+02:00</lastmod>
   </url><url>
     <loc>https://youngerfill.github.io/hugonotes/tags/asciidoc/</loc>
     <lastmod>2021-10-01T10:37:14+02:00</lastmod>
   </url><url>
-    <loc>https://youngerfill.github.io/hugonotes/</loc>
-    <lastmod>2021-10-01T10:37:14+02:00</lastmod>
-  </url><url>
     <loc>https://youngerfill.github.io/hugonotes/asciidoc/testbed/</loc>
-    <lastmod>2021-10-01T10:37:14+02:00</lastmod>
-  </url><url>
-    <loc>https://youngerfill.github.io/hugonotes/tags/</loc>
     <lastmod>2021-10-01T10:37:14+02:00</lastmod>
   </url><url>
     <loc>https://youngerfill.github.io/hugonotes/posts/</loc>
