@@ -6,7 +6,30 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Sep 2021 23:31:27 +0200</lastBuildDate><atom:link href="https://youngerfill.github.io/hugonotes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Oct 2021 10:37:14 +0200</lastBuildDate><atom:link href="https://youngerfill.github.io/hugonotes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markup testbed</title>
+      <link>https://youngerfill.github.io/hugonotes/asciidoc/testbed/</link>
+      <pubDate>Fri, 01 Oct 2021 10:37:14 +0200</pubDate>
+      
+      <guid>https://youngerfill.github.io/hugonotes/asciidoc/testbed/</guid>
+      <description>Text formatting     Description Syntax Result Remark     Emphasis, quotes
+ One &amp;#39;Two&amp;#39; Three
+ One &amp;#39;Two&amp;#39; Three
+    Emphasis, underscores
+ One Two Three
+ One Two Three
+    Emphasis, quotes, unconstrained
+ One&amp;#39;&amp;#39;Two&amp;#39;&amp;#39;Three
+ One&amp;#39;&amp;#39;Two&amp;#39;&amp;#39;Three
+    Emphasis, underscores, unconstrained
+ OneTwoThree
+ OneTwoThree
+    Strong
+ One Two Three
+ One Two Three</description>
+    </item>
+    
     <item>
       <title>Secondpost</title>
       <link>https://youngerfill.github.io/hugonotes/posts/secondpost/</link>
