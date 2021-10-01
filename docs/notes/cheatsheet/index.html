@@ -93,7 +93,7 @@
         }
     },
     "url" : "https:\/\/youngerfill.github.io\/hugonotes\/notes\/cheatsheet\/",
-    "wordCount" : "2547",
+    "wordCount" : "2725",
     "genre" : [ "bash" ]
 }
 </script>
@@ -691,7 +691,7 @@
             
                 <span class="flex">
                     <a href="/hugonotes/testbed/highlight/" class="gdoc-nav__entry ">
-                        Highlight
+                        Syntax highlighting
                     </a>
                 </span>
             
@@ -2088,6 +2088,69 @@ apt-get install oracle-java7-installer</pre>
 <h2 id="_git">Git</h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="_create_a_tag">Create a tag</h3>
+<div class="paragraph">
+<p>Create a tag both locally and on the remote:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tagname=MY_TAG &amp;&amp; git tag -a $tagname -m &#34;$tagname&#34; &amp;&amp; git push origin $tagname</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delete_a_tag">Delete a tag</h3>
+<div class="paragraph">
+<p>Delete a tag both on the remote and locally:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tagname=MY_TAG &amp;&amp; git push --delete origin $tagname &amp;&amp; git tag --delete $tagname</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_a_branch">Create a branch</h3>
+<div class="paragraph">
+<p>Create a branch both locally and on the remote:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">branchname=MY_BRANCH &amp;&amp; git checkout -b $branchname &amp;&amp; git push -u origin $branchname</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delete_a_branch">Delete a branch</h3>
+<div class="paragraph">
+<p>Delete a branch both on the remote and locally:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">branchName=MY_BRANCH &amp;&amp; git push --delete origin $branchName &amp;&amp; git branch --delete $branchName</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_revert_some_of_the_files_in_a_commit">Revert some of the files in a commit</h3>
+<div class="paragraph">
+<p>List all files changed in a commit, select some of them and revert the selected ones to their previous state:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">commitHash=320aacfe3ad &amp;&amp; git diff-tree --no-commit-id --name-only -r $commitHash | pickn | xr git checkout ${commitHash}~1 --</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_show_all_tags_that_contain_a_given_commit">Show all tags that contain a given commit</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">git tag --contains HASH</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_web_project_use_github_pages_for_a_live_demo">Web project: use Github Pages for a live demo</h3>
 <div class="paragraph">
 <p>Source:</p>
@@ -2122,6 +2185,35 @@ git merge master
 git push origin gh-pages
 git checkout master</pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_networking">Networking</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>List processes and the ports they’re listening on:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo netstat -tulpn</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo netstat -an | less</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List iptables rules:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo iptables -L -n</code></pre>
 </div>
 </div>
 </div>

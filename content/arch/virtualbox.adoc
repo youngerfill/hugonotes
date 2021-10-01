@@ -5,14 +5,14 @@ tags:
 - arch
 ---
 
-== 1. Arch Linux .iso file
+=== 1. Arch Linux .iso file
 
 archlinux-2018.02.01-x86_64.iso::
   from:
   https://archlinux.cu.be/iso/2018.02.01/archlinux-2018.02.01-x86_64.iso
   saved at: "M:vmisoarchlinux-2018.02.01-x86_64.iso"
 
-== 2. VirtualBox:
+=== 2. VirtualBox:
 
 * {blank}
 +
@@ -91,7 +91,7 @@ Display:::
   ** auto-mount, full access
 ____
 
-== 3. From LiveCD to working root login:
+=== 3. From LiveCD to working root login:
 
 start VM :
 
@@ -229,7 +229,7 @@ ____
 ***** snapshot : Fresh install*****
 ____
 
-== 4. A one-user system:
+=== 4. A one-user system:
 
 Add a non-root user, with 'sudo' rights :
 
@@ -291,7 +291,7 @@ ____
 ***** snapshot : User bert, NW OK*****
 ____
 
-== 5. Virtualbox Guest Additions
+=== 5. Virtualbox Guest Additions
 
 Make sure your version of Virtualbox matches the version of the Guest
 Additions:
@@ -359,18 +359,18 @@ ____
 ***** snapshot : vbox guest additions*****
 ____
 
-== 6. Lots of packages
+=== 6. Lots of packages
 
 Install some necessary packages: :
 
 ....
-sudo pacman -Syu base-devel clang git tmux time zip unzip dialog wget dos2unix hwinfo openssh knockd lighttpd ffmpeg python-mako python-sphinx asciidoc imagemagick poppler ghostscript fzf ripgrep moreutils
+sudo pacman -Syu base-devel clang git tig tmux time zip unzip dialog wget dos2unix hwinfo openssh knockd lighttpd ffmpeg python-mako python-sphinx asciidoc imagemagick poppler ghostscript fzf ripgrep fd moreutils
 ....
 
 Install xorg-related packages: :
 
 ....
-sudo pacman -Syu gvim xorg-server xorg-xinit xorg-apps xorg-apps xorg-xfontsel xorg-fonts-misc scrot unclutter dmenu ttf-dejavu ttf-inconsolata adobe-source-code-pro-fonts
+sudo pacman -Syu gvim xorg-server xorg-xinit xorg-apps xorg-apps xorg-xfontsel xorg-fonts-misc xclip xsel scrot unclutter dmenu ttf-dejavu ttf-inconsolata adobe-source-code-pro-fonts
 ....
 
 The 2 previous commands can be combined by pasting all package names in
@@ -395,7 +395,7 @@ cd dwm && makepkg -si && cd -
 
 ***** snapshot : Packages installed*****
 
-== 7. Set up xorg, dwm
+=== 7. Set up xorg, dwm
 
 Edit the config file read by 'startx' :
 
@@ -484,7 +484,7 @@ ExecStart=
 ExecStart=-/usr/bin/agetty --autologin bert --noclear %I $TERM
 ....
 
-== 8. Personal tools and config
+=== 8. Personal tools and config
 
 ::::
   mkdir ~/tools && cd ~/tools git clone
@@ -536,7 +536,7 @@ Copy from effie:::
   ~/notes.txt ~/cheatsheet.txt
 ____
 
-== 9. Set up webserver and host->guest connectivity
+=== 9. Set up webserver and host->guest connectivity
 
 /home/bert/prj/webserver contains:::
   etc/lighttpd.conf www/index.html
@@ -569,12 +569,30 @@ Configure static IP address 192.168.56.110 and gateway 192.168.56.101
 
 sudo ip link set enp0s8 down
 
+== With netctl:
+
+____
 sudoedit /etc/netctl/enp0s8::
   Description='yeba static ip address' Interface=enp0s8
   Connection=ethernet IP=static Address=('192.168.56.110/24')
-  Gateway=('192.168.56.101')
 
 sudo netctl start enp0s8 sudo netctl enable enp0s8
+____
+
+== With systemd-networkd:
+
+Check if systemd-networkd is enabled:::
+  systemctl status systemd-networkd
+If not:::
+  sudo systemctl restart systemd-networkd.service
+sudoedit /etc/systemd/network/20-wired.network::
+  [Match] Name=enp0s8
+  +
+  [Network] Address=192.168.56.110/24 DNS=192.168.56.101
+  +
+  [Route] Gateway=192.168.56.101 Destination=0.0.0.0/0 Metric=1024
+
+ip link set enp0s8 up sudo systemctl restart systemd-networkd.service
 
 --> Visit 192.168.56.110 with browser on host OS
 
@@ -598,7 +616,7 @@ sudo -i::
 
 ***** CURRENT STATE*****
 
-== 10. Further config
+=== 10. Further config
 
 TODO:
 
@@ -612,4 +630,3 @@ TODO:
 
 v autostart tmux 2 panes in every st terminal v change xorg clipboard v
 set vim yank buffer to xorg clipboard v bidir clipboard host/guest OK?
-

@@ -979,6 +979,58 @@ apt-get install oracle-java7-installer
 
 == Git
 
+=== Create a tag
+
+Create a tag both locally and on the remote:
+
+[source,bash]
+--
+tagname=MY_TAG && git tag -a $tagname -m "$tagname" && git push origin $tagname
+--
+
+=== Delete a tag
+
+Delete a tag both on the remote and locally:
+
+[source,bash]
+--
+tagname=MY_TAG && git push --delete origin $tagname && git tag --delete $tagname
+--
+
+=== Create a branch
+
+Create a branch both locally and on the remote:
+
+[source,bash]
+--
+branchname=MY_BRANCH && git checkout -b $branchname && git push -u origin $branchname
+--
+
+=== Delete a branch
+
+Delete a branch both on the remote and locally:
+
+[source,bash]
+--
+branchName=MY_BRANCH && git push --delete origin $branchName && git branch --delete $branchName
+--
+
+=== Revert some of the files in a commit
+
+List all files changed in a commit, select some of them and revert the selected ones to their previous state:
+
+[source,bash]
+--
+commitHash=320aacfe3ad && git diff-tree --no-commit-id --name-only -r $commitHash | pickn | xr git checkout ${commitHash}~1 --
+--
+
+=== Show all tags that contain a given commit
+
+[source,bash]
+--
+git tag --contains HASH
+--
+
 === Web project: use Github Pages for a live demo
 
 Source:
@@ -1007,4 +1059,25 @@ git push origin gh-pages
 git checkout master
 ....
 
+== Networking
 
+List processes and the ports they're listening on:
+
+[source,bash]
+--
+sudo netstat -tulpn
+--
+
+Or:
+
+[source,bash]
+--
+sudo netstat -an | less
+--
+
+List iptables rules:
+
+[source,bash]
+--
+sudo iptables -L -n
+--
