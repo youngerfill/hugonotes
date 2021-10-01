@@ -10,11 +10,17 @@
 
 
 
-    <meta name="description" content="hugonotes">
+    <meta name="description" content="Prerequisites  Arch Linux, with the following packages  dosfstools wpa_supplicant
+   Micro SD card
+ USB stick with slot for Micro SD Card
+ Raspberry Pi Zero W
+   Create an Arch Linux ARM system TODO : chroot binfmt qemu
+   Partition Micro SD Card In Linux, list the available devices: :
+ sudo fdisk -l   If Linux is running inside VirtualBox, consult the list of devices in: Devices&gt;USB">
 
 
 
-    <title>Tags | hugonotes</title>
+    <title>Headless install of Arch Linux on Raspberry Pi Zero W | hugonotes</title>
 
     <link rel="icon" type="image/svg+xml" href="/hugonotes/favicon/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/hugonotes/favicon/favicon-32x32.png">
@@ -22,15 +28,29 @@
 
     
 
-    <meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://youngerfill.github.io/hugonotes/tags/" />
+    <meta property="og:title" content="Headless install of Arch Linux on Raspberry Pi Zero W" />
+<meta property="og:description" content="Prerequisites  Arch Linux, with the following packages  dosfstools wpa_supplicant
+   Micro SD card
+ USB stick with slot for Micro SD Card
+ Raspberry Pi Zero W
+   Create an Arch Linux ARM system TODO : chroot binfmt qemu
+   Partition Micro SD Card In Linux, list the available devices: :
+ sudo fdisk -l   If Linux is running inside VirtualBox, consult the list of devices in: Devices&gt;USB" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://youngerfill.github.io/hugonotes/notes/rp0w/" /><meta property="article:section" content="notes" />
+<meta property="article:published_time" content="2021-10-01T14:06:50+02:00" />
+<meta property="article:modified_time" content="2021-10-01T14:06:50+02:00" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Headless install of Arch Linux on Raspberry Pi Zero W"/>
+<meta name="twitter:description" content="Prerequisites  Arch Linux, with the following packages  dosfstools wpa_supplicant
+   Micro SD card
+ USB stick with slot for Micro SD Card
+ Raspberry Pi Zero W
+   Create an Arch Linux ARM system TODO : chroot binfmt qemu
+   Partition Micro SD Card In Linux, list the available devices: :
+ sudo fdisk -l   If Linux is running inside VirtualBox, consult the list of devices in: Devices&gt;USB"/>
 
 
     <script src="/hugonotes/js/darkmode-ce906ea916.min.js"></script>
@@ -55,6 +75,44 @@
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
     
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "articleSection": "notes",
+    "name": "Headless install of Arch Linux on Raspberry Pi Zero W",
+    "headline": "Headless install of Arch Linux on Raspberry Pi Zero W",
+    "alternativeHeadline": "",
+    "description": "Prerequisites  Arch Linux, with the following packages  dosfstools wpa_supplicant\n   Micro SD card\n USB stick with slot for Micro SD Card\n Raspberry Pi Zero W\n   Create an Arch Linux ARM system TODO : chroot binfmt qemu\n   Partition Micro SD Card In Linux, list the available devices: :\n sudo fdisk -l   If Linux is running inside VirtualBox, consult the list of devices in: Devices\u0026gt;USB",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/youngerfill.github.io\/hugonotes\/notes\/rp0w\/"
+    },
+    "copyrightHolder" : "hugonotes",
+    "copyrightYear" : "2021",
+    "dateCreated": "2021-10-01T14:06:50.00Z",
+    "datePublished": "2021-10-01T14:06:50.00Z",
+    "dateModified": "2021-10-01T14:06:50.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "hugonotes",
+        "url": "https://youngerfill.github.io/hugonotes/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/youngerfill.github.io\/hugonotes\/brand.svg",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "url" : "https:\/\/youngerfill.github.io\/hugonotes\/notes\/rp0w\/",
+    "wordCount" : "159",
+    "genre" : [ "rp" ]
+}
+</script>
+
 
     
 
@@ -245,7 +303,7 @@
             
             
                 <span class="flex">
-                    <a href="/hugonotes/notes/rp0w/" class="gdoc-nav__entry ">
+                    <a href="/hugonotes/notes/rp0w/" class="gdoc-nav__entry is-active">
                         Headless install of Arch Linux on Raspberry Pi Zero W
                     </a>
                 </span>
@@ -376,50 +434,6 @@
     </section>
 
     
-    <section class="gdoc-nav--tags">
-        <h2>Tags</h2>
-        <ul class="gdoc-nav__list">
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/Minecraft/">Minecraft</a>
-            </li>
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/android/">android</a>
-            </li>
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/asciidoc/">asciidoc</a>
-            </li>
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/babs/">babs</a>
-            </li>
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/bash/">bash</a>
-            </li>
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/rp/">rp</a>
-            </li>
-            
-            
-        </ul>
-    </section>
-    
 
     <section class="gdoc-nav--more">
         
@@ -432,198 +446,178 @@
             <div class="gdoc-page">
                 
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/Minecraft/">Minecraft</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
 
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T14:13:46&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
 
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
-
-                
-                
-            </footer>
-        </article>
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/babs/">babs</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
 
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T14:11:28&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
 
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
 
-                
-                
-            </footer>
-        </article>
+
+
+
+<div class="gdoc-page__header flex flex-wrap
+     justify-between 
+     hidden-mobile 
+    " itemprop="breadcrumb">
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/rp/">rp</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
-
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T14:06:50&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
-
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
-
-                
-                
-            </footer>
-        </article>
+    <div>
+        <svg class="icon gdoc_path hidden-mobile"><use xlink:href="#gdoc_path"></use></svg>
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            
+            
+            
+            
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/android/">android</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
-
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T13:54:23&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
-
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
-
-                
-                
-            </footer>
-        </article>
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/bash/">bash</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
-
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T13:26:18&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
-
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
-
-                
-                
-            </footer>
-        </article>
+        
+        
+        
+        
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/asciidoc/">asciidoc</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
-
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T10:37:14&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
-
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
-
-                
-                
-            </footer>
-        </article>
     
+        
+        
+        
+        
+    
+    
+        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/hugonotes/' href='/hugonotes/'><span itemprop='name'>hugonotes</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/hugonotes/notes/' href='/hugonotes/notes/'><span itemprop='name'>Notes</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Headless install of Arch Linux on Raspberry Pi Zero W</span><meta itemprop='position' content='4' /></li>
+    
+
+    
+
+    
+
+        </ol>
+    </div>
+    
+    
+    
+        &nbsp;
+        <a href="https://youngerfill.github.io/hugonotes/tags/rp/">rp</a>
+    
+</div>
+
+
+    <article class="gdoc-markdown gdoc-markdown__align--left">
+        <h1>Headless install of Arch Linux on Raspberry Pi Zero W</h1>
+        <div class="sect1">
+<h2 id="_prerequisites">Prerequisites</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Arch Linux, with the following packages</dt>
+<dd>
+<p>dosfstools wpa_supplicant</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Micro SD card</p>
+</div>
+<div class="paragraph">
+<p>USB stick with slot for Micro SD Card</p>
+</div>
+<div class="paragraph">
+<p>Raspberry Pi Zero W</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_an_arch_linux_arm_system">Create an Arch Linux ARM system</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TODO : chroot binfmt qemu</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_partition_micro_sd_card">Partition Micro SD Card</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Linux, list the available devices: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo fdisk -l</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If Linux is running inside VirtualBox, consult the list of devices in:
+Devices&gt;USB</p>
+</div>
+<div class="paragraph">
+<p>Insert the Micro SD card in the USB adapter, and insert the adapter in a
+USB port.</p>
+</div>
+<div class="paragraph">
+<p>If Linux is running inside VirtualBox, look up &amp; select the new device
+that appeared in Devices&gt;USB</p>
+</div>
+<div class="paragraph">
+<p>List the available devices again: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo fdisk -l</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The device that was added to the list is the Micro SD card.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_useful_commands">Useful commands</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Save existing partition layout: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo sfdisk -d /dev/sdc &gt; part_layout.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Partition a card according to a saved layout: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo sfdisk /dev/sdc &lt; part_layout.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Delete all partitions: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo sfdisk --delete /dev/sdc</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references">References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://archlinuxarm.org/platforms/armv6/raspberry-pi" class="bare">https://archlinuxarm.org/platforms/armv6/raspberry-pi</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://ladvien.com/installing-arch-linux-raspberry-pi-zero-w/" class="bare">https://ladvien.com/installing-arch-linux-raspberry-pi-zero-w/</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.debian.org/QemuUserEmulation" class="bare">https://wiki.debian.org/QemuUserEmulation</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://blog.thijsbroenink.com/2015/10/emulate-file-system-with-different-architecture/" class="bare">http://blog.thijsbroenink.com/2015/10/emulate-file-system-with-different-architecture/</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://raspberrypi.stackexchange.com/questions/165/emulation-on-a-linux-pc" class="bare">https://raspberrypi.stackexchange.com/questions/165/emulation-on-a-linux-pc</a></p>
+</div>
+</div>
+</div>
+
+    </article>
 
                 
 

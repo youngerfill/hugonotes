@@ -1,5 +1,5 @@
 ---
-title: "Markup testbed"
+title: "Asciidoc markup"
 date: 2021-10-01T10:37:14+02:00
 tags:
 - asciidoc

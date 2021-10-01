@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Oct 2021 10:37:14 +0200</lastBuildDate><atom:link href="https://youngerfill.github.io/hugonotes/tags/asciidoc/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Markup testbed</title>
-      <link>https://youngerfill.github.io/hugonotes/asciidoc/testbed/</link>
+      <title>Asciidoc markup</title>
+      <link>https://youngerfill.github.io/hugonotes/testbed/asciidoc/</link>
       <pubDate>Fri, 01 Oct 2021 10:37:14 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/asciidoc/testbed/</guid>
+      <guid>https://youngerfill.github.io/hugonotes/testbed/asciidoc/</guid>
       <description>Text formatting     Description Syntax Result Remark     Emphasis, quotes
  One &amp;#39;Two&amp;#39; Three
  One &amp;#39;Two&amp;#39; Three

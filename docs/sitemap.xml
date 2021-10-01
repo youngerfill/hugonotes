@@ -2,37 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://youngerfill.github.io/hugonotes/</loc>
+    <lastmod>2021-10-01T14:13:46+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/tags/Minecraft/</loc>
+    <lastmod>2021-10-01T14:13:46+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/notes/mctips/</loc>
+    <lastmod>2021-10-01T14:13:46+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/notes/</loc>
+    <lastmod>2021-10-01T14:13:46+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/tags/</loc>
+    <lastmod>2021-10-01T14:13:46+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/notes/babs/</loc>
+    <lastmod>2021-10-01T14:11:28+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/tags/babs/</loc>
+    <lastmod>2021-10-01T14:11:28+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/notes/rp0w/</loc>
+    <lastmod>2021-10-01T14:06:50+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/tags/rp/</loc>
+    <lastmod>2021-10-01T14:06:50+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/testbed/highlight/</loc>
+    <lastmod>2021-10-01T14:03:26+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/testbed/</loc>
+    <lastmod>2021-10-01T14:03:26+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/notes/android/</loc>
+    <lastmod>2021-10-01T13:54:23+02:00</lastmod>
+  </url><url>
+    <loc>https://youngerfill.github.io/hugonotes/tags/android/</loc>
+    <lastmod>2021-10-01T13:54:23+02:00</lastmod>
+  </url><url>
     <loc>https://youngerfill.github.io/hugonotes/tags/bash/</loc>
     <lastmod>2021-10-01T13:26:18+02:00</lastmod>
   </url><url>
-    <loc>https://youngerfill.github.io/hugonotes/cheatsheet/</loc>
+    <loc>https://youngerfill.github.io/hugonotes/notes/cheatsheet/</loc>
     <lastmod>2021-10-01T13:26:18+02:00</lastmod>
-  </url><url>
-    <loc>https://youngerfill.github.io/hugonotes/cheatsheet/cheatsheet/</loc>
-    <lastmod>2021-10-01T13:26:18+02:00</lastmod>
-  </url><url>
-    <loc>https://youngerfill.github.io/hugonotes/</loc>
-    <lastmod>2021-10-01T13:26:18+02:00</lastmod>
-  </url><url>
-    <loc>https://youngerfill.github.io/hugonotes/tags/</loc>
-    <lastmod>2021-10-01T13:26:18+02:00</lastmod>
-  </url><url>
-    <loc>https://youngerfill.github.io/hugonotes/asciidoc/</loc>
-    <lastmod>2021-10-01T10:37:14+02:00</lastmod>
   </url><url>
     <loc>https://youngerfill.github.io/hugonotes/tags/asciidoc/</loc>
     <lastmod>2021-10-01T10:37:14+02:00</lastmod>
   </url><url>
-    <loc>https://youngerfill.github.io/hugonotes/asciidoc/testbed/</loc>
+    <loc>https://youngerfill.github.io/hugonotes/testbed/asciidoc/</loc>
     <lastmod>2021-10-01T10:37:14+02:00</lastmod>
-  </url><url>
-    <loc>https://youngerfill.github.io/hugonotes/posts/</loc>
-    <lastmod>2021-09-30T23:31:27+02:00</lastmod>
-  </url><url>
-    <loc>https://youngerfill.github.io/hugonotes/posts/secondpost/</loc>
-    <lastmod>2021-09-30T23:31:27+02:00</lastmod>
-  </url><url>
-    <loc>https://youngerfill.github.io/hugonotes/posts/firstpost/</loc>
-    <lastmod>2021-09-30T22:41:54+02:00</lastmod>
   </url>
 </urlset>

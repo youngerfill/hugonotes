@@ -10,11 +10,11 @@
 
 
 
-    <meta name="description" content="hugonotes">
+    <meta name="description" content="C&#43;&#43; program #include &lt;iostream&gt; using namespace std; int main() { cout &lt;&lt; &#34;Hello world!&#34; &lt;&lt; endl; return 0; }     C program #include &lt;stdlib.h&gt; #include &lt;stdio.h&gt; #include &lt;dlfcn.h&gt; int main(int argc, char **argv) { void *handle; char *error; void (*fun)(); char fileName[300]; char* buildDir = getenv(&#34;BUILD_DIR&#34;); sprintf(fileName, &#34;%s/toolkit/libtoolkit.so.1.0.0&#34;, buildDir); printf(&#34;fileName = %s\n&#34;, fileName); printf(&#34;mark1\n&#34;); dlerror(); handle = dlopen ( fileName , RTLD_LAZY); if (!handle) { fputs (dlerror(), stderr); printf(&#34;\n&#34;); exit(1); } printf(&#34;mark2\n&#34;); fun = (void (*)()) dlsym(handle, &#34;testfun1&#34;); if ((error = dlerror()) !">
 
 
 
-    <title>Tags | hugonotes</title>
+    <title>Highlight | hugonotes</title>
 
     <link rel="icon" type="image/svg+xml" href="/hugonotes/favicon/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/hugonotes/favicon/favicon-32x32.png">
@@ -22,15 +22,17 @@
 
     
 
-    <meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://youngerfill.github.io/hugonotes/tags/" />
+    <meta property="og:title" content="Highlight" />
+<meta property="og:description" content="C&#43;&#43; program #include &lt;iostream&gt; using namespace std; int main() { cout &lt;&lt; &#34;Hello world!&#34; &lt;&lt; endl; return 0; }     C program #include &lt;stdlib.h&gt; #include &lt;stdio.h&gt; #include &lt;dlfcn.h&gt; int main(int argc, char **argv) { void *handle; char *error; void (*fun)(); char fileName[300]; char* buildDir = getenv(&#34;BUILD_DIR&#34;); sprintf(fileName, &#34;%s/toolkit/libtoolkit.so.1.0.0&#34;, buildDir); printf(&#34;fileName = %s\n&#34;, fileName); printf(&#34;mark1\n&#34;); dlerror(); handle = dlopen ( fileName , RTLD_LAZY); if (!handle) { fputs (dlerror(), stderr); printf(&#34;\n&#34;); exit(1); } printf(&#34;mark2\n&#34;); fun = (void (*)()) dlsym(handle, &#34;testfun1&#34;); if ((error = dlerror()) !" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://youngerfill.github.io/hugonotes/testbed/highlight/" /><meta property="article:section" content="testbed" />
+<meta property="article:published_time" content="2021-10-01T14:03:26+02:00" />
+<meta property="article:modified_time" content="2021-10-01T14:03:26+02:00" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Highlight"/>
+<meta name="twitter:description" content="C&#43;&#43; program #include &lt;iostream&gt; using namespace std; int main() { cout &lt;&lt; &#34;Hello world!&#34; &lt;&lt; endl; return 0; }     C program #include &lt;stdlib.h&gt; #include &lt;stdio.h&gt; #include &lt;dlfcn.h&gt; int main(int argc, char **argv) { void *handle; char *error; void (*fun)(); char fileName[300]; char* buildDir = getenv(&#34;BUILD_DIR&#34;); sprintf(fileName, &#34;%s/toolkit/libtoolkit.so.1.0.0&#34;, buildDir); printf(&#34;fileName = %s\n&#34;, fileName); printf(&#34;mark1\n&#34;); dlerror(); handle = dlopen ( fileName , RTLD_LAZY); if (!handle) { fputs (dlerror(), stderr); printf(&#34;\n&#34;); exit(1); } printf(&#34;mark2\n&#34;); fun = (void (*)()) dlsym(handle, &#34;testfun1&#34;); if ((error = dlerror()) !"/>
 
 
     <script src="/hugonotes/js/darkmode-ce906ea916.min.js"></script>
@@ -55,6 +57,44 @@
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
     
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "articleSection": "testbed",
+    "name": "Highlight",
+    "headline": "Highlight",
+    "alternativeHeadline": "",
+    "description": "C\u002b\u002b program #include \u0026lt;iostream\u0026gt; using namespace std; int main() { cout \u0026lt;\u0026lt; \u0026#34;Hello world!\u0026#34; \u0026lt;\u0026lt; endl; return 0; }     C program #include \u0026lt;stdlib.h\u0026gt; #include \u0026lt;stdio.h\u0026gt; #include \u0026lt;dlfcn.h\u0026gt; int main(int argc, char **argv) { void *handle; char *error; void (*fun)(); char fileName[300]; char* buildDir = getenv(\u0026#34;BUILD_DIR\u0026#34;); sprintf(fileName, \u0026#34;%s\/toolkit\/libtoolkit.so.1.0.0\u0026#34;, buildDir); printf(\u0026#34;fileName = %s\\n\u0026#34;, fileName); printf(\u0026#34;mark1\\n\u0026#34;); dlerror(); handle = dlopen ( fileName , RTLD_LAZY); if (!handle) { fputs (dlerror(), stderr); printf(\u0026#34;\\n\u0026#34;); exit(1); } printf(\u0026#34;mark2\\n\u0026#34;); fun = (void (*)()) dlsym(handle, \u0026#34;testfun1\u0026#34;); if ((error = dlerror()) !",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/youngerfill.github.io\/hugonotes\/testbed\/highlight\/"
+    },
+    "copyrightHolder" : "hugonotes",
+    "copyrightYear" : "2021",
+    "dateCreated": "2021-10-01T14:03:26.00Z",
+    "datePublished": "2021-10-01T14:03:26.00Z",
+    "dateModified": "2021-10-01T14:03:26.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "hugonotes",
+        "url": "https://youngerfill.github.io/hugonotes/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/youngerfill.github.io\/hugonotes\/brand.svg",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "url" : "https:\/\/youngerfill.github.io\/hugonotes\/testbed\/highlight\/",
+    "wordCount" : "261",
+    "genre" : [ ]
+}
+</script>
+
 
     
 
@@ -347,7 +387,7 @@
             
             
                 <span class="flex">
-                    <a href="/hugonotes/testbed/highlight/" class="gdoc-nav__entry ">
+                    <a href="/hugonotes/testbed/highlight/" class="gdoc-nav__entry is-active">
                         Highlight
                     </a>
                 </span>
@@ -376,50 +416,6 @@
     </section>
 
     
-    <section class="gdoc-nav--tags">
-        <h2>Tags</h2>
-        <ul class="gdoc-nav__list">
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/Minecraft/">Minecraft</a>
-            </li>
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/android/">android</a>
-            </li>
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/asciidoc/">asciidoc</a>
-            </li>
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/babs/">babs</a>
-            </li>
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/bash/">bash</a>
-            </li>
-            
-            
-            
-            <li>
-                <a class="gdoc-nav__entry " href="/hugonotes/tags/rp/">rp</a>
-            </li>
-            
-            
-        </ul>
-    </section>
-    
 
     <section class="gdoc-nav--more">
         
@@ -432,198 +428,191 @@
             <div class="gdoc-page">
                 
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/Minecraft/">Minecraft</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
 
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T14:13:46&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
 
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
-
-                
-                
-            </footer>
-        </article>
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/babs/">babs</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
 
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T14:11:28&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
 
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
 
-                
-                
-            </footer>
-        </article>
+
+
+
+<div class="gdoc-page__header flex flex-wrap
+     justify-between 
+     hidden-mobile 
+    " itemprop="breadcrumb">
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/rp/">rp</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
-
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T14:06:50&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
-
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
-
-                
-                
-            </footer>
-        </article>
+    <div>
+        <svg class="icon gdoc_path hidden-mobile"><use xlink:href="#gdoc_path"></use></svg>
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            
+            
+            
+            
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/android/">android</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
-
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T13:54:23&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
-
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
-
-                
-                
-            </footer>
-        </article>
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/bash/">bash</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
-
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T13:26:18&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
-
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
-
-                
-                
-            </footer>
-        </article>
+        
+        
+        
+        
     
-        <article class="gdoc-markdown gdoc-post">
-            <header class="gdoc-post__header">
-                <h1 class="gdoc-post__title"><a href="/hugonotes/tags/asciidoc/">asciidoc</a></h1>
-            </header>
-            <section>
-                
-            </section>
-            <div class="gdoc-post__readmore">
-                
-            </div>
-
-            <footer class="gdoc-post__footer">
-                <span class="no-wrap">
-                    <svg class="icon gdoc_date"><use xlink:href="#gdoc_date"></use></svg>
-                    <span class="gdoc-post__tag">
-                        <time datetime="2021-10-01T10:37:14&#43;02:00">
-                            
-                            Oct 1, 2021
-                        </time>
-                    </span>
-                </span>
-
-                <span class="no-wrap">
-                    <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
-                    <span class="gdoc-post__tag">0 min read</span>
-                </span>
-
-                
-                
-            </footer>
-        </article>
     
+        
+        
+        
+        
+    
+    
+        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/hugonotes/' href='/hugonotes/'><span itemprop='name'>hugonotes</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/hugonotes/testbed/' href='/hugonotes/testbed/'><span itemprop='name'>Testbed</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Highlight</span><meta itemprop='position' content='4' /></li>
+    
+
+    
+
+    
+
+        </ol>
+    </div>
+    
+    
+    
+</div>
+
+
+    <article class="gdoc-markdown gdoc-markdown__align--left">
+        <h1>Highlight</h1>
+        <div class="sect1">
+<h2 id="_c_program">C++ program</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-c++" data-lang="c++">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+  cout &lt;&lt; &#34;Hello world!&#34; &lt;&lt; endl;
+  return 0;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_c_program_2">C program</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-c" data-lang="c">#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;dlfcn.h&gt;
+
+
+int main(int argc, char **argv)
+{
+  void *handle;
+  char *error;
+  void (*fun)();
+  char fileName[300];
+  char* buildDir = getenv(&#34;BUILD_DIR&#34;);
+
+  sprintf(fileName, &#34;%s/toolkit/libtoolkit.so.1.0.0&#34;, buildDir);
+  printf(&#34;fileName = %s\n&#34;, fileName);
+
+  printf(&#34;mark1\n&#34;);
+
+  dlerror();
+  handle = dlopen ( fileName , RTLD_LAZY);
+  if (!handle) {
+      fputs (dlerror(), stderr);
+        printf(&#34;\n&#34;);
+      exit(1);
+  }
+
+  printf(&#34;mark2\n&#34;);
+
+  fun = (void (*)()) dlsym(handle, &#34;testfun1&#34;);
+  if ((error = dlerror()) != NULL)  {
+      fputs(error, stderr);
+        printf(&#34;\n&#34;);
+      exit(1);
+  }
+
+  printf(&#34;mark3\n&#34;);
+
+  (*fun)();
+
+  printf(&#34;mark4\n&#34;);
+
+  dlclose(handle);
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_python_program">Python program</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">def my_function():
+    &#34;just a test&#34;
+    print 8/2</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bash_script">bash script</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">#!/bin/bash
+
+if [ -z &#34;$1&#34; ]; then
+  echo &#34;Usage: $(basename $0) COMMAND&#34;
+  exit 0
+fi
+
+. ~/tools/common.sh
+if [ &#34;$?&#34; -ne &#34;0&#34; ]; then
+  echo &#34;$0: Error while sourcing ~/tools/common.sh&#34; &gt;&amp;2
+  exit 1
+fi
+
+checkPrereq ~/tools/timestamp_id
+checkPrereq ~/tools/fullts
+
+logDir=${LOGOP_DIR:-~/log}
+fileName=&#34;$(timestamp_id).txt&#34;
+logFile=&#34;$logDir/$fileName&#34;
+
+# Obtain path to external time command, to avoid having to use
+# the limited shell built-in command.
+timeCmd=$(which time)
+
+# Print header
+echo ====  Start log: `date &#39;+%Y-%m-%d %H:%M:%S&#39;` | tee -a &#34;$logFile&#34;
+echo ==== Command: $*  | tee -a &#34;$logFile&#34;
+echo ==== Logfile: $logFile | tee -a &#34;$logFile&#34;
+echo ==== Logscript: $(readlink -f $0)  | tee -a &#34;$logFile&#34;
+echo  | tee -a &#34;$logFile&#34;
+
+# Run the command and log its output
+$timeCmd -f &#34;\n==== Exit status: %x\n==== Elapsed: %e seconds&#34; $* 2&gt;&amp;1 | tee -a &#34;$logFile&#34;
+
+# Print footer
+echo ====  End log: `date &#39;+%Y-%m-%d %H:%M:%S&#39;` | tee -a &#34;$logFile&#34;
+
+# Update symlink &#39;latest.txt&#39; to point to latest logfile
+ln -sf &#34;$fileName&#34; &#34;$logDir/latest.txt&#34;</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+    </article>
 
                 
 
