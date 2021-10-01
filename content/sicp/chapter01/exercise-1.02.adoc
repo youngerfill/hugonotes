@@ -1,0 +1,21 @@
+---
+title: "Exercise 1.02"
+date: 2021-10-01T15:38:53+02:00
+tags:
+- sicp
+---
+= Exercise 1.02
+
+== Question:
+
+todo
+
+[source,scheme]
+----
+(+ 1 2)
+----
+
+== Answer:
+
+todo
+
