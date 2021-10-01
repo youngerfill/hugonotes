@@ -10,13 +10,18 @@
 
 
 
-    <meta name="description" content="Nexus 10 Boot in recovery mode https://www.android.gs/how-to-boot-google-nexus-10-recovery-mode/
- Reset to factory defaults https://www.android.gs/how-to-hard-reset-the-google-nexus-10/
-     ">
+    <meta name="description" content="1. Arch Linux .iso file  archlinux-2018.02.01-x86_64.iso  from: https://archlinux.cu.be/iso/2018.02.01/archlinux-2018.02.01-x86_64.iso saved at: &#34;M:vmisoarchlinux-2018.02.01-x86_64.iso&#34;
+     2. VirtualBox:   
+ This document applies to v5.2.6    Help/About VirtualBox
+  File/Check for updates
+        
+ in File/Preferences    General: check vm default location: &#34;M:vm&#34;
+        
+ in File/Host Network Manager     &#43;">
 
 
 
-    <title>Android | hugonotes</title>
+    <title>Installing Arch Linux in VirtualBox | hugonotes</title>
 
     <link rel="icon" type="image/svg+xml" href="/hugonotes/favicon/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/hugonotes/favicon/favicon-32x32.png">
@@ -24,21 +29,31 @@
 
     
 
-    <meta property="og:title" content="Android" />
-<meta property="og:description" content="Nexus 10 Boot in recovery mode https://www.android.gs/how-to-boot-google-nexus-10-recovery-mode/
- Reset to factory defaults https://www.android.gs/how-to-hard-reset-the-google-nexus-10/
-     " />
+    <meta property="og:title" content="Installing Arch Linux in VirtualBox" />
+<meta property="og:description" content="1. Arch Linux .iso file  archlinux-2018.02.01-x86_64.iso  from: https://archlinux.cu.be/iso/2018.02.01/archlinux-2018.02.01-x86_64.iso saved at: &#34;M:vmisoarchlinux-2018.02.01-x86_64.iso&#34;
+     2. VirtualBox:   
+ This document applies to v5.2.6    Help/About VirtualBox
+  File/Check for updates
+        
+ in File/Preferences    General: check vm default location: &#34;M:vm&#34;
+        
+ in File/Host Network Manager     &#43;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://youngerfill.github.io/hugonotes/notes/android/" /><meta property="article:section" content="notes" />
-<meta property="article:published_time" content="2021-10-01T13:54:23+02:00" />
-<meta property="article:modified_time" content="2021-10-01T13:54:23+02:00" />
+<meta property="og:url" content="https://youngerfill.github.io/hugonotes/arch/virtualbox/" /><meta property="article:section" content="arch" />
+<meta property="article:published_time" content="2021-10-01T18:18:58+02:00" />
+<meta property="article:modified_time" content="2021-10-01T18:18:58+02:00" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Android"/>
-<meta name="twitter:description" content="Nexus 10 Boot in recovery mode https://www.android.gs/how-to-boot-google-nexus-10-recovery-mode/
- Reset to factory defaults https://www.android.gs/how-to-hard-reset-the-google-nexus-10/
-     "/>
+<meta name="twitter:title" content="Installing Arch Linux in VirtualBox"/>
+<meta name="twitter:description" content="1. Arch Linux .iso file  archlinux-2018.02.01-x86_64.iso  from: https://archlinux.cu.be/iso/2018.02.01/archlinux-2018.02.01-x86_64.iso saved at: &#34;M:vmisoarchlinux-2018.02.01-x86_64.iso&#34;
+     2. VirtualBox:   
+ This document applies to v5.2.6    Help/About VirtualBox
+  File/Check for updates
+        
+ in File/Preferences    General: check vm default location: &#34;M:vm&#34;
+        
+ in File/Host Network Manager     &#43;"/>
 
 
     <script src="/hugonotes/js/darkmode-ce906ea916.min.js"></script>
@@ -68,22 +83,22 @@
 {
     "@context": "http://schema.org",
     "@type": "TechArticle",
-    "articleSection": "notes",
-    "name": "Android",
-    "headline": "Android",
+    "articleSection": "arch",
+    "name": "Installing Arch Linux in VirtualBox",
+    "headline": "Installing Arch Linux in VirtualBox",
     "alternativeHeadline": "",
-    "description": "Nexus 10 Boot in recovery mode https:\/\/www.android.gs\/how-to-boot-google-nexus-10-recovery-mode\/\n Reset to factory defaults https:\/\/www.android.gs\/how-to-hard-reset-the-google-nexus-10\/\n     ",
+    "description": "1. Arch Linux .iso file  archlinux-2018.02.01-x86_64.iso  from: https:\/\/archlinux.cu.be\/iso\/2018.02.01\/archlinux-2018.02.01-x86_64.iso saved at: \u0026#34;M:vmisoarchlinux-2018.02.01-x86_64.iso\u0026#34;\n     2. VirtualBox:   \n This document applies to v5.2.6    Help\/About VirtualBox\n  File\/Check for updates\n        \n in File\/Preferences    General: check vm default location: \u0026#34;M:vm\u0026#34;\n        \n in File\/Host Network Manager     \u002b",
     "inLanguage": "en",
     "isFamilyFriendly": "true",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https:\/\/youngerfill.github.io\/hugonotes\/notes\/android\/"
+        "@id": "https:\/\/youngerfill.github.io\/hugonotes\/arch\/virtualbox\/"
     },
     "copyrightHolder" : "hugonotes",
     "copyrightYear" : "2021",
-    "dateCreated": "2021-10-01T13:54:23.00Z",
-    "datePublished": "2021-10-01T13:54:23.00Z",
-    "dateModified": "2021-10-01T13:54:23.00Z",
+    "dateCreated": "2021-10-01T18:18:58.00Z",
+    "datePublished": "2021-10-01T18:18:58.00Z",
+    "dateModified": "2021-10-01T18:18:58.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "hugonotes",
@@ -95,9 +110,9 @@
             "height":"32"
         }
     },
-    "url" : "https:\/\/youngerfill.github.io\/hugonotes\/notes\/android\/",
-    "wordCount" : "12",
-    "genre" : [ "android" ]
+    "url" : "https:\/\/youngerfill.github.io\/hugonotes\/arch\/virtualbox\/",
+    "wordCount" : "1234",
+    "genre" : [ "arch" ]
 }
 </script>
 
@@ -219,7 +234,7 @@
             
             
                 <span class="flex">
-                    <a href="/hugonotes/arch/virtualbox/" class="gdoc-nav__entry ">
+                    <a href="/hugonotes/arch/virtualbox/" class="gdoc-nav__entry is-active">
                         Installing Arch Linux in VirtualBox
                     </a>
                 </span>
@@ -321,7 +336,7 @@
             
             
                 <span class="flex">
-                    <a href="/hugonotes/notes/android/" class="gdoc-nav__entry is-active">
+                    <a href="/hugonotes/notes/android/" class="gdoc-nav__entry ">
                         Android
                     </a>
                 </span>
@@ -769,7 +784,7 @@
         
     
     
-        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/hugonotes/' href='/hugonotes/'><span itemprop='name'>hugonotes</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/hugonotes/notes/' href='/hugonotes/notes/'><span itemprop='name'>Notes</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Android</span><meta itemprop='position' content='4' /></li>
+        <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/hugonotes/' href='/hugonotes/'><span itemprop='name'>hugonotes</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/hugonotes/arch/' href='/hugonotes/arch/'><span itemprop='name'>Arch</span></a><meta itemprop='position' content='3' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>Installing Arch Linux in VirtualBox</span><meta itemprop='position' content='4' /></li>
     
 
     
@@ -782,27 +797,1112 @@
     
     
         &nbsp;
-        <a href="https://youngerfill.github.io/hugonotes/tags/android/">android</a>
+        <a href="https://youngerfill.github.io/hugonotes/tags/arch/">arch</a>
     
 </div>
 
 
     <article class="gdoc-markdown gdoc-markdown__align--left">
-        <h1>Android</h1>
+        <h1>Installing Arch Linux in VirtualBox</h1>
         <div class="sect1">
-<h2 id="_nexus_10">Nexus 10</h2>
+<h2 id="_1_arch_linux_iso_file">1. Arch Linux .iso file</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_boot_in_recovery_mode">Boot in recovery mode</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">archlinux-2018.02.01-x86_64.iso</dt>
+<dd>
+<p>from:
+<a href="https://archlinux.cu.be/iso/2018.02.01/archlinux-2018.02.01-x86_64.iso" class="bare">https://archlinux.cu.be/iso/2018.02.01/archlinux-2018.02.01-x86_64.iso</a>
+saved at: &#34;M:vmisoarchlinux-2018.02.01-x86_64.iso&#34;</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_virtualbox">2. VirtualBox:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">This document applies to v5.2.6</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Help/About VirtualBox</p>
+</li>
+<li>
+<p>File/Check for updates</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">in File/Preferences</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>General: check vm default location: &#34;M:vm&#34;</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">in File/Host Network Manager</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>
++</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Create host-only network</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Set the IP address, e.g. : 192.168.236.2</p>
+</li>
+<li>
+<p>Network mask : 255.255.255.0</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">new vm</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>
++</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">name: yeba</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>make sure &#34;M:vmyeba&#34; doesn’t exist before creation of VM</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>type/version: arch linux 64 bit</p>
+</li>
+<li>
+<p>memory 4096 MB</p>
+</li>
+<li>
+<p>create virtual HD</p>
+</li>
+<li>
+<p>press &#34;create&#34;</p>
+</li>
+<li>
+<p>File size 30 GB</p>
+</li>
+<li>
+<p>VDI</p>
+</li>
+<li>
+<p>dynamically allocated</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>&#34;yeba&#34; (powered off) appears in list of VMs</p>
+</li>
+<li>
+<p>yeba Settings:</p>
+<div class="quoteblock">
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p>General/Advanced: shared clipboard: bidirectional</p>
+</li>
+<li>
+<p>System/Motherboard:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Boot order: Optical, Harddisk</p>
+</li>
+<li>
+<p></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Extended features</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>disable I/O APIC</p>
+</li>
+<li>
+<p>disable EFI</p>
+</li>
+<li>
+<p>enable HW clock in UTC time</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Display</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>
++</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Video Memory: depends on the resolution</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>for 1080p (1920×1080): 8 MB</p>
+</li>
+<li>
+<p>for 4k (3840×2160): 32 MB</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Monitor count: 1</p>
+</li>
+<li>
+<p>Graphics controller: VBoxSVGA</p>
+</li>
+<li>
+<p>3D acceleration: off</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">- Storage</dt>
+</dl>
+</div>
+</li>
+<li>
+<p>
++</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">IDE secondary master: &#34;M:vmisoarchlinux-2018.02.01-x86_64.iso&#34;</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>don’t enable LiveCD/DVD</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>
++</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">SATA: add hard disk</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>new hard disk</p>
+</li>
+<li>
+<p>VDI, dynamically allocated, 100 GB</p>
+</li>
+<li>
+<p>M:vmhddLargeData.vdi</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Network:::</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+<li>
+<p>Adapter 1 : NAT</p>
+</li>
+<li>
+<p>Adapter 2 : Host-only, name: the one just created in
+File/Preferences</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Shared Folders:::</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>&#34;C:\Bert\vm\pub&#34;</p>
+</li>
+<li>
+<p>&#34;M:\mshare&#34;</p>
+</li>
+<li>
+<p>auto-mount, full access</p>
+</li>
+</ul>
+</div>
+</blockquote>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_from_livecd_to_working_root_login">3. From LiveCD to working root login:</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://www.android.gs/how-to-boot-google-nexus-10-recovery-mode/" class="bare">https://www.android.gs/how-to-boot-google-nexus-10-recovery-mode/</a></p>
+<p>start VM :</p>
 </div>
-<div class="sect3">
-<h4 id="_reset_to_factory_defaults">Reset to factory defaults</h4>
+<div class="literalblock">
+<div class="content">
+<pre>loadkeys be-latin1</pre>
+</div>
+</div>
 <div class="paragraph">
-<p><a href="https://www.android.gs/how-to-hard-reset-the-google-nexus-10/" class="bare">https://www.android.gs/how-to-hard-reset-the-google-nexus-10/</a></p>
+<p>Network should work: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>curl www.google.com</pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Syncronize the system clock with NTP :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>timedatectl set-ntp true</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create partition table :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>fdisk -l /dev/sda
+
+fdisk /dev/sda
+    --&gt; n : new partition
+    --&gt; p : primary partition
+    --&gt; enter : partition #1
+    --&gt; enter : default first sector
+    --&gt; enter : default last sector
+    --&gt; w write partition table</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Format the partition :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>mkfs.ext4 /dev/sda1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mount the partition :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>mount /dev/sda1 /mnt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make sure nearest mirror is first in the list :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>vi /etc/pacman.d/mirrorlist</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install the &#39;base&#39; package group :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacstrap /mnt base</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create an fstab file :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&#39;chroot&#39; into the newly created system :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>arch-chroot /mnt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set the timezone :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ln -s /usr/share/zoneinfo/Europe/Brussels /etc/localtime</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use UTC in hardware clock. Initialize the hardware clock from current
+system time. :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>hwclock --systohc --utc</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use US locale :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>echo en_US.UTF-8 UTF-8 &gt; /etc/locale.gen
+locale-gen
+echo LANG=en_US.UTF-8 &gt; /etc/locale.conf</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use Belgian keymap :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>echo KEYMAP=be-latin1 &gt; /etc/vconsole.conf</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set hostname :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>echo yeba &gt; /etc/hostname</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set localhost alias :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>vi /etc/hosts</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In /etc/hosts, add: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>127.0.0.1 yeba.localdomain yeba</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set password :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>passwd</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install boot loader &#39;grub&#39; :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacman -Syu grub
+grub-install --target=i386-pc /dev/sda &amp;&amp; grub-mkconfig -o /boot/grub/grub.cfg</pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Leave chroot environment and shutdown VM </dt>
+<dd>
+<p>exit shutdown now</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>in settings of VM: Remove disk from virtual drive</p>
+</div>
+<div class="paragraph">
+<p>start VM</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p>snapshot : Fresh install<strong>*</strong></p>
+</li>
+</ul>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_a_one_user_system">4. A one-user system:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Add a non-root user, with &#39;sudo&#39; rights :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>useradd -m bert
+groupadd sudoers
+usermod -aG sudoers bert
+passwd bert</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>enable NW-ing: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>systemctl enable dhcpcd@enp0s3.service
+systemctl start dhcpcd@enp0s3.service</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>check connection: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>curl www.google.com</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install &#39;sudo&#39; :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacman -Syu sudo</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>allow group &#39;sudoers&#39; to use sudo (in conf file): :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>visudo</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>-→ add line: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>%sudoers    ALL=(ALL) ALL</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>log out of root session: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>exit</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>log back in as bert</p>
+</div>
+<div class="paragraph">
+<p>test if sudo: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo -v</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>(after entering password should not output anything if all is well)</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p>snapshot : User bert, NW OK<strong>*</strong></p>
+</li>
+</ul>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5_virtualbox_guest_additions">5. Virtualbox Guest Additions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Make sure your version of Virtualbox matches the version of the Guest
+Additions:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>VirtualBox:::</p>
+</li>
+<li>
+<p>Help/About VirtualBox . File/Check for updates</p>
+</li>
+<li>
+<p>Arch Linux guest OS:</p>
+</li>
+</ol>
+</div>
+</blockquote>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacman -Ss virtualbox-guest-utils</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install guest additions &amp; hwinfo :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo pacman -Syu virtualbox-guest-utils hwinfo</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>During installation, choose package: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>virtualbox-guest-modules-arch</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Enable the service :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo systemctl enable vboxservice.service</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>output: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>created symlink /etc/systemd/system/multi-user.target.wants/vboxservice.service
+-&gt; /usr/lib/systemd/system/vboxservice.service.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Start the service :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo systemctl start vboxservice.service</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Reboot VM :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo reboot now</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And log in again</p>
+</div>
+<div class="paragraph">
+<p>Grant access to shared folders :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo chmod 755 /media
+sudo usermod -aG vboxsf bert</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Logout and -in for the latter change to take effect</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p>snapshot : vbox guest additions<strong>*</strong></p>
+</li>
+</ul>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_lots_of_packages">6. Lots of packages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Install some necessary packages: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo pacman -Syu base-devel clang git tmux time zip unzip dialog wget dos2unix hwinfo openssh knockd lighttpd ffmpeg python-mako python-sphinx asciidoc imagemagick poppler ghostscript fzf ripgrep moreutils</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install xorg-related packages: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo pacman -Syu gvim xorg-server xorg-xinit xorg-apps xorg-apps xorg-xfontsel xorg-fonts-misc scrot unclutter dmenu ttf-dejavu ttf-inconsolata adobe-source-code-pro-fonts</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The 2 previous commands can be combined by pasting all package names in
+a text file in a vboxsf shared folder and running: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo pacman -Syu - &lt; /media/sf_pub/packages.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install dwm from AUR: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz
+curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz
+
+tar xzvf st.tar.gz
+tar xzvf dwm.tar.gz
+
+cd st &amp;&amp; makepkg -si &amp;&amp; cd -
+cd dwm &amp;&amp; makepkg -si &amp;&amp; cd -</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>snapshot : Packages installed<strong>*</strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7_set_up_xorg_dwm">7. Set up xorg, dwm</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Edit the config file read by &#39;startx&#39; :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>vim ~/.xinitrc</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Write: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VBoxClient --display
+VBoxClient --clipboard
+xrandr --output VGA-1 --mode 1920x1080
+setxkbmap be
+unclutter -jitter 2 -noevents -root &amp;
+exec dwm</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Start xorg, and dwm :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>startx</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>dwm starts up alt-enter to open st session show all possible screen
+resolutions: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xrandr</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>dwm -v</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>output: dwm-6.1</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>st -v</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>output: st 0.7</p>
+</div>
+<div class="paragraph">
+<p>The latter versions are identical to the effie setup</p>
+</div>
+<div class="paragraph">
+<p>Shutdown VM</p>
+</div>
+<div class="paragraph">
+<p>Windows Command Prompt: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VBoxManage setextradata &#34;yeba&#34; &#34;CustomVideoMode1&#34; &#34;1600x900x24&#34;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Start vm</p>
+</div>
+<div class="paragraph">
+<p>Set video resolution at startup :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudoedit /etc/default/grub</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Find the line starting with &#39;GRUB_CMDLINE_LINUX_DEFAULT=&#39; and change it:
+:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>GRUB_CMDLINE_LINUX_DEFAULT=&#34;quiet video=1600x900&#34;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Update grub with the new config :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo grub-mkconfig -o /boot/grub/grub.cfg</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Auto-login on TTY1: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo systemctl edit getty@tty1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>add lines: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --autologin bert --noclear %I $TERM</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_8_personal_tools_and_config">8. Personal tools and config</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">:</dt>
+<dd>
+<p>mkdir ~/tools &amp;&amp; cd ~/tools git clone
+<a href="https://github.com/bergoid/lswrappers.git" class="bare">https://github.com/bergoid/lswrappers.git</a> git clone
+<a href="https://github.com/bergoid/rabot.git" class="bare">https://github.com/bergoid/rabot.git</a> git clone
+<a href="https://github.com/bergoid/gt.git" class="bare">https://github.com/bergoid/gt.git</a> git clone
+<a href="https://github.com/bergoid/preppy.git" class="bare">https://github.com/bergoid/preppy.git</a> git clone
+<a href="https://github.com/bergoid/avtools.git" class="bare">https://github.com/bergoid/avtools.git</a> git clone
+<a href="https://github.com/bergoid/dotfiles.git" class="bare">https://github.com/bergoid/dotfiles.git</a> dotfiles/install_dotfiles</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Do manually: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>~/tools/misc
+~/.gtpresets
+~/.ssh</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>youtube-dl without pacman: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install knockd &amp; reflector :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo pacman -Syu knockd reflector</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Update mirrorlist: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo reflector --age 6 --fastest 64 --protocol https --sort rate --save /etc/pacman.d/mirrorlist</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set remote URLS to ssh protocol: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>git remote set-url origin github_bergoid:bergoid/anthos.git
+# etc ...</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>snapshot : Xorg, dwm, personal tools &amp; config<strong>*</strong></p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Copy from effie</dt>
+<dd>
+<p>~/notes.txt ~/cheatsheet.txt</p>
+</dd>
+</dl>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_9_set_up_webserver_and_hostguest_connectivity">9. Set up webserver and host→guest connectivity</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">/home/bert/prj/webserver contains</dt>
+<dd>
+<p>etc/lighttpd.conf www/index.html</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">sudo -i</dt>
+<dd>
+<p>cd /srv &amp;&amp; rm -rf * mkdir log ln -s /home/bert/prj/webserver repo ln
+-sf /etc/lighttpd.conf /srv/repo/etc/lighttpd.conf chmod 755
+/home/bert</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">/home/bert/prj/webserver/etc/lighttpd.conf</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">server.modules = (</dt>
+<dd>
+<p>  &#34;mod_access&#34;, &#34;mod_accesslog&#34;, )
++
+server.port = 80 server.username = &#34;http&#34; server.groupname = &#34;http&#34;
+server.document-root = &#34;/srv/repo/www&#34; server.errorlog =
+&#34;/srv/log/error.log&#34; accesslog.filename = &#34;srv/log/access.log&#34;
+dir-listing.activate = &#34;enable&#34; index-file.names = ( &#34;index.html&#34; )
+mimetype.assign = ( &#34;.html&#34; ⇒ &#34;text/html&#34;, &#34;.txt&#34; ⇒ &#34;text/plain&#34;,
+&#34;.css&#34; ⇒ &#34;text/css&#34;, &#34;.js&#34; ⇒ &#34;application/x-javascript&#34;, &#34;.jpg&#34; ⇒
+&#34;image/jpeg&#34;, &#34;.jpeg&#34; ⇒ &#34;image/jpeg&#34;, &#34;.gif&#34; ⇒ &#34;image/gif&#34;, &#34;.png&#34;
+⇒ &#34;image/png&#34;, &#34;&#34; ⇒ &#34;application/octet-stream&#34; )</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">/home/bert/prj/webserver/www/index.html</dt>
+<dd>
+<p>Hello there!</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>sudo systemctl start lighttpd.service sudo systemctl status
+lighttpd.service sudo systemctl enable lighttpd.service</p>
+</div>
+<div class="paragraph">
+<p>curl localhost</p>
+</div>
+<div class="paragraph">
+<p>Configure static IP address 192.168.56.110 and gateway 192.168.56.101
+(or whatever the IP address of the host-only adapter is):</p>
+</div>
+<div class="paragraph">
+<p>sudo ip link set enp0s8 down</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">sudoedit /etc/netctl/enp0s8</dt>
+<dd>
+<p>Description=&#39;yeba static ip address&#39; Interface=enp0s8
+Connection=ethernet IP=static Address=(&#39;192.168.56.110/24&#39;)
+Gateway=(&#39;192.168.56.101&#39;)</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>sudo netctl start enp0s8 sudo netctl enable enp0s8</p>
+</div>
+<div class="paragraph">
+<p>-→ Visit 192.168.56.110 with browser on host OS</p>
+</div>
+<div class="paragraph">
+<p>Tools for rp0w:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>sudo pacman -Syu dosfstools wpa_supplicant qemu-headless
+qemu-headless-arch-extra</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Tools for React development:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>sudo pacman -Syu npm sudo npm install -g create-react-app</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>AUR helper:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">sudo -i</dt>
+<dd>
+<p>git clone <a href="https://aur.archlinux.org/pakku.git" class="bare">https://aur.archlinux.org/pakku.git</a> cd pakku makepkg -si</p>
+<div class="ulist">
+<ul>
+<li>
+<p>CURRENT STATE<strong>*</strong></p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_10_further_config">10. Further config</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TODO:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>numlockx::
+<a href="https://www.archlinux.org/packages/community/x86_64/numlockx/" class="bare">https://www.archlinux.org/packages/community/x86_64/numlockx/</a>
+<a href="https://github.com/rg3/numlockx" class="bare">https://github.com/rg3/numlockx</a></p>
+</li>
+<li>
+<p>tmux scrollback</p>
+</li>
+<li>
+<p>dwm monocle mode</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>v autostart tmux 2 panes in every st terminal v change xorg clipboard v
+set vim yank buffer to xorg clipboard v bidir clipboard host/guest OK?</p>
 </div>
 </div>
 </div>
