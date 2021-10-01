@@ -5,6 +5,16 @@
     <link>https://youngerfill.github.io/hugonotes/tags/</link>
     <description>Recent content in Tags on hugonotes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://youngerfill.github.io/hugonotes/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Oct 2021 10:37:14 +0200</lastBuildDate><atom:link href="https://youngerfill.github.io/hugonotes/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>asciidoc</title>
+      <link>https://youngerfill.github.io/hugonotes/tags/asciidoc/</link>
+      <pubDate>Fri, 01 Oct 2021 10:37:14 +0200</pubDate>
+      
+      <guid>https://youngerfill.github.io/hugonotes/tags/asciidoc/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

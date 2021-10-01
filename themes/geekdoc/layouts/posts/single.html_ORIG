@@ -15,6 +15,10 @@
               </span>
           </span>
 
+          <span class="no-wrap">
+              <svg class="icon gdoc_timer"><use xlink:href="#gdoc_timer"></use></svg>
+              <span class="gdoc-post__tag">{{ .ReadingTime }} min read</span>
+          </span>
       </div>
       </header>
       <div>

@@ -15,9 +15,12 @@ disablePathToLower = true
 enableRobotsTXT = true
 
 [taxonomies]
-   tag = "tags"
+   tag = 'tags'
 
 [params]
-# (Optional, default static/brand.svg) Set the path to a logo for the Geekdoc
-# relative to your 'static/' folder.
+  # (Optional, default static/brand.svg) Set the path to a logo for the Geekdoc
+  # relative to your 'static/' folder.
   geekdocLogo = "alpha_1px.png"
+
+  # (Optional, default false) Enable or disable adding tags for post pages automatically to the navigation sidebar.
+  geekdocTagsToMenu = true
