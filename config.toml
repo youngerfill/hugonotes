@@ -1,6 +1,6 @@
 baseURL = 'https://youngerfill.github.io/hugonotes/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'hugonotes'
 theme = 'geekdoc'
 publishDir = 'docs'
 
@@ -16,3 +16,8 @@ enableRobotsTXT = true
 
 [taxonomies]
    tag = "tags"
+
+[params]
+# (Optional, default static/brand.svg) Set the path to a logo for the Geekdoc
+# relative to your 'static/' folder.
+  geekdocLogo = "alpha_1px.png"
