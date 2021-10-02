@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on hugonotes</title>
-    <link>https://youngerfill.github.io/hugonotes/notes/</link>
+    <link>/notes.html</link>
     <description>Recent content in Notes on hugonotes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Oct 2021 10:10:12 +0200</lastBuildDate><atom:link href="https://youngerfill.github.io/hugonotes/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Oct 2021 10:10:12 +0200</lastBuildDate><atom:link href="/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Links</title>
-      <link>https://youngerfill.github.io/hugonotes/notes/links/</link>
+      <link>/notes/links.html</link>
       <pubDate>Sat, 02 Oct 2021 10:10:12 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/notes/links/</guid>
+      <guid>/notes/links.html</guid>
       <description>Technical Mobile The Search for a FLOSS Mobile OS (Aug 2021) https://blog.emacsen.net/blog/2021/08/23/floss-mobile-os-aug-2021/ https://news.ycombinator.com/item?id=28296738
   Programming Data Structures and Algorithms in JavaScript https://news.ycombinator.com/item?id=20634409 https://amejiarosario.gumroad.com/l/dsajs
  John Carmack on Functional Programming (2013 https://news.ycombinator.com/item?id=15036591
@@ -24,10 +24,10 @@
     
     <item>
       <title>Minecraft tips</title>
-      <link>https://youngerfill.github.io/hugonotes/notes/mctips/</link>
+      <link>/notes/mctips.html</link>
       <pubDate>Fri, 01 Oct 2021 14:13:46 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/notes/mctips/</guid>
+      <guid>/notes/mctips.html</guid>
       <description>Hoofden zetten Plaats het hoofd van SpelerNaam in je inventaris: :
  /give @p skull 1 3 {SkullOwner:&amp;#34;SpelerNaam&amp;#34;}   Plaats het hoofd van een ghast in je inventaris: :
  /give @p skull 1 3 {SkullOwner:&amp;#34;MHF_Ghast&amp;#34;}   Voor andere mobs: vervang MHF_Ghast door: :
@@ -36,10 +36,10 @@
     
     <item>
       <title>Babs</title>
-      <link>https://youngerfill.github.io/hugonotes/notes/babs/</link>
+      <link>/notes/babs.html</link>
       <pubDate>Fri, 01 Oct 2021 14:11:28 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/notes/babs/</guid>
+      <guid>/notes/babs.html</guid>
       <description>Introduction babs, (an acronym for &amp;#34;babs: a build system&amp;#34;) is a set of Makefiles meant to easily compile &amp;amp; link a set of interdependent modules, containing C/C++ source code, binaries like object files, static or dynamic libraries, etc …​
    Environment variables In order to do its work, babs needs 3 environment variables:
    BABS_DIR : the directory where the babs build system is located.
@@ -48,10 +48,10 @@
     
     <item>
       <title>Headless install of Arch Linux on Raspberry Pi Zero W</title>
-      <link>https://youngerfill.github.io/hugonotes/notes/rp0w/</link>
+      <link>/notes/rp0w.html</link>
       <pubDate>Fri, 01 Oct 2021 14:06:50 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/notes/rp0w/</guid>
+      <guid>/notes/rp0w.html</guid>
       <description>Prerequisites  Arch Linux, with the following packages  dosfstools wpa_supplicant
    Micro SD card
  USB stick with slot for Micro SD Card
@@ -63,10 +63,10 @@
     
     <item>
       <title>Android</title>
-      <link>https://youngerfill.github.io/hugonotes/notes/android/</link>
+      <link>/notes/android.html</link>
       <pubDate>Fri, 01 Oct 2021 13:54:23 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/notes/android/</guid>
+      <guid>/notes/android.html</guid>
       <description>Nexus 10 Boot in recovery mode https://www.android.gs/how-to-boot-google-nexus-10-recovery-mode/
  Reset to factory defaults https://www.android.gs/how-to-hard-reset-the-google-nexus-10/
      </description>
@@ -74,10 +74,10 @@
     
     <item>
       <title>Cheatsheet</title>
-      <link>https://youngerfill.github.io/hugonotes/notes/cheatsheet/</link>
+      <link>/notes/cheatsheet.html</link>
       <pubDate>Fri, 01 Oct 2021 13:26:18 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/notes/cheatsheet/</guid>
+      <guid>/notes/cheatsheet.html</guid>
       <description>Check folder size: du -sh foldername/     Clear trash folder (Ubuntu &amp;amp; friends): rm -rf ~/.local/share/Trash/files ~/.local/share/Trash/info     Arch Linux guest VM in VirtualBox: Restore networking: sudo ip link set enp0s8 down &amp;amp;&amp;amp; sudo ip link set enp0s8 up &amp;amp;&amp;amp; curl www.google.com    Mount USB drive Before inserting the USB drive, show list of devices: :
  sudo lsblk -f   Insert USB drive, and select device in VirtualBox GUI menu ( Devices &amp;gt; USB &amp;gt; …​ )</description>
     </item>

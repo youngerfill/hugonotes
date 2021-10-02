@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bash on hugonotes</title>
-    <link>https://youngerfill.github.io/hugonotes/tags/bash/</link>
+    <link>/tags/bash.html</link>
     <description>Recent content in bash on hugonotes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Oct 2021 10:10:12 +0200</lastBuildDate><atom:link href="https://youngerfill.github.io/hugonotes/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Oct 2021 10:10:12 +0200</lastBuildDate><atom:link href="/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Links</title>
-      <link>https://youngerfill.github.io/hugonotes/notes/links/</link>
+      <link>/notes/links.html</link>
       <pubDate>Sat, 02 Oct 2021 10:10:12 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/notes/links/</guid>
+      <guid>/notes/links.html</guid>
       <description>Technical Mobile The Search for a FLOSS Mobile OS (Aug 2021) https://blog.emacsen.net/blog/2021/08/23/floss-mobile-os-aug-2021/ https://news.ycombinator.com/item?id=28296738
   Programming Data Structures and Algorithms in JavaScript https://news.ycombinator.com/item?id=20634409 https://amejiarosario.gumroad.com/l/dsajs
  John Carmack on Functional Programming (2013 https://news.ycombinator.com/item?id=15036591
@@ -24,10 +24,10 @@
     
     <item>
       <title>Cheatsheet</title>
-      <link>https://youngerfill.github.io/hugonotes/notes/cheatsheet/</link>
+      <link>/notes/cheatsheet.html</link>
       <pubDate>Fri, 01 Oct 2021 13:26:18 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/notes/cheatsheet/</guid>
+      <guid>/notes/cheatsheet.html</guid>
       <description>Check folder size: du -sh foldername/     Clear trash folder (Ubuntu &amp;amp; friends): rm -rf ~/.local/share/Trash/files ~/.local/share/Trash/info     Arch Linux guest VM in VirtualBox: Restore networking: sudo ip link set enp0s8 down &amp;amp;&amp;amp; sudo ip link set enp0s8 up &amp;amp;&amp;amp; curl www.google.com    Mount USB drive Before inserting the USB drive, show list of devices: :
  sudo lsblk -f   Insert USB drive, and select device in VirtualBox GUI menu ( Devices &amp;gt; USB &amp;gt; …​ )</description>
     </item>

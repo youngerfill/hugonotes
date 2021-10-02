@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arch on hugonotes</title>
-    <link>https://youngerfill.github.io/hugonotes/arch/</link>
+    <link>/arch.html</link>
     <description>Recent content in Arch on hugonotes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Oct 2021 18:21:42 +0200</lastBuildDate><atom:link href="https://youngerfill.github.io/hugonotes/arch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Oct 2021 18:21:42 +0200</lastBuildDate><atom:link href="/arch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing Arch Linux on a VPS</title>
-      <link>https://youngerfill.github.io/hugonotes/arch/vps/</link>
+      <link>/arch/vps.html</link>
       <pubDate>Fri, 01 Oct 2021 18:21:42 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/arch/vps/</guid>
+      <guid>/arch/vps.html</guid>
       <description>1. Base system  Create VPS, pick Debian 9.3 as OS.   -→ didn’t work 2nd time, stuck in 1st reboot  picked centos and worked
       Copy bootstrap files from M:vmisovps2arch to M:msharevps2arch and cd into the latter folder.
  Upload bootstrap files to the newly created VPS:
@@ -23,10 +23,10 @@
     
     <item>
       <title>Installing Arch Linux in VirtualBox</title>
-      <link>https://youngerfill.github.io/hugonotes/arch/virtualbox/</link>
+      <link>/arch/virtualbox.html</link>
       <pubDate>Fri, 01 Oct 2021 18:18:58 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/arch/virtualbox/</guid>
+      <guid>/arch/virtualbox.html</guid>
       <description>1. Arch Linux .iso file  archlinux-2018.02.01-x86_64.iso  from: https://archlinux.cu.be/iso/2018.02.01/archlinux-2018.02.01-x86_64.iso saved at: &amp;#34;M:vmisoarchlinux-2018.02.01-x86_64.iso&amp;#34;
     2. VirtualBox:   
  This document applies to v5.2.6    Help/About VirtualBox
@@ -39,10 +39,10 @@
     
     <item>
       <title>Installing Arch Linux on a PC</title>
-      <link>https://youngerfill.github.io/hugonotes/arch/pc/</link>
+      <link>/arch/pc.html</link>
       <pubDate>Fri, 01 Oct 2021 18:17:19 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/arch/pc/</guid>
+      <guid>/arch/pc.html</guid>
       <description>This guide explains how to install vanilla Arch Linux on a PC.
  Prerequisites   
  A PC or a laptop, with    a USB port

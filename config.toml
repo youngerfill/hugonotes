@@ -1,7 +1,9 @@
-baseURL = 'https://youngerfill.github.io/hugonotes/'
+#baseURL = 'https://youngerfill.github.io/hugonotes/'
+relativeURLs = true
+uglyurls = true
 languageCode = 'en-us'
 title = 'hugonotes'
-theme = 'geekdoc'
+theme = 'simple'
 publishDir = 'docs'
 
 pluralizeListTitles = false

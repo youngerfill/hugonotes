@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rp on hugonotes</title>
-    <link>https://youngerfill.github.io/hugonotes/tags/rp/</link>
+    <link>/tags/rp.html</link>
     <description>Recent content in rp on hugonotes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Oct 2021 14:06:50 +0200</lastBuildDate><atom:link href="https://youngerfill.github.io/hugonotes/tags/rp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Oct 2021 14:06:50 +0200</lastBuildDate><atom:link href="/tags/rp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Headless install of Arch Linux on Raspberry Pi Zero W</title>
-      <link>https://youngerfill.github.io/hugonotes/notes/rp0w/</link>
+      <link>/notes/rp0w.html</link>
       <pubDate>Fri, 01 Oct 2021 14:06:50 +0200</pubDate>
       
-      <guid>https://youngerfill.github.io/hugonotes/notes/rp0w/</guid>
+      <guid>/notes/rp0w.html</guid>
       <description>Prerequisites  Arch Linux, with the following packages  dosfstools wpa_supplicant
    Micro SD card
  USB stick with slot for Micro SD Card
