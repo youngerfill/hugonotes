@@ -1,0 +1,140 @@
+---
+title: "Links"
+date: 2021-10-02T10:10:12+02:00
+tags:
+- bash
+- linux
+---
+
+== Technical
+
+=== Mobile
+
+The Search for a FLOSS Mobile OS (Aug 2021)
+https://blog.emacsen.net/blog/2021/08/23/floss-mobile-os-aug-2021/
+https://news.ycombinator.com/item?id=28296738
+
+=== Programming
+
+Data Structures and Algorithms in JavaScript
+https://news.ycombinator.com/item?id=20634409
+https://amejiarosario.gumroad.com/l/dsajs
+
+
+John Carmack on Functional Programming (2013
+https://news.ycombinator.com/item?id=15036591
+
+
+A Thought Experiment: Using the ECS Pattern Outside of Game Engines
+https://news.ycombinator.com/item?id=21892126
+https://adventures.michaelfbryan.com/posts/ecs-outside-of-games/
+https://en.m.wikipedia.org/wiki/Entity_component_system#Characteristics
+
+
+=== Web
+
+==== HTML, CSS
+
+TypeSafe CSS
+https://uglyduck.ca/typesafe-sans-css/
+
+
+Ten modern layouts in one line of CSS
+https://web.dev/one-line-layouts/
+https://news.ycombinator.com/item?id=24003385
+
+
+My current HTML boilerplate
+https://www.matuzo.at/blog/html-boilerplate/
+https://news.ycombinator.com/item?id=26952557
+
+
+HTML5 Boilerplate
+https://html5boilerplate.com/
+
+
+A simple guide to HTML <head> elements
+https://github.com/joshbuchea/HEAD
+
+
+HTML Tips (2020)
+https://markodenic.com/html-tips/
+https://news.ycombinator.com/item?id=27054348
+
+
+==== JS
+
+SolidJS
+https://www.solidjs.com/docs/1.0.0
+
+
+lit-html
+https://lit-html.polymer-project.org/guide
+
+=== C/C++
+
+Show HN: Angeldust – a fast and efficient video game
+https://news.ycombinator.com/item?id=21858226
+
+C++ Core Guidelines (2021)
+https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md
+
+
+Tracy Profiler
+https://github.com/wolfpld/tracy
+
+==== Networking
+
+NNG
+
+
+https://nng.nanomsg.org/man/tip/index.html
+https://github.com/nanomsg/nng
+
+
+UDP Server-Client implementation in C
+https://www.geeksforgeeks.org/udp-server-client-implementation-c/
+
+Socket Programming in C/C++
+https://www.geeksforgeeks.org/socket-programming-cc/
+
+
+=== Linux
+
+How NAT traversal works
+https://tailscale.com/blog/how-nat-traversal-works/
+
+Ventoy
+https://github.com/ventoy/Ventoy
+
+MinIO Quickstart Guide
+https://github.com/minio/minio/blob/master/README.md
+
+PostgREST: REST API for any Postgres database 
+https://news.ycombinator.com/item?id=25159097
+
+==== bash
+
+Some Relatively Obscure Bash Tips
+https://zwischenzugs.com/2020/05/09/some-relatively-obscure-bash-tips/
+
+Escaping strings in Bash using !:q
+https://til.simonwillison.net/bash/escaping-a-string
+
+An Opinionated Guide to xargs
+https://www.oilshell.org/blog/2021/08/xargs.html
+
+xargs(1) — Linux manual page
+https://www.man7.org/linux/man-pages/man1/xargs.1.html
+
+Htmlq: like jq, but for html
+https://github.com/mgdm/htmlq
+https://news.ycombinator.com/item?id=28441880
+
+rlwrap(1) - Linux man page
+https://linux.die.net/man/1/rlwrap
+
+Linux Productivity Tools (2019)
+https://news.ycombinator.com/item?id=23229241
+
+

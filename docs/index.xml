@@ -6,7 +6,22 @@
     <description>Recent content on hugonotes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Oct 2021 18:21:42 +0200</lastBuildDate><atom:link href="https://youngerfill.github.io/hugonotes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Oct 2021 10:10:12 +0200</lastBuildDate><atom:link href="https://youngerfill.github.io/hugonotes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Links</title>
+      <link>https://youngerfill.github.io/hugonotes/notes/links/</link>
+      <pubDate>Sat, 02 Oct 2021 10:10:12 +0200</pubDate>
+      
+      <guid>https://youngerfill.github.io/hugonotes/notes/links/</guid>
+      <description>Technical Mobile The Search for a FLOSS Mobile OS (Aug 2021) https://blog.emacsen.net/blog/2021/08/23/floss-mobile-os-aug-2021/ https://news.ycombinator.com/item?id=28296738
+  Programming Data Structures and Algorithms in JavaScript https://news.ycombinator.com/item?id=20634409 https://amejiarosario.gumroad.com/l/dsajs
+ John Carmack on Functional Programming (2013 https://news.ycombinator.com/item?id=15036591
+ A Thought Experiment: Using the ECS Pattern Outside of Game Engines https://news.ycombinator.com/item?id=21892126 https://adventures.michaelfbryan.com/posts/ecs-outside-of-games/ https://en.m.wikipedia.org/wiki/Entity_component_system#Characteristics
+  Web HTML, CSS TypeSafe CSS https://uglyduck.ca/typesafe-sans-css/
+ Ten modern layouts in one line of CSS https://web.dev/one-line-layouts/ https://news.ycombinator.com/item?id=24003385
+ My current HTML boilerplate https://www.</description>
+    </item>
+    
     <item>
       <title>Installing Arch Linux on a VPS</title>
       <link>https://youngerfill.github.io/hugonotes/arch/vps/</link>
