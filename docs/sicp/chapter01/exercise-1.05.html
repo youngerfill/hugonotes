@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Question: Ben Bitdiddle has invented a test to determine whether the interpreter he is faced with is using applicative-order evaluation or normal-order evaluation. He defines the following two procedures:
+ (define (p) (p)) (define (test x y) (if (= x 0) 0 y))   Then he evaluates the expression
+ (test 0 (p))   What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation?">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Exercise 1.05" />
+<meta property="og:description" content="Question: Ben Bitdiddle has invented a test to determine whether the interpreter he is faced with is using applicative-order evaluation or normal-order evaluation. He defines the following two procedures:
+ (define (p) (p)) (define (test x y) (if (= x 0) 0 y))   Then he evaluates the expression
+ (test 0 (p))   What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/sicp/chapter01/exercise-1.05.html" /><meta property="article:section" content="sicp" />
+<meta property="article:published_time" content="2021-10-01T15:46:39+02:00" />
+<meta property="article:modified_time" content="2021-10-01T15:46:39+02:00" />
+
+<title>Exercise 1.05 | hugonotes</title>
+<link rel="manifest" href="../../manifest.json">
+<link rel="icon" href="../../favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="../../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
+  <script defer src="../../flexsearch.min.js"></script>
+  <script defer src="../../en.search.min.ea6f6a66a22837dfa32f7e7f343cfa7c6633c48e851e9b76da0727e1c622a287.js" ></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="../../"><span>hugonotes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Notes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../notes/links.html" class="">Links</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../notes/mctips.html" class="">Minecraft tips</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../notes/babs.html" class="">Babs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../notes/rp0w.html" class="">Headless install of Arch Linux on Raspberry Pi Zero W</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../notes/android.html" class="">Android</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../notes/cheatsheet.html" class="">Cheatsheet</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Arch</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../arch/vps.html" class="">Installing Arch Linux on a VPS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../arch/virtualbox.html" class="">Installing Arch Linux in VirtualBox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../arch/pc.html" class="">Installing Arch Linux on a PC</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Sicp</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../sicp/chapter01/exercise-1.07.html" class="">Exercise 1.07</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../sicp/chapter01/exercise-1.06.html" class="">Exercise 1.06</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../sicp/chapter01/exercise-1.05.html" class=" active">Exercise 1.05</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../sicp/chapter01/exercise-1.04.html" class="">Exercise 1.04</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../sicp/chapter01/exercise-1.03.html" class="">Exercise 1.03</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../sicp/chapter01/exercise-1.02.html" class="">Exercise 1.02</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../sicp/chapter01/exercise-1.01.html" class="">Exercise 1.01</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Testbed</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../testbed/highlight.html" class="">Syntax highlighting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../../testbed/asciidoc.html" class="">Asciidoc markup</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../../svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Exercise 1.05</strong>
+
+  <label for="toc-control">
+    
+    <img src="../../svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><div class="sect1">
+<h2 id="_question">Question:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ben Bitdiddle has invented a test to determine whether the interpreter
+he is faced with is using applicative-order evaluation or normal-order
+evaluation. He defines the following two procedures:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-scheme" data-lang="scheme">(define (p) (p))
+
+(define (test x y)
+  (if (= x 0)
+      0
+      y))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then he evaluates the expression</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-scheme" data-lang="scheme">(test 0 (p))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What behavior will Ben observe with an interpreter that uses
+applicative-order evaluation? What behavior will he observe with an
+interpreter that uses normal-order evaluation? Explain your answer.
+(Assume that the evaluation rule for the special form <code>if</code> is the same
+whether the interpreter is using normal or applicative order: The
+predicate expression is evaluated first, and the result determines
+whether to evaluate the consequent or the alternative expression.)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_answer">Answer:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_applicative_order_evaluation">Applicative-order evaluation:</h3>
+<div class="paragraph">
+<p>The program gets stuck in an infinite loop.</p>
+</div>
+<div class="paragraph">
+<p>When the program evaluates the second operand in the call <code>(test 0 (p))</code>
+it will substitute <code>(p)</code> with its definition. As this definition is also
+<code>(p)</code>, the substitution process is endlessly recursive.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_normal_order_evaluation">Normal-order evaluation:</h3>
+<div class="paragraph">
+<p>The program returns <code>0</code>.</p>
+</div>
+<div class="paragraph">
+<p>When <code>(test 0 (p))</code> is called, its operands are not evaluated
+immediately. Instead, the procedure <code>test</code> is expanded to:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-scheme" data-lang="scheme">(if (= 0 0)
+    0
+    (p)))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <em>predicate</em> in the special form <code>if</code> evaluates to <code>true</code>, so the
+<em>alternative</em> <code>(p)</code> is never evaluated and the <em>consequent</em>&#39;s value <code>0</code>
+is returned.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

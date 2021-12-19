@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Check folder size: du -sh foldername/     Clear trash folder (Ubuntu &amp; friends): rm -rf ~/.local/share/Trash/files ~/.local/share/Trash/info     Arch Linux guest VM in VirtualBox: Restore networking: sudo ip link set enp0s8 down &amp;&amp; sudo ip link set enp0s8 up &amp;&amp; curl www.google.com    Mount USB drive Before inserting the USB drive, show list of devices: :
+ sudo lsblk -f   Insert USB drive, and select device in VirtualBox GUI menu ( Devices &gt; USB &gt; …​ )">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Cheatsheet" />
+<meta property="og:description" content="Check folder size: du -sh foldername/     Clear trash folder (Ubuntu &amp; friends): rm -rf ~/.local/share/Trash/files ~/.local/share/Trash/info     Arch Linux guest VM in VirtualBox: Restore networking: sudo ip link set enp0s8 down &amp;&amp; sudo ip link set enp0s8 up &amp;&amp; curl www.google.com    Mount USB drive Before inserting the USB drive, show list of devices: :
+ sudo lsblk -f   Insert USB drive, and select device in VirtualBox GUI menu ( Devices &gt; USB &gt; …​ )" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/notes/cheatsheet.html" /><meta property="article:section" content="notes" />
+<meta property="article:published_time" content="2021-10-01T13:26:18+02:00" />
+<meta property="article:modified_time" content="2021-10-01T13:26:18+02:00" />
+
+<title>Cheatsheet | hugonotes</title>
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
+  <script defer src="../flexsearch.min.js"></script>
+  <script defer src="../en.search.min.ea6f6a66a22837dfa32f7e7f343cfa7c6633c48e851e9b76da0727e1c622a287.js" ></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="../"><span>hugonotes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Notes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/links.html" class="">Links</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/mctips.html" class="">Minecraft tips</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/babs.html" class="">Babs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/rp0w.html" class="">Headless install of Arch Linux on Raspberry Pi Zero W</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/android.html" class="">Android</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/cheatsheet.html" class=" active">Cheatsheet</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Arch</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../arch/vps.html" class="">Installing Arch Linux on a VPS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../arch/virtualbox.html" class="">Installing Arch Linux in VirtualBox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../arch/pc.html" class="">Installing Arch Linux on a PC</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Sicp</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.07.html" class="">Exercise 1.07</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.06.html" class="">Exercise 1.06</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.05.html" class="">Exercise 1.05</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.04.html" class="">Exercise 1.04</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.03.html" class="">Exercise 1.03</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.02.html" class="">Exercise 1.02</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.01.html" class="">Exercise 1.01</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Testbed</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../testbed/highlight.html" class="">Syntax highlighting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../testbed/asciidoc.html" class="">Asciidoc markup</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Cheatsheet</strong>
+
+  <label for="toc-control">
+    
+    <img src="../svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><div class="sect1">
+<h2 id="_check_folder_size">Check folder size:</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>du -sh foldername/</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_clear_trash_folder_ubuntu_friends">Clear trash folder (Ubuntu &amp; friends):</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>rm -rf ~/.local/share/Trash/files ~/.local/share/Trash/info</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_arch_linux_guest_vm_in_virtualbox">Arch Linux guest VM in VirtualBox:</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_restore_networking">Restore networking:</h3>
+<div class="literalblock">
+<div class="content">
+<pre>sudo ip link set enp0s8 down &amp;&amp; sudo ip link set enp0s8 up &amp;&amp; curl www.google.com</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mount_usb_drive">Mount USB drive</h3>
+<div class="paragraph">
+<p>Before inserting the USB drive, show list of devices: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo lsblk -f</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Insert USB drive, and select device in VirtualBox GUI menu ( Devices &gt;
+USB &gt; …​ )</p>
+</div>
+<div class="paragraph">
+<p>In VM, show list of devices again to find the DEVICENAME of the new
+device: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo lsblk -f</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mount the device: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo -i
+mkdir /mnt/usbstick
+mount /dev/DEVICENAME /mnt/usbstick</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_wget">wget</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mirror site: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>wget -mkE http://www.example.com</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mirror subdirectory of website: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>wget -mkE -np http://www.example.com/subdir/</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mirror full web page: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>wget -pkE -np -nH -nd http://www.example.com/page.html
+wget -np -k -p -nd -nH -H -E http://www.example.com/page.html</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Related: extract URLs (&#39;http://…​&#39; ones) from HTML file: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sed &#39;s/&lt;a href=&#34;/\n/g&#39; index.html | sed &#39;s/&#34;&gt;/\n/g&#39; | grep &#34;^http:&#34; | sort -u</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_youtube_dl">youtube-dl</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Download video from YouTube: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>youtube-dl &#34;URL&#34;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Download audio from YouTube: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>youtube-dl -x -o &#34;%(title)s.%(ext)s&#34; &#34;URL&#34;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Download audio &amp; convert to mp3: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>youtube-dl -x --audio-format &#34;mp3&#34; -o &#34;%(title)s.%(ext)s&#34; &#34;URL&#34;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Download videos listed in urls.txt: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cat urls.txt | xargs -I{} youtube-dl &#34;{}&#34;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Download audio of videos listed in urls.txt: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cat urls.txt | xargs -I{} youtube-dl -x -o &#34;%(autonumber)s - %(title)s.%(ext)s&#34; &#34;{}&#34;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Update program: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo youtube-dl -U</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zenity">zenity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Zenity menu: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>zenity --width=640 --height=480 --list --column &#34;Number&#34; --column &#34;Name&#34; --title=&#34;Numbers and their names&#34; --text=&#34;&#34; 1 one 2 two 3 three</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Zenity menu from textfile, 1st line is the title, 2nd line are the
+column names, separated by tab characters, rest of the file are line
+entries separated by newlines, divided in columns by tab characters: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>eval zenity --width=640 --height=480 --list $(cat menu.txt | sed &#39;2q;d&#39; | tr &#39;\t&#39; &#39;\n&#39; | sed &#39;s/^/--column\ \&#34;/&#39; | sed &#39;s/$/\&#34;/&#39; | tr &#39;\n&#39; &#39; &#39;) --title=$(cat menu.txt | head -n 1 | sed &#39;s/^/\&#34;/&#39; | sed &#39;s/$/\&#34;/&#39; | tr &#39;\n&#39; &#39; &#39;) $(cat menu.txt | tail -n +3 | tr &#39;\t&#39; &#39;\n&#39; | sed &#39;s/^/\&#34;/&#39; | sed &#39;s/$/\&#34;/&#39; | tr &#39;\n&#39; &#39; &#39;)</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tail">tail</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>tail -f /var/log/messages</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mount">mount</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mount ext3 partition: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo mkdir /media/bigpart
+sudo mount /dev/sda4 /media/bigpart -t ext3</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bash">bash</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_redirection_in_bash">Redirection in bash</h3>
+<div class="paragraph">
+<p>Redirect stderr of command to stdout: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ls 2&gt;&amp;1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Don’t output anything: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ls &gt; /dev/null 2&gt;&amp;1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Echo to stderr: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>echo Hello &gt;&amp;2</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Iterate over output of command, one line per iteration, and write output
+to a file: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>while read line; do
+    echo Another line: $line
+done &lt; &lt;(some_command arg1 arg2) &gt; afile.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Send value of a variable as standard input (stdin) to a command, and
+capture output in another variable: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ myvar=&#34;one two&#34;
+$ yourvar=$(tr &#39; &#39; &#39;_&#39; &lt;&lt;&lt;$myvar)
+$ echo $yourvar
+one_two</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Send value of a variable as input to a chain of piped commands, and
+capture output in another variable: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ myvar=abcde
+$ yourvar=$(tr &#39;a&#39; &#39;b&#39; &lt;&lt;&lt;$myvar | tr &#39;b&#39; &#39;c&#39; | tr &#39;c&#39; &#39;d&#39;)
+$ echo $yourvar
+dddde</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Truncate a file (wipe its contents): :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt; myfile.txt</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_booleans_in_bash">Booleans in bash</h3>
+<div class="literalblock">
+<div class="content">
+<pre>hot=true
+
+if $hot; then
+    echo &#34;It&#39;s hot&#34;
+else
+    echo &#34;It&#39;s cold&#34;
+fi</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_globbing_in_bash">Globbing in bash</h3>
+<div class="paragraph">
+<p>Test if glob expands to anything: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>theGlob=*.html
+if stat -t $theGlob &gt; /dev/null 2&gt;&amp;1; then
+    echo *.html
+else
+    echo No matches found.
+fi</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or with &#34;find&#34;: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>theGlob=*.html
+if [ -n &#34;$(find . -maxdepth 1 -name &#34;$theGlob&#34; -print -quit)&#34; ]; then
+    echo *.html
+else
+    echo No matches found.
+fi</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_variable_assignment_in_bash">Variable assignment in bash</h3>
+<div class="paragraph">
+<p>Set the variable logDir to $LOG_DIR, or &#39;~/log&#39; if $LOG_DIR is an empty
+string: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>logDir=${LOG_DIR:-~/log}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ someVar=foo
+$ emptyVar=
+$ myVar=${someVar:-bar}
+$ yourVar=${emptyVar:-bar}
+$ echo myVar = $myVar; echo yourVar = $yourVar
+myVar = foo
+yourVar = bar</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set the variable myVar to &#39;foo&#39; if $myVar is an empty string, otherwise
+leave myVar unchanged :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>: ${myVar:=foo}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ myVar=foo
+$ yourVar=
+$ : ${myVar:=bar}
+$ : ${yourVar:=bar}
+$ echo myVar = $myVar; echo yourVar = $yourVar
+myVar = foo
+yourVar = bar</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Equivalent of ternary operator in bash: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[[ &#34;$year&#34; = &#34;leapyear&#34; ]] &amp;&amp; numdays=366 || numdays=365</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keyboard_shortcuts_in_bash">Keyboard shortcuts in bash:</h3>
+<div class="paragraph">
+<p>Clear screen: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ctrl-l</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Open editor to write command in: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Ctrlv-XE</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Keyboard shortcuts (from:
+<a href="http://www.getoffmalawn.com/blog/useful-bash-shortcuts" class="bare">http://www.getoffmalawn.com/blog/useful-bash-shortcuts</a>): :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Movement
+--------
+
+Shortcut        Action
+Ctrl-a          Move to the start of the line
+Ctrl-e          Move to the end of the line
+Ctrl-b          Move back one character
+Alt-b           Move back one word
+Ctrl-f          Move forward one character
+Alt-f           Move forward one word
+Ctrl-] x        Move the cursor forward to next occurance of x
+Alt-Ctrl-] x    Move the cursor backward to the next occurance of x
+
+
+Line Modification
+-----------------
+
+Shortcut        Action
+Ctrl-u          Delete from the cursor to the beginning of the line
+Ctrl-k          Delete from the cursor to the end of the line
+Esc Backspace   Delete back a word
+Alt-d           Delete forward a word
+Alt-r           Undo all changes to the line
+Ctrl-y          Paste any text deleted with previous shortcuts
+Ctrl-e Esc-t    Swap order of the last two arguments
+
+
+History Utilisation
+-------------------
+
+Shortcut        Action
+Ctrl-x Ctrl-u   Undo the last change to the line
+Ctrl-r          Incremental reverse search of history
+Alt-p           Non-incremental reverse search of history
+Ctrl-L          Clear the screen (doesn&#39;t wipe current line)
+!!              Execute last command in history
+!abc            Execute last command in history beginning with abc
+!n              Execute nth command in history
+!$              Last argument of previous command
+!^              First argument of previous command
+^abc^xyz        Replace first occurance of abc with xyz in previous command and execute it
+Alt-. (period)  Paste last word from previous command after cursor position (repeat to cycle through previous commands)</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_miscellaneous_bash_commands">Miscellaneous bash commands:</h3>
+<div class="paragraph">
+<p>List commands found in bash history, sorted by usage: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cat ~/.bash_history | cut -f1 -d&#39; &#39; | sort | uniq -c | sort -n -r | more</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ln">ln</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Create hard links in a folder to all files in another folder, eg: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ln -t ~/.gnome2/nautilus-scripts ~/tools/nautilus/*</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create symbolic link named &#39;LNK&#39; to target file named &#39;TGT&#39;: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ln -s TGT LNK</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Run command in background and return to shell immediately (e.g. &#39;firefox
+index.html&#39;). Don’t write any output to nohup.out. :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>nohup firefox index.html &gt; /dev/null 2&gt;&amp;1</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tar">tar</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Create tar.gz from directory: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>tar cpzf mydir.tar.gz mydir</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extract directory from tar.gz file: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>tar xzf mydir.tar.gz</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_check_linux_version">Check Linux version</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>cat /etc/issue</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>lsb_release -a</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cat /etc/lsb-release</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>uname -a</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cat /proc/version</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_logfiles">Logfiles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Browse syslog with vim (requires <a href="https://github.com/bergoid/rabot" class="bare">https://github.com/bergoid/rabot</a>): :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>find /var/log -maxdepth 1 | grep syslog | sort | flon</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_batch_renaming">Batch renaming</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Replace a substring &#39;foo&#39; with &#39;bar&#39; in all names of textfiles</p>
+</div>
+<div class="paragraph">
+<p>Output every renaming command for review: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>for filename in *.txt ; do echo mv \&#34;$filename\&#34; \&#34;${filename//foo/bar}\&#34;; done</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Execute the reviewed commands: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>for filename in *.txt ; do echo mv \&#34;$filename\&#34; \&#34;${filename//foo/bar}\&#34;; done | /bin/bash</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ls_find_grep">ls, find, grep</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>List all filenames in directory tree: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>find . -print</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>find .</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>find $(pwd)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List files in reverse chronological order: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ls -lt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List the the most recently modified files in directory tree: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>find . -type f -exec stat --format &#39;%Y :%y %n&#39; {} \; | sort -nr | cut -d: -f2- | head</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List files in reverse order by size: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ls -lS</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List only filenames: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ls -m1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Find all files matching &#39;*.c&#39;: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>find . -name \*.c</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Find directories named &#39;mydir&#39;: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>find . -type d -name mydir</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Search for &#39;pattern&#39; in all .cpp files in &#39;mydir&#39;, recursively: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>grep pattern -nr --include=\*.cpp mydir</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Search for &#39;pattern&#39; in all .cpp and .h files in &#39;mydir&#39;, recursively: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>grep pattern -nr --include=\*.{cpp,h} mydir</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Search for &#39;pattern&#39; in all files in current dir, but don’t recurse into
+subdirectories: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>grep -d skip pattern *</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Replace all occurrences of &#39;oldstring&#39; with &#39;newstring&#39; in all .txt
+files in directory tree rooted in &#39;.&#39;:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>find . -name &#39;*.txt&#39; -type f -print0 | xargs -0 sed -i &#39;s|oldstring|newstring|g&#39;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Remove all .flac files in directory tree rooted in &#39;.&#39;:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>find . -name &#39;*.flac&#39; -type f -print0 | xargs -0 rm</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Compare 2 directories: print 2 columns of files unique to either
+directory:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>comm -3 &lt;(find dir1 -type f -printf &#39;%f\n&#39; | sort -u) &lt;(find dir2 -type f -printf &#39;%f\n&#39; | sort -u)</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_directories">directories</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>cd into parent dir of currently running bash script: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cd $(dirname $(readlink -f $0))</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lines_in_files">Lines in files</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Output Nth line of file :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>more +N file | head -n 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>head -N file | tail -1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Count the number of lines in file: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>wc -l &lt; my_text.txt</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modify_files">Modify files</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Remove all blank lines :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cat file.txt | sed &#39;/^\s*$/d&#39; &gt; file2.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or in-place: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sed -i &#39;/^\s*$/d&#39; file.txt</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_package_management">Package management</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_dpkg">dpkg</h3>
+<div class="paragraph">
+<p>Show (among other info) dependencies of .deb file: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>dpkg -I package_file.deb</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install a .deb file: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo dpkg -i package_file.deb</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Uninstall a .deb file: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo dpkg -r package_file.deb</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List all installed packages: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>dpkg -l</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List files provided by package: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>dpkg -L packagename</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pacman">pacman</h3>
+<div class="paragraph">
+<p>Install a package :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacman -Syu package_name</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check if a package is installed: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacman -Q package_name</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List all files owned by an installed package: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacman -Ql package_name</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Find package that owns a given file :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacman -Qo file_path</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Display info about an installed package: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacman -Qi package_name</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Display info about a package: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacman -Si package_name</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Uninstall a package and its orphaned dependencies: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacman -Rs package_name</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Clean pacman cache ( /var/cache/pacman/pkg ): :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pacman -Scc</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List all packages from a given repository (here &#39;community&#39; as an
+example): :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>paclist community</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Print dependency tree of a package: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pactree packagename</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_openbox">OpenBox</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Edit the OpenBox menu: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>vi ~/.config/openbox/menu.xml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Edit the OpenBox settings: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>vi ~/.config/openbox/rc.xml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Go to location of .desktop files: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cd /usr/share/applications</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Reconfigure OpenBox: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>openbox --reconfigure</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_bootable_usb_stick_from_iso_file">Make bootable USB stick from .iso file</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">From</dt>
+<dd>
+<p><a href="http://crunchbang.org/forums/viewtopic.php?id=23267" class="bare">http://crunchbang.org/forums/viewtopic.php?id=23267</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Determine what device your USB is. With your USB plugged in run: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo ls -l /dev/disk/by-id/*usb*</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This should produce output along the lines of: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>lrwxrwxrwx 1 root root  9 2010-03-15 22:54 /dev/disk/by-id/usb-_USB_DISK_2.0_077508380189-0:0 -&gt; ../../sdb
+lrwxrwxrwx 1 root root 10 2010-03-15 22:54 /dev/disk/by-id/usb-_USB_DISK_2.0_077508380189-0:0-part1 -&gt; ../../sdb1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now cd to where your *.iso is :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cd ~/downloads</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo dd if=filename.iso of=/dev/usbdevice; sync</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>let’s say the iso is named mini.iso and your USB device is sdb</p>
+</div>
+<div class="paragraph">
+<p>Example :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo dd if=mini.iso of=/dev/sdb; sync</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vim">vim</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some shortcuts: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Deleting text:
+dd      Delete line
+dw      Delete rest of word, until (but excluding) start of next word
+D       Delete rest of line (including character under cursor)
+d$      &#34;
+d0      Delete beginning of line before cursor
+x       Delete character
+da(     delete a set of matching parens and everything in them
+S       substitute line (i.e. replace entire line with an empty line and go to insert mode)
+:%s/\s\+$//   delete trailing whitespace on all lines
+
+Inserting text:
+i               Insert text before cursor
+a               Insert text after cursor
+A               Append text to the end of a line
+I               Insert text before the first non-blank in the line
+C               Replace rest of line
+o               Insert new line above cursor
+O               Insert new line below cursor
+ctrl-v&lt;tab&gt;     Insert tab character even when expandtab is on
+
+:r !ls      Insert output of shell command into text (here: ls)
+
+Transforming text:
+ctrl-a    increment number under cursor
+ctrl-x    decrement number under cursor
+
+u       undo
+ctrl-r  redo
+
+Moving:
+g;      jump back to last edited position.
+g_      go to last non-whitespace character on line
+w       go to start of next word
+e       go to end of (next) word
+b       go start of (previous) word
+W       go to start of next word (words are whitespace-delimited)
+E       go to end of word (words are whitespace-delimited)
+B       go start of (previous) word (words are whitespace-delimited)
+zz  put current line at the center of the screen
+zz  move current line to the middle of the screen
+zt  move current line to the top of the screen
+zb   move current line to the bottom of the screen
+Ctrl-e  Moves screen up one line
+Ctrl-y  Moves screen down one line
+Ctrl-u  Moves screen up ½ page
+Ctrl-d  Moves screen down ½ page
+Ctrl-b  Moves screen up one page
+Ctrl-f  Moves screen down one page
+
+Selecting pieces of text:
+vw      select from cursor to start of next word
+vb      select from cursor to start of word under cursor
+vaw     select word under cursor
+vi(     select parens block, parens excluded
+va(     select parens block, parens included
+vi&#34;, vi&#39;, vi[, vi&lt;, vi{     analogous as 2 lines higher
+va&#34;, va&#39;, va[, va&lt;, va{     analogous as 2 lines higher
+vit     select text between HTML tags
+vat     select text between HTML tags, together with the tags themselves
+
+File handling:
+:e filename     Open new file in editor
+:e! filename    Open new file in editor, discard buffer
+:e .                    Browse current directory
+:w                      Write buffer
+:w filename     Write buffer to filename
+:q                      Exit vim
+ZZ                      Save buffer and exit vim
+:x                      &#34;
+ZQ                      Discard buffer and exit vim
+:q!                     &#34;
+
+Searching:
+/searchstring           search for searchstring
+/searchstring\c     case-insensitive search for searchstring
+
+:%s/old/new/g           replace all occurrences of &#39;old&#39; with &#39;new&#39;
+:%s/\&lt;old\&gt;/new/g   same, but whole word only
+:%s/old\c/new/g     replace all case-insensitive matches of &#39;old&#39; with &#39;new&#39;
+:%s/old/new/gc          replace all occurrences of &#39;old&#39; with &#39;new&#39;, confirm each substitution
+:%s/\t/    /g       replace all tabs with 4 spaces
+
+Tabs:
+:set expandtab
+:set tabstop=4
+
+Comment all lines of a block
+Go to the first line, press ctrl-v, select until last line, press I#&lt;Esc&gt;
+
+Reselect block:
+gv
+
+Uncomment all lines of a block
+Go to the first line, press ctrl-v, select until last line, press x
+
+Multi-window:
+Ctrl-w o    Close all windows except current:
+:on        idem
+Ctrl-w q    Close current window
+Ctrl-w p    Switch to previously accessed window:
+
+Colors:
+Show highlight groups with their current color:
+:so $VIMRUNTIME/syntax/hitest.vim</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scp">scp</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Copy the file &#34;foobar.txt&#34; from the local host to a remote host :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>scp foobar.txt your_username@remotehost.edu:some/remote/directory</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Copy the file &#34;foobar.txt&#34; from a remote host to the local host :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>scp your_username@remotehost.edu:foobar.txt some/local/directory</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Copy the directory &#34;foo&#34; from the local host to a remote host’s
+directory &#34;bar&#34; :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>scp -r foo your_username@remotehost.edu:some/remote/directory/bar</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Copy the directory &#34;foo&#34; from a remote host to the local host’s
+directory &#34;bar&#34; :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>scp -r your_username@remotehost.edu:some/remote/directory/foo bar</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_apt_get_and_dpkg">apt-get and dpkg</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Show info about file.deb: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>dpkg -I file.deb</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_echo_text_and_redirect_to_privileged_file">echo text and redirect to privileged file:</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>echo &#39;some text&#39; | sudo tee -a /etc/some.file</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_startstopenabledisable_daemons">Start/stop/enable/disable daemons</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enable the ssh daemon: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>update-rc.d ssh defaults</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Disable it: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>update-rc.d -f ssh remove</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Start daemon: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo service ssh start</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Restart daemon: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo service ssh restart</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Stop daemon: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo service ssh stop</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_list_of_options_for_setxkbmap">List of options for &#39;setxkbmap&#39;:</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>vi /usr/share/X11/xkb/rules/base.lst</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tmux">tmux</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Create new session: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ tmux new -s session-name</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Detach from session: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;CTRL-b&gt; d</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Attach to first available session: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ tmux a</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Attach to specific session: :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ tmux a -t session-name</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_oracle_java_7_in_debian_wheezy">Install Oracle Java 7 in Debian Wheezy:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>From:
+<a href="http://stackoverflow.com/questions/15543603/installing-java-7-oracle-in-debian-via-apt-get" class="bare">http://stackoverflow.com/questions/15543603/installing-java-7-oracle-in-debian-via-apt-get</a></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo su
+
+echo &#34;deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main&#34; | tee -a /etc/apt/sources.list
+echo &#34;deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main&#34; | tee -a /etc/apt/sources.list
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
+apt-get update
+apt-get install oracle-java7-installer</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_git">Git</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_create_a_tag">Create a tag</h3>
+<div class="paragraph">
+<p>Create a tag both locally and on the remote:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tagname=MY_TAG &amp;&amp; git tag -a $tagname -m &#34;$tagname&#34; &amp;&amp; git push origin $tagname</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delete_a_tag">Delete a tag</h3>
+<div class="paragraph">
+<p>Delete a tag both on the remote and locally:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tagname=MY_TAG &amp;&amp; git push --delete origin $tagname &amp;&amp; git tag --delete $tagname</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_a_branch">Create a branch</h3>
+<div class="paragraph">
+<p>Create a branch both locally and on the remote:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">branchname=MY_BRANCH &amp;&amp; git checkout -b $branchname &amp;&amp; git push -u origin $branchname</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delete_a_branch">Delete a branch</h3>
+<div class="paragraph">
+<p>Delete a branch both on the remote and locally:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">branchName=MY_BRANCH &amp;&amp; git push --delete origin $branchName &amp;&amp; git branch --delete $branchName</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_revert_some_of_the_files_in_a_commit">Revert some of the files in a commit</h3>
+<div class="paragraph">
+<p>List all files changed in a commit, select some of them and revert the selected ones to their previous state:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">commitHash=320aacfe3ad &amp;&amp; git diff-tree --no-commit-id --name-only -r $commitHash | pickn | xr git checkout ${commitHash}~1 --</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_show_all_tags_that_contain_a_given_commit">Show all tags that contain a given commit</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">git tag --contains HASH</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_web_project_use_github_pages_for_a_live_demo">Web project: use Github Pages for a live demo</h3>
+<div class="paragraph">
+<p>Source:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://help.github.com/articles/creating-project-pages-manually/" class="bare">https://help.github.com/articles/creating-project-pages-manually/</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://lea.verou.me/2011/10/easily-keep-gh-pages-in-sync-with-master/" class="bare">http://lea.verou.me/2011/10/easily-keep-gh-pages-in-sync-with-master/</a></p>
+</div>
+<div class="paragraph">
+<p>To create a Github Pages presence for your repo:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>git checkout --orphan gh-pages
+git merge master
+git push origin gh-pages
+git checkout master</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The demo will be visible at username.github.io/reponame</p>
+</div>
+<div class="paragraph">
+<p>To get the demo up-to-date with the master branch:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>git checkout gh-pages
+git merge master
+git push origin gh-pages
+git checkout master</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_networking">Networking</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>List processes and the ports they’re listening on:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo netstat -tulpn</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo netstat -an | less</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List iptables rules:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo iptables -L -n</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_postgresql">postgresql</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_pgpass_file">.pgpass file</h3>
+<div class="paragraph">
+<p>Linux: ~/.pgpass
+Windows: %APPDATA%/postgresql/pgpass.conf</p>
+</div>
+<div class="paragraph">
+<p>The file should contain lines of the following format:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>hostname:port:database:username:password</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>localhost:*:*:postgres:postgres</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pg_dump">pg_dump</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">pg_dump --username=MYUSERNAME --file=MYDUMPFILE --format=custom DBNAME
+
+pg_restore --username=MYUSERNAME --clean --dbname=DBNAME MYDUMPFILE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>babs on hugonotes</title>
+    <link>/tags/babs.html</link>
+    <description>Recent content in babs on hugonotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Oct 2021 14:11:28 +0200</lastBuildDate><atom:link href="/tags/babs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Babs</title>
+      <link>/notes/babs.html</link>
+      <pubDate>Fri, 01 Oct 2021 14:11:28 +0200</pubDate>
+      
+      <guid>/notes/babs.html</guid>
+      <description>Introduction babs, (an acronym for &amp;#34;babs: a build system&amp;#34;) is a set of Makefiles meant to easily compile &amp;amp; link a set of interdependent modules, containing C/C++ source code, binaries like object files, static or dynamic libraries, etc …​
+   Environment variables In order to do its work, babs needs 3 environment variables:
+   BABS_DIR : the directory where the babs build system is located.
+  SOURCE_DIR : the directory where the source modules are located.</description>
+    </item>
+    
+  </channel>
+</rss>

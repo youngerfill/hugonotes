@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on hugonotes</title>
+    <link>/tags/linux.html</link>
+    <description>Recent content in linux on hugonotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Oct 2021 10:10:12 +0200</lastBuildDate><atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Links</title>
+      <link>/notes/links.html</link>
+      <pubDate>Sat, 02 Oct 2021 10:10:12 +0200</pubDate>
+      
+      <guid>/notes/links.html</guid>
+      <description>Technical Mobile The Search for a FLOSS Mobile OS (Aug 2021) https://blog.emacsen.net/blog/2021/08/23/floss-mobile-os-aug-2021/ https://news.ycombinator.com/item?id=28296738
+  Programming Data Structures and Algorithms in JavaScript https://news.ycombinator.com/item?id=20634409 https://amejiarosario.gumroad.com/l/dsajs
+ John Carmack on Functional Programming (2013 https://news.ycombinator.com/item?id=15036591
+ A Thought Experiment: Using the ECS Pattern Outside of Game Engines https://news.ycombinator.com/item?id=21892126 https://adventures.michaelfbryan.com/posts/ecs-outside-of-games/ https://en.m.wikipedia.org/wiki/Entity_component_system#Characteristics
+  Web HTML, CSS Scrollspy with ‘just JavaScript’ https://medium.com/p1xts-blog/scrollspy-with-just-javascript-3131c114abdc
+ TypeSafe CSS https://uglyduck.ca/typesafe-sans-css/
+ Ten modern layouts in one line of CSS https://web.</description>
+    </item>
+    
+  </channel>
+</rss>
