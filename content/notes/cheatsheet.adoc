@@ -1081,3 +1081,33 @@ List iptables rules:
 --
 sudo iptables -L -n
 --
+
+== postgresql
+
+=== .pgpass file
+
+Linux: ~/.pgpass
+Windows: %APPDATA%/postgresql/pgpass.conf
+
+The file should contain lines of the following format:
+
+[source]
+--
+hostname:port:database:username:password
+--
+
+Example:
+
+[source]
+--
+localhost:*:*:postgres:postgres
+--
+
+=== pg_dump
+
+[source,bash]
+--
+pg_dump --username=MYUSERNAME --file=MYDUMPFILE --format=custom DBNAME
+
+pg_restore --username=MYUSERNAME --clean --dbname=DBNAME MYDUMPFILE
+--
