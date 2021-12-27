@@ -4,18 +4,16 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="1. Base system  Create VPS, pick Debian 9.3 as OS.   -→ didn’t work 2nd time, stuck in 1st reboot  picked centos and worked
-      Copy bootstrap files from M:vmisovps2arch to M:msharevps2arch and cd into the latter folder.
+      Copy bootstrap files from M:\vm\isovps2arch to M:\mshare\vps2arch and cd into the latter folder.
  Upload bootstrap files to the newly created VPS:
-  scp * root@IP_ADDRESS:
-   Log into the VPS
+ scp * root@IP_ADDRESS:   Log into the VPS
  chmod &#43;x vps2arch mv * / &amp;&amp; cd / .">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="Installing Arch Linux on a VPS" />
 <meta property="og:description" content="1. Base system  Create VPS, pick Debian 9.3 as OS.   -→ didn’t work 2nd time, stuck in 1st reboot  picked centos and worked
-      Copy bootstrap files from M:vmisovps2arch to M:msharevps2arch and cd into the latter folder.
+      Copy bootstrap files from M:\vm\isovps2arch to M:\mshare\vps2arch and cd into the latter folder.
  Upload bootstrap files to the newly created VPS:
-  scp * root@IP_ADDRESS:
-   Log into the VPS
+ scp * root@IP_ADDRESS:   Log into the VPS
  chmod &#43;x vps2arch mv * / &amp;&amp; cd / ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/arch/vps.html" /><meta property="article:section" content="arch" />
@@ -27,7 +25,7 @@
 <link rel="icon" href="../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
   <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../en.search.min.ea6f6a66a22837dfa32f7e7f343cfa7c6633c48e851e9b76da0727e1c622a287.js" ></script>
+  <script defer src="../en.search.min.4958d06b55d55edac59e35d9094ba7cfaf1193118be73bd136468609e37c437a.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -460,56 +458,67 @@ https://github.com/alex-shpak/hugo-book
 </dl>
 </div>
 <div class="paragraph">
-<p>Copy bootstrap files from M:vmisovps2arch to M:msharevps2arch and cd
+<p>Copy bootstrap files from <code>M:\vm\isovps2arch</code> to <code>M:\mshare\vps2arch</code> and <code>cd</code>
 into the latter folder.</p>
 </div>
 <div class="paragraph">
 <p>Upload bootstrap files to the newly created VPS:</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>scp * root@IP_ADDRESS:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">scp * root@IP_ADDRESS:</code></pre>
 </div>
-</blockquote>
 </div>
 <div class="paragraph">
 <p>Log into the VPS</p>
 </div>
-<div class="paragraph">
-<p>chmod +x vps2arch mv * / &amp;&amp; cd / ./vps2arch echo HOSTNAME &gt;
-/etc/hostname sync; reboot -f</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">chmod +x vps2arch
+mv * / &amp;&amp; cd /
+./vps2arch
+echo HOSTNAME &gt; /etc/hostname
+sync; reboot -f</code></pre>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_2_create_user">2. Create user</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>useradd -m bert groupadd sudoers usermod -aG sudoers bert passwd bert</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">useradd -m bert
+groupadd sudoers
+usermod -aG sudoers bert
+passwd bert
+
+pacman -Syu sudo vim ufw knockd lighttpd git</code></pre>
 </div>
-<div class="paragraph">
-<p>pacman -Syu sudo vim ufw knockd lighttpd git</p>
 </div>
 <div class="paragraph">
 <p>allow group &#39;sudoers&#39; to use sudo (in conf file):</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>echo &#39;%sudoers ALL=(ALL) ALL&#39; &gt; /etc/sudoers</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">echo &#39;%sudoers ALL=(ALL) ALL&#39; &gt; /etc/sudoers</code></pre>
 </div>
-</blockquote>
+</div>
+<div class="paragraph">
+<p>Install some packages:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">pacman -Syu sudo vim ufw knockd lighttpd git</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>use &#39;vim&#39; as &#39;vi&#39;:</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>mv /usr/bin/vi /usr/bin/vi_BAK &amp;&amp; ln -s /usr/bin/vim /usr/bin/vi</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">mv /usr/bin/vi /usr/bin/vi_BAK &amp;&amp; ln -s /usr/bin/vim /usr/bin/vi</code></pre>
 </div>
-</blockquote>
 </div>
 </div>
 </div>
@@ -519,50 +528,46 @@ into the latter folder.</p>
 <div class="paragraph">
 <p>On the client:</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>ssh-copy-id bert@IP_ADDRESS</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">ssh-copy-id bert@IP_ADDRESS</code></pre>
 </div>
-</blockquote>
 </div>
 <div class="paragraph">
 <p>On the server:</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">vi /etc/ssh/sshd_config</dt>
-<dd>
-<p>LogLevel VERBOSE PermitRootLogin no PubkeyAuthentication yes
-PasswordAuthentication no AuthorizedKeysFile .ssh/authorized_keys
-ChallengeResponseAuthentication no UsePAM yes AllowUsers bert</p>
-</dd>
-</dl>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">vi /etc/ssh/sshd_config</code></pre>
 </div>
-</blockquote>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>LogLevel VERBOSE
+PermitRootLogin no
+PubkeyAuthentication yes
+PasswordAuthentication no
+AuthorizedKeysFile .ssh/authorized_keys
+ChallengeResponseAuthentication no
+UsePAM yes
+AllowUsers bert</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>Add 5s delay to failed login attempts:</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>bash -c &#34;echo auth optional pam_faildelay.so delay=5000000 &gt;&gt;
-/etc/pam.d/system-login&#34;</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">bash -c &#34;echo auth optional pam_faildelay.so delay=5000000 &gt;&gt; /etc/pam.d/system-login&#34;</code></pre>
 </div>
-</blockquote>
 </div>
 <div class="paragraph">
 <p>reboot needed for future ufw config:</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>reboot now</p>
+<div class="listingblock">
+<div class="content">
+<pre>reboot now</pre>
 </div>
-</blockquote>
 </div>
 </div>
 </div>
@@ -572,35 +577,41 @@ ChallengeResponseAuthentication no UsePAM yes AllowUsers bert</p>
 <div class="paragraph">
 <p>ssh bert@IP_ADDRESS</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">sudo -i</dt>
-<dd>
-<p>ufw default deny ufw allow 22 ufw allow 80,443/tcp ufw enable
-+</p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">vi /etc/knockd.conf</dt>
-</dl>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">sudo -i</code></pre>
 </div>
-</dd>
-<dt class="hdlist1">[options]</dt>
-<dd>
-<p>logfile = /var/log/knockd.log</p>
-</dd>
-<dt class="hdlist1">[SSH]</dt>
-<dd>
-<p>    sequence = PORT1, PORT2, …​, PORTN seq_timeout = 5 start_command
-    = ufw allow from %IP% to any port 22 tcpflags = syn cmd_timeout =
-    10 stop_command = ufw delete allow from %IP% to any port 22
-+
-systemctl enable ufw.service systemctl start ufw.service
-+
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">ufw default deny ufw allow 22 ufw allow 80,443/tcp ufw enable</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">vi /etc/knockd.conf</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">[options]
+    logfile = /var/log/knockd.log
+
+[SSH]
+    sequence    = PORT1,...,PORTN
+    seq_timeout = 5
+    start_command = ufw allow from %IP% to any port 22
+    tcpflags    = syn
+    cmd_timeout   = 10
+    stop_command  = ufw delete allow from %IP% to any port 22</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">systemctl enable ufw.service systemctl start ufw.service
 systemctl enable knockd.service systemctl start knockd.service
-+
-ufw delete allow 22</p>
-</dd>
-</dl>
+ufw delete allow 22</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -610,102 +621,101 @@ ufw delete allow 22</p>
 <div class="paragraph">
 <p>Create dotfiles &amp; tools:</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>mkdir ~/tools &amp;&amp; cd ~/tools git clone
-<a href="https://github.com/bergoid/lswrappers.git" class="bare">https://github.com/bergoid/lswrappers.git</a> git clone
-<a href="https://github.com/bergoid/rabot.git" class="bare">https://github.com/bergoid/rabot.git</a> git clone
-<a href="https://github.com/bergoid/gt.git" class="bare">https://github.com/bergoid/gt.git</a> git clone
-<a href="https://github.com/bergoid/preppy.git" class="bare">https://github.com/bergoid/preppy.git</a> git clone
-<a href="https://github.com/bergoid/dotfiles.git" class="bare">https://github.com/bergoid/dotfiles.git</a> dotfiles/install_dotfiles echo
-hostnameColour=27 &gt; ~/.localConfig</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">mkdir ~/tools &amp;&amp; cd ~/tools git clone
+git clone https://github.com/bergoid/lswrappers.git
+git clone https://github.com/bergoid/rabot.git
+git clone https://github.com/bergoid/gt.git
+git clone https://github.com/bergoid/preppy.git
+git clone https://github.com/bergoid/dotfiles.git dotfiles/install_dotfiles echo
+hostnameColour=27 &gt; ~/.localConfig</code></pre>
 </div>
-</blockquote>
 </div>
 <div class="paragraph">
 <p>Customize root env:</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>sudo -i sudo -i ln -s /home/bert/.tmux.conf .tmux.conf ln -s
-/home/bert/tools/dotfiles/.vim/ .vim ln -s /home/bert/tools/ tools ln -s
-/home/bert/.bash_profile .bash_profile ln -s /home/bert/.bashrc .bashrc</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">sudo -i
+ln -s /home/bert/.tmux.conf .tmux.conf
+ln -s /home/bert/tools/dotfiles/.vim/ .vim
+ln -s /home/bert/tools/ tools
+ln -s /home/bert/.bash_profile .bash_profile
+ln -s /home/bert/.bashrc .bashrc</code></pre>
 </div>
-</blockquote>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_6_spigot_server">6. spigot server</h2>
 <div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Enable AUR</dt>
-<dd>
-<p>sudo pacman -Syu base base-devel mkcd ~/aur</p>
-</dd>
-<dt class="hdlist1">Install JRE</dt>
-<dd>
-<p>git clone <a href="https://aur.archlinux.org/jre.git" class="bare">https://aur.archlinux.org/jre.git</a> cd jre makepkg -si</p>
-</dd>
-</dl>
+<div class="paragraph">
+<p>Enable AUR</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">sudo pacman -Syu base base-devel mkcd ~/aur</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install JRE</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">git clone https://aur.archlinux.org/jre.git cd jre makepkg -si</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>Install bukkit/spigot:</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>mkcd ~/mc curl
-&#34;https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar&#34;
--o BuildTools.jar java -jar BuildTools.jar</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">mkcd ~/mc
+curl &#34;https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar&#34;
+-o BuildTools.jar java -jar BuildTools.jar</code></pre>
 </div>
-</blockquote>
 </div>
-<div class="paragraph">
-<p>sudo pacman -Syu tmux dialog</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">sudo pacman -Syu tmux dialog</code></pre>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">vi /etc/locale.gen</dt>
-<dd>
-<p>-→ Uncomment: &#39;en_US.UTF-8 UTF-8&#39;</p>
-</dd>
-</dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">vi /etc/locale.gen</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>locale-gen</p>
+<p>Uncomment: &#39;en_US.UTF-8 UTF-8&#39;</p>
 </div>
-<div class="paragraph">
-<p>echo LANG=en_US.UTF-8 &gt; /etc/locale.conf</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">locale-gen
+echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+sudo ufw allow 24680</code></pre>
 </div>
-<div class="paragraph">
-<p>sudo ufw allow 24680</p>
 </div>
 <div class="paragraph">
 <p>Removed jre9:</p>
 </div>
-<div class="paragraph">
-<p>sudo pacman -Rs jre</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">sudo pacman -Rs jre</code></pre>
+</div>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Install jre8</dt>
-<dd>
-<p>cd ~/aur git clone <a href="https://aur.archlinux.org/jre8.git" class="bare">https://aur.archlinux.org/jre8.git</a> cd jre8 makepkg
--si
-+</p>
-<div class="ulist">
-<ul>
-<li>
-<p>CURRENT STATE<strong>*</strong></p>
-</li>
-</ul>
-</div>
-</dd>
 </dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">cd ~/aur git clone https://aur.archlinux.org/jre8.git cd jre8 makepkg -si</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>CURRENT STATE</p>
 </div>
 </div>
 </div>

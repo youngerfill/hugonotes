@@ -14,10 +14,9 @@
       
       <guid>/arch/vps.html</guid>
       <description>1. Base system  Create VPS, pick Debian 9.3 as OS.   -→ didn’t work 2nd time, stuck in 1st reboot  picked centos and worked
-      Copy bootstrap files from M:vmisovps2arch to M:msharevps2arch and cd into the latter folder.
+      Copy bootstrap files from M:\vm\isovps2arch to M:\mshare\vps2arch and cd into the latter folder.
  Upload bootstrap files to the newly created VPS:
-  scp * root@IP_ADDRESS:
-   Log into the VPS
+ scp * root@IP_ADDRESS:   Log into the VPS
  chmod +x vps2arch mv * / &amp;amp;&amp;amp; cd / .</description>
     </item>
     
