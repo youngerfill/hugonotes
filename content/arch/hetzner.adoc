@@ -1,38 +1,148 @@
 ---
-title: "Installing Arch Linux on a VPS"
-date: 2021-10-01T18:21:42+02:00
+title: "Installing Arch Linux on a Hetzner VPS"
 tags:
 - arch
 ---
 
-== 1. Base system
+== Boot live iso
 
-Create VPS, pick Debian 9.3 as OS.::
-  --> didn't work 2nd time, stuck in 1st reboot;;
-    picked centos and worked
+In the web config panel of the VPS, mount the Arch Linux .iso in your server & reboot. Connect to the server with the web console.
 
-Copy bootstrap files from `M:\vm\isovps2arch` to `M:\mshare\vps2arch` and `cd`
-into the latter folder.
-
-Upload bootstrap files to the newly created VPS:
-
-[source,shell]
+[source, shell]
 ----
-scp * root@IP_ADDRESS:
+loadkeys be-latin1
 ----
 
-Log into the VPS
+Network should work: :
 
-[source,shell]
+[source, shell]
 ----
-chmod +x vps2arch
-mv * / && cd /
-./vps2arch
-echo HOSTNAME > /etc/hostname
-sync; reboot -f
+curl www.google.com
 ----
 
-== 2. Create user
+Syncronize the system clock with NTP :
+
+[source, shell]
+----
+timedatectl set-ntp true
+----
+
+Create partition table :
+
+[source, shell]
+----
+fdisk -l /dev/sda
+
+fdisk /dev/sda
+----
+
+First, create a partition (sda1) of size 32 MB (+32M). Change its type to 1 (EFI System).
+Then, create a partion (sda2) with the rest of the available space.
+
+Format the partitions:
+
+[source, shell]
+----
+mkfs.fat -F 16 /dev/sda1
+mkfs.ext4 /dev/sda2
+----
+
+Mount the root partition :
+
+[source, shell]
+----
+mount /dev/sda2 /mnt
+----
+
+Install the 'base' package group :
+
+[source, shell]
+----
+pacstrap /mnt base vim
+----
+
+Create an fstab file :
+
+[source, shell]
+----
+genfstab -U /mnt >> /mnt/etc/fstab
+----
+
+'chroot' into the newly created system :
+
+[source, shell]
+----
+arch-chroot /mnt
+----
+
+Set the timezone :
+
+[source, shell]
+----
+ln -s /usr/share/zoneinfo/Europe/Brussels /etc/localtime
+----
+
+Use UTC in hardware clock. Initialize the hardware clock from current
+system time. :
+
+[source, shell]
+----
+hwclock --systohc --utc
+----
+
+Use US locale :
+
+[source, shell]
+----
+echo en_US.UTF-8 UTF-8 > /etc/locale.gen
+locale-gen
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+----
+
+Use Belgian keymap :
+
+[source, shell]
+----
+echo KEYMAP=be-latin1 > /etc/vconsole.conf
+----
+
+Set hostname :
+
+[source, shell]
+----
+echo yeba > /etc/hostname
+----
+
+Set localhost alias :
+
+[source, shell]
+----
+vi /etc/hosts
+----
+
+In /etc/hosts, add: :
+
+[source, shell]
+----
+127.0.0.1 yeba.localdomain yeba
+----
+
+Set password :
+
+[source, shell]
+----
+passwd
+----
+
+Install boot loader 'grub' :
+
+[source, shell]
+----
+pacman -Syu grub
+grub-install --target=i386-pc /dev/sda && grub-mkconfig -o /boot/grub/grub.cfg
+----
+
+== Create user
 
 [source,shell]
 ----
@@ -65,7 +175,7 @@ use 'vim' as 'vi':
 mv /usr/bin/vi /usr/bin/vi_BAK && ln -s /usr/bin/vim /usr/bin/vi
 ----
 
-== 3. sshd config
+== sshd config
 
 On the client:
 
@@ -105,7 +215,7 @@ reboot needed for future ufw config:
 reboot now
 ----
 
-== 4. ufw, knockd
+== ufw, knockd
 
 ssh bert@IP_ADDRESS
 
@@ -147,7 +257,7 @@ systemctl start knockd.service
 ufw delete allow 22
 ----
 
-== 5. Customization
+== Customization
 
 Create dotfiles & tools:
 
@@ -174,7 +284,7 @@ ln -s /home/bert/.bash_profile .bash_profile
 ln -s /home/bert/.bashrc .bashrc
 ----
 
-== 6. spigot server
+== spigot server
 
 Enable AUR
 [source,shell]
@@ -193,7 +303,7 @@ Install bukkit/spigot:
 [source,shell]
 ----
 mkcd ~/mc
-curl "https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar" 
+curl "https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar"
 -o BuildTools.jar java -jar BuildTools.jar
 ----
 

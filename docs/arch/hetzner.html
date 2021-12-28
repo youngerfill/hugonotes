@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1. Base system  Create VPS, pick Debian 9.3 as OS.   -→ didn’t work 2nd time, stuck in 1st reboot  picked centos and worked
-      Copy bootstrap files from M:\vm\isovps2arch to M:\mshare\vps2arch and cd into the latter folder.
- Upload bootstrap files to the newly created VPS:
- scp * root@IP_ADDRESS:   Log into the VPS
- chmod &#43;x vps2arch mv * / &amp;&amp; cd / .">
+<meta name="description" content="Boot live iso In the web config panel of the VPS, mount the Arch Linux .iso in your server &amp; reboot. Connect to the server with the web console.
+ loadkeys be-latin1   Network should work: :
+ curl www.google.com   Syncronize the system clock with NTP :
+ timedatectl set-ntp true   Create partition table :
+ fdisk -l /dev/sda fdisk /dev/sda   First, create a partition (sda1) of size 32 MB (&#43;32M).">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Installing Arch Linux on a VPS" />
-<meta property="og:description" content="1. Base system  Create VPS, pick Debian 9.3 as OS.   -→ didn’t work 2nd time, stuck in 1st reboot  picked centos and worked
-      Copy bootstrap files from M:\vm\isovps2arch to M:\mshare\vps2arch and cd into the latter folder.
- Upload bootstrap files to the newly created VPS:
- scp * root@IP_ADDRESS:   Log into the VPS
- chmod &#43;x vps2arch mv * / &amp;&amp; cd / ." />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Installing Arch Linux on a Hetzner VPS" />
+<meta property="og:description" content="Boot live iso In the web config panel of the VPS, mount the Arch Linux .iso in your server &amp; reboot. Connect to the server with the web console.
+ loadkeys be-latin1   Network should work: :
+ curl www.google.com   Syncronize the system clock with NTP :
+ timedatectl set-ntp true   Create partition table :
+ fdisk -l /dev/sda fdisk /dev/sda   First, create a partition (sda1) of size 32 MB (&#43;32M)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/arch/vps.html" /><meta property="article:section" content="arch" />
-<meta property="article:published_time" content="2021-10-01T18:21:42+02:00" />
-<meta property="article:modified_time" content="2021-10-01T18:21:42+02:00" />
+<meta property="og:url" content="/arch/hetzner.html" /><meta property="article:section" content="arch" />
 
-<title>Installing Arch Linux on a VPS | hugonotes</title>
+
+
+<title>Installing Arch Linux on a Hetzner VPS | hugonotes</title>
 <link rel="manifest" href="../manifest.json">
 <link rel="icon" href="../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
@@ -188,7 +188,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../arch/vps.html" class=" active">Installing Arch Linux on a VPS</a>
+    <a href="../arch/vps.html" class="">Installing Arch Linux on a VPS</a>
   
 
         </li>
@@ -227,7 +227,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../arch/hetzner.html" class="">Installing Arch Linux on a Hetzner VPS</a>
+    <a href="../arch/hetzner.html" class=" active">Installing Arch Linux on a Hetzner VPS</a>
   
 
         </li>
@@ -427,7 +427,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="../svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Installing Arch Linux on a VPS</strong>
+  <strong>Installing Arch Linux on a Hetzner VPS</strong>
 
   <label for="toc-control">
     
@@ -453,51 +453,167 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><div class="sect1">
-<h2 id="_1_base_system">1. Base system</h2>
+<h2 id="_boot_live_iso">Boot live iso</h2>
 <div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Create VPS, pick Debian 9.3 as OS.</dt>
-<dd>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">-→ didn’t work 2nd time, stuck in 1st reboot</dt>
-<dd>
-<p>picked centos and worked</p>
-</dd>
-</dl>
-</div>
-</dd>
-</dl>
-</div>
 <div class="paragraph">
-<p>Copy bootstrap files from <code>M:\vm\isovps2arch</code> to <code>M:\mshare\vps2arch</code> and <code>cd</code>
-into the latter folder.</p>
-</div>
-<div class="paragraph">
-<p>Upload bootstrap files to the newly created VPS:</p>
+<p>In the web config panel of the VPS, mount the Arch Linux .iso in your server &amp; reboot. Connect to the server with the web console.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">scp * root@IP_ADDRESS:</code></pre>
+<pre class="highlight"><code class="language-shell" data-lang="shell">loadkeys be-latin1</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Log into the VPS</p>
+<p>Network should work: :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">chmod +x vps2arch
-mv * / &amp;&amp; cd /
-./vps2arch
-echo HOSTNAME &gt; /etc/hostname
-sync; reboot -f</code></pre>
+<pre class="highlight"><code class="language-shell" data-lang="shell">curl www.google.com</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Syncronize the system clock with NTP :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">timedatectl set-ntp true</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create partition table :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">fdisk -l /dev/sda
+
+fdisk /dev/sda</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>First, create a partition (sda1) of size 32 MB (+32M). Change its type to 1 (EFI System).
+Then, create a partion (sda2) with the rest of the available space.</p>
+</div>
+<div class="paragraph">
+<p>Format the partitions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">mkfs.fat -F 16 /dev/sda1
+mkfs.ext4 /dev/sda2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mount the root partition :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">mount /dev/sda2 /mnt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install the &#39;base&#39; package group :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">pacstrap /mnt base vim</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create an fstab file :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&#39;chroot&#39; into the newly created system :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">arch-chroot /mnt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set the timezone :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">ln -s /usr/share/zoneinfo/Europe/Brussels /etc/localtime</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use UTC in hardware clock. Initialize the hardware clock from current
+system time. :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">hwclock --systohc --utc</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use US locale :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">echo en_US.UTF-8 UTF-8 &gt; /etc/locale.gen
+locale-gen
+echo LANG=en_US.UTF-8 &gt; /etc/locale.conf</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Use Belgian keymap :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">echo KEYMAP=be-latin1 &gt; /etc/vconsole.conf</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set hostname :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">echo yeba &gt; /etc/hostname</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set localhost alias :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">vi /etc/hosts</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In /etc/hosts, add: :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">127.0.0.1 yeba.localdomain yeba</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set password :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">passwd</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install boot loader &#39;grub&#39; :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">pacman -Syu grub
+grub-install --target=i386-pc /dev/sda &amp;&amp; grub-mkconfig -o /boot/grub/grub.cfg</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_2_create_user">2. Create user</h2>
+<h2 id="_create_user">Create user</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -536,7 +652,7 @@ pacman -Syu sudo vim ufw knockd lighttpd git</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_3_sshd_config">3. sshd config</h2>
+<h2 id="_sshd_config">sshd config</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>On the client:</p>
@@ -585,7 +701,7 @@ AllowUsers bert</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_4_ufw_knockd">4. ufw, knockd</h2>
+<h2 id="_ufw_knockd">ufw, knockd</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>ssh bert@IP_ADDRESS</p>
@@ -631,7 +747,7 @@ ufw delete allow 22</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_5_customization">5. Customization</h2>
+<h2 id="_customization">Customization</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Create dotfiles &amp; tools:</p>
@@ -663,7 +779,7 @@ ln -s /home/bert/.bashrc .bashrc</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_6_spigot_server">6. spigot server</h2>
+<h2 id="_spigot_server">spigot server</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Enable AUR</p>
