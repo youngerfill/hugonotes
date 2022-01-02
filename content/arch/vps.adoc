@@ -153,13 +153,14 @@ Create dotfiles & tools:
 
 [source,shell]
 ----
-mkdir ~/tools && cd ~/tools git clone
+mkdir ~/tools && cd ~/tools
 git clone https://github.com/bergoid/lswrappers.git
 git clone https://github.com/bergoid/rabot.git
 git clone https://github.com/bergoid/gt.git
 git clone https://github.com/bergoid/preppy.git
-git clone https://github.com/bergoid/dotfiles.git dotfiles/install_dotfiles echo
-hostnameColour=27 > ~/.localConfig
+git clone https://github.com/bergoid/dotfiles.git
+dotfiles/install_dotfiles
+echo hostnameColour=27 > ~/.localConfig
 ----
 
 Customize root env:
@@ -227,7 +228,9 @@ Install jre8:::
 
 [source,shell]
 ----
-cd ~/aur git clone https://aur.archlinux.org/jre8.git cd jre8 makepkg -si
+cd ~/aur git clone https://aur.archlinux.org/jre8.git
+cd jre8
+makepkg -si
 ----
 
 CURRENT STATE
