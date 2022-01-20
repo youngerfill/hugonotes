@@ -150,8 +150,6 @@ useradd -m bert
 groupadd sudoers
 usermod -aG sudoers bert
 passwd bert
-
-pacman -Syu sudo vim ufw knockd lighttpd git
 ----
 
 allow group 'sudoers' to use sudo (in conf file):
@@ -263,13 +261,14 @@ Create dotfiles & tools:
 
 [source,shell]
 ----
-mkdir ~/tools && cd ~/tools git clone
+mkdir ~/tools && cd ~/tools
 git clone https://github.com/bergoid/lswrappers.git
 git clone https://github.com/bergoid/rabot.git
 git clone https://github.com/bergoid/gt.git
 git clone https://github.com/bergoid/preppy.git
-git clone https://github.com/bergoid/dotfiles.git dotfiles/install_dotfiles echo
-hostnameColour=27 > ~/.localConfig
+git clone https://github.com/bergoid/dotfiles.git
+dotfiles/install_dotfiles echo
+preppy_hostnameColor=27 > ~/.localConfig
 ----
 
 Customize root env:

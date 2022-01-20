@@ -7,6 +7,11 @@ theme = 'hugo-book-master'
 publishDir = 'docs'
 pluralizelisttitles = false
 
+[security]
+  [security.exec]
+      allow = ['^asciidoctor$']
+
+
 ###################
 #
 # Book theme options

@@ -64,6 +64,17 @@ HTML Tips (2020)
 https://markodenic.com/html-tips/
 https://news.ycombinator.com/item?id=27054348
 
+Drop-in CSS Frameworks
+https://github.com/sw-yx/spark-joy#cssui-templates
+
+List of awesome CSS frameworks
+https://github.com/troxler/awesome-css-frameworks
+
+Simple.css
+https://simplecss.org/
+
+Water.css
+https://watercss.netlify.app/
 
 ==== JS
 
