@@ -1111,3 +1111,20 @@ pg_dump --username=MYUSERNAME --file=MYDUMPFILE --format=custom DBNAME
 
 pg_restore --username=MYUSERNAME --clean --dbname=DBNAME MYDUMPFILE
 --
+
+
+== Google Test
+
+=== Filter tests at compile-time
+
+[source,c++]
+--
+int main(int argc, char **argv)
+{
+  ::testing::GTEST_FLAG(filter) = "testSuiteName.testName";
+  ::testing::InitGoogleTest(&argc, argv);
+  RUN_ALL_TESTS();
+}
+--
+
+This is equivalent to the run-time argument: `--gtest_filter=testSuiteName.testName`
