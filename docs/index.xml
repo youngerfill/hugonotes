@@ -6,240 +6,220 @@
     <description>Recent content on hugonotes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Oct 2021 10:10:12 +0200</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Oct 2021 10:10:12 +0200</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Links</title>
       <link>/notes/links.html</link>
       <pubDate>Sat, 02 Oct 2021 10:10:12 +0200</pubDate>
-      
       <guid>/notes/links.html</guid>
       <description>Technical Mobile The Search for a FLOSS Mobile OS (Aug 2021) https://blog.emacsen.net/blog/2021/08/23/floss-mobile-os-aug-2021/ https://news.ycombinator.com/item?id=28296738
-  Programming Data Structures and Algorithms in JavaScript https://news.ycombinator.com/item?id=20634409 https://amejiarosario.gumroad.com/l/dsajs
- John Carmack on Functional Programming (2013 https://news.ycombinator.com/item?id=15036591
- A Thought Experiment: Using the ECS Pattern Outside of Game Engines https://news.ycombinator.com/item?id=21892126 https://adventures.michaelfbryan.com/posts/ecs-outside-of-games/ https://en.m.wikipedia.org/wiki/Entity_component_system#Characteristics
-  Web HTML, CSS Scrollspy with ‘just JavaScript’ https://medium.com/p1xts-blog/scrollspy-with-just-javascript-3131c114abdc
- TypeSafe CSS https://uglyduck.ca/typesafe-sans-css/
- Ten modern layouts in one line of CSS https://web.</description>
+Programming Data Structures and Algorithms in JavaScript https://news.ycombinator.com/item?id=20634409 https://amejiarosario.gumroad.com/l/dsajs
+John Carmack on Functional Programming (2013 https://news.ycombinator.com/item?id=15036591
+A Thought Experiment: Using the ECS Pattern Outside of Game Engines https://news.ycombinator.com/item?id=21892126 https://adventures.michaelfbryan.com/posts/ecs-outside-of-games/ https://en.m.wikipedia.org/wiki/Entity_component_system#Characteristics
+Web HTML, CSS Scrollspy with ‘just JavaScript’ https://medium.com/p1xts-blog/scrollspy-with-just-javascript-3131c114abdc
+TypeSafe CSS https://uglyduck.ca/typesafe-sans-css/
+Ten modern layouts in one line of CSS https://web.dev/one-line-layouts/ https://news.ycombinator.com/item?id=24003385
+My current HTML boilerplate https://www.matuzo.at/blog/html-boilerplate/ https://news.</description>
     </item>
-    
     <item>
       <title>Installing Arch Linux on a VPS</title>
       <link>/arch/vps.html</link>
       <pubDate>Fri, 01 Oct 2021 18:21:42 +0200</pubDate>
-      
       <guid>/arch/vps.html</guid>
-      <description>1. Base system  Create VPS, pick Debian 9.3 as OS.   -→ didn’t work 2nd time, stuck in 1st reboot  picked centos and worked
-      Copy bootstrap files from M:\vm\isovps2arch to M:\mshare\vps2arch and cd into the latter folder.
- Upload bootstrap files to the newly created VPS:
- scp * root@IP_ADDRESS:   Log into the VPS
- chmod +x vps2arch mv * / &amp;amp;&amp;amp; cd / .</description>
+      <description>1. Base system Create VPS, pick Debian 9.3 as OS. -→ didn’t work 2nd time, stuck in 1st reboot picked centos and worked
+Copy bootstrap files from M:\vm\isovps2arch to M:\mshare\vps2arch and cd into the latter folder.
+Upload bootstrap files to the newly created VPS:
+scp * root@IP_ADDRESS: Log into the VPS
+chmod +x vps2arch mv * / &amp;amp;&amp;amp; cd / ./vps2arch echo HOSTNAME &amp;gt; /etc/hostname sync; reboot -f 2. Create user useradd -m bert groupadd sudoers usermod -aG sudoers bert passwd bert pacman -Syu sudo vim ufw knockd lighttpd git allow group &amp;#39;sudoers&amp;#39; to use sudo (in conf file):</description>
     </item>
-    
     <item>
       <title>Installing Arch Linux in VirtualBox</title>
       <link>/arch/virtualbox.html</link>
       <pubDate>Fri, 01 Oct 2021 18:18:58 +0200</pubDate>
-      
       <guid>/arch/virtualbox.html</guid>
-      <description>1. Arch Linux .iso file  archlinux-2018.02.01-x86_64.iso  from: https://archlinux.cu.be/iso/2018.02.01/archlinux-2018.02.01-x86_64.iso saved at: &amp;#34;M:vmisoarchlinux-2018.02.01-x86_64.iso&amp;#34;
-    2. VirtualBox:   
- This document applies to v5.2.6    Help/About VirtualBox
-  File/Check for updates
-        
- in File/Preferences    General: check vm default location: &amp;#34;M:vm&amp;#34;
-        
- in File/Host Network Manager     +</description>
+      <description>1. Arch Linux .iso file archlinux-2018.02.01-x86_64.iso from: https://archlinux.cu.be/iso/2018.02.01/archlinux-2018.02.01-x86_64.iso saved at: &amp;#34;M:vmisoarchlinux-2018.02.01-x86_64.iso&amp;#34;
+2. VirtualBox: This document applies to v5.2.6 Help/About VirtualBox
+File/Check for updates
+in File/Preferences General: check vm default location: &amp;#34;M:vm&amp;#34;
+in File/Host Network Manager +
+Create host-only network Set the IP address, e.g. : 192.168.236.2
+Network mask : 255.255.255.0
+new vm +
+name: yeba make sure &amp;#34;M:vmyeba&amp;#34; doesn’t exist before creation of VM
+type/version: arch linux 64 bit</description>
     </item>
-    
     <item>
       <title>Installing Arch Linux on a PC</title>
       <link>/arch/pc.html</link>
       <pubDate>Fri, 01 Oct 2021 18:17:19 +0200</pubDate>
-      
       <guid>/arch/pc.html</guid>
       <description>This guide explains how to install vanilla Arch Linux on a PC.
- Prerequisites   
- A PC or a laptop, with    a USB port
-  wifi adapter
-  a HDD with contents that are no longer needed
-        A USB stick with contents that are no longer needed.
-  A PC with a working operating system and internet access.</description>
+Prerequisites A PC or a laptop, with a USB port
+wifi adapter
+a HDD with contents that are no longer needed
+A USB stick with contents that are no longer needed.
+A PC with a working operating system and internet access. This may also be the machine we will install Arch Linux on. We will assume a Linux(-like) environment with &amp;#39;curl&amp;#39; and &amp;#39;dd&amp;#39;</description>
     </item>
-    
     <item>
       <title>Exercise 1.07</title>
       <link>/sicp/chapter01/exercise-1.07.html</link>
       <pubDate>Fri, 01 Oct 2021 15:49:32 +0200</pubDate>
-      
       <guid>/sicp/chapter01/exercise-1.07.html</guid>
-      <description>Background: Section 1.1.7, Square Roots by Newton’s Method (define (square x) (* x x)) (define (average x y) (/ (+ x y) 2)) (define (improve guess x) (average guess (/ x guess))) (define (good-enough? guess x) (&amp;lt; (abs (- (square guess) x)) 0.001)) (define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) (define (sqrt x) (sqrt-iter 1.0 x))     Question: The good-enough? test used in computing square roots will not be very effective for finding the square roots of very small numbers.</description>
+      <description>Background: Section 1.1.7, Square Roots by Newton’s Method (define (square x) (* x x)) (define (average x y) (/ (+ x y) 2)) (define (improve guess x) (average guess (/ x guess))) (define (good-enough? guess x) (&amp;lt; (abs (- (square guess) x)) 0.001)) (define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) (define (sqrt x) (sqrt-iter 1.0 x)) Question: The good-enough? test used in computing square roots will not be very effective for finding the square roots of very small numbers.</description>
     </item>
-    
     <item>
       <title>Exercise 1.06</title>
       <link>/sicp/chapter01/exercise-1.06.html</link>
       <pubDate>Fri, 01 Oct 2021 15:48:01 +0200</pubDate>
-      
       <guid>/sicp/chapter01/exercise-1.06.html</guid>
-      <description>Background: Section 1.1.7, Square Roots by Newton’s Method (define (square x) (* x x)) (define (average x y) (/ (+ x y) 2)) (define (improve guess x) (average guess (/ x guess))) (define (good-enough? guess x) (&amp;lt; (abs (- (square guess) x)) 0.001)) (define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) (define (sqrt x) (sqrt-iter 1.0 x))     Question: Alyssa P. Hacker doesn’t see why if needs to be provided as a special form.</description>
+      <description>Background: Section 1.1.7, Square Roots by Newton’s Method (define (square x) (* x x)) (define (average x y) (/ (+ x y) 2)) (define (improve guess x) (average guess (/ x guess))) (define (good-enough? guess x) (&amp;lt; (abs (- (square guess) x)) 0.001)) (define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) (define (sqrt x) (sqrt-iter 1.0 x)) Question: Alyssa P. Hacker doesn’t see why if needs to be provided as a special form.</description>
     </item>
-    
     <item>
       <title>Exercise 1.05</title>
       <link>/sicp/chapter01/exercise-1.05.html</link>
       <pubDate>Fri, 01 Oct 2021 15:46:39 +0200</pubDate>
-      
       <guid>/sicp/chapter01/exercise-1.05.html</guid>
       <description>Question: Ben Bitdiddle has invented a test to determine whether the interpreter he is faced with is using applicative-order evaluation or normal-order evaluation. He defines the following two procedures:
- (define (p) (p)) (define (test x y) (if (= x 0) 0 y))   Then he evaluates the expression
- (test 0 (p))   What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation?</description>
+(define (p) (p)) (define (test x y) (if (= x 0) 0 y)) Then he evaluates the expression
+(test 0 (p)) What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation?</description>
     </item>
-    
     <item>
       <title>Exercise 1.04</title>
       <link>/sicp/chapter01/exercise-1.04.html</link>
       <pubDate>Fri, 01 Oct 2021 15:43:40 +0200</pubDate>
-      
       <guid>/sicp/chapter01/exercise-1.04.html</guid>
       <description>Question: Observe that our model of evaluation allows for combinations whose operators are compound expressions. Use this observation to describe the behavior of the following procedure:
- (define (a-plus-abs-b a b) ((if (&amp;gt; b 0) + -) a b))     Answer: In the body of a-plus-abs-b a b, the expression (if (&amp;gt; b 0) + -) evaluates to an arithmetic operation (either + or -, depending on the sign of b’s actual argument).</description>
+(define (a-plus-abs-b a b) ((if (&amp;gt; b 0) + -) a b)) Answer: In the body of a-plus-abs-b a b, the expression (if (&amp;gt; b 0) + -) evaluates to an arithmetic operation (either + or -, depending on the sign of b’s actual argument).</description>
     </item>
-    
     <item>
       <title>Exercise 1.03</title>
       <link>/sicp/chapter01/exercise-1.03.html</link>
       <pubDate>Fri, 01 Oct 2021 15:42:25 +0200</pubDate>
-      
       <guid>/sicp/chapter01/exercise-1.03.html</guid>
-      <description>Question: Define a procedure that takes three numbers as arguments and returns the sum of the squares of the two larger numbers.
-   Answer: (define (square x) (* x x)) (define (sum-of-squares x y) (+ (square x) (square y))) (define (sum-squares-larger a b c) (cond ((and (&amp;lt;= a b) (&amp;lt;= a c)) (sum-of-squares b c)) ((and (&amp;lt;= b a) (&amp;lt;= b c)) (sum-of-squares a c)) (else (sum-of-squares a b))))     </description>
+      <description> Question: Define a procedure that takes three numbers as arguments and returns the sum of the squares of the two larger numbers.
+Answer: (define (square x) (* x x)) (define (sum-of-squares x y) (+ (square x) (square y))) (define (sum-squares-larger a b c) (cond ((and (&amp;lt;= a b) (&amp;lt;= a c)) (sum-of-squares b c)) ((and (&amp;lt;= b a) (&amp;lt;= b c)) (sum-of-squares a c)) (else (sum-of-squares a b)))) </description>
     </item>
-    
     <item>
       <title>Exercise 1.02</title>
       <link>/sicp/chapter01/exercise-1.02.html</link>
       <pubDate>Fri, 01 Oct 2021 15:38:53 +0200</pubDate>
-      
       <guid>/sicp/chapter01/exercise-1.02.html</guid>
       <description>Question: todo
- (+ 1 2)     Answer: todo
-   </description>
+(+ 1 2) Answer: todo</description>
     </item>
-    
     <item>
       <title>Exercise 1.01</title>
       <link>/sicp/chapter01/exercise-1.01.html</link>
       <pubDate>Fri, 01 Oct 2021 15:34:34 +0200</pubDate>
-      
       <guid>/sicp/chapter01/exercise-1.01.html</guid>
-      <description>Question: Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
- 10 (+ 5 3 4) (- 9 1) (/ 6 2) (+ (* 2 4) (- 4 6)) (define a 3) (define b (+ a 1)) (+ a b (* a b)) (= a b) (if (and (&amp;gt; b a) (&amp;lt; b (* a b))) b a) (cond ((= a 4) 6) ((= b 4) (+ 6 7 a)) (else 25)) (+ 2 (if (&amp;gt; b a) b a)) (* (cond ((&amp;gt; a b) a) ((&amp;lt; a b) b) (else -1)) (+ a 1))     Answer: &amp;gt; 10 10 &amp;gt; (+ 5 3 4) 12 &amp;gt; (- 9 1) 8 &amp;gt; (/ 6 2) 3 &amp;gt; (+ (* 2 4) (- 4 6)) 6 &amp;gt; (define a 3) &amp;gt; (define b (+ a 1)) &amp;gt; (+ a b (* a b)) 19 &amp;gt; (= a b) #f &amp;gt; (if (and (&amp;gt; b a) (&amp;lt; b (* a b))) b a) 4 &amp;gt; (cond ((= a 4) 6) ((= b 4) (+ 6 7 a)) (else 25)) 16 &amp;gt; (+ 2 (if (&amp;gt; b a) b a)) 6 &amp;gt; (* (cond ((&amp;gt; a b) a) ((&amp;lt; a b) b) (else -1)) (+ a 1)) 16     </description>
+      <description> Question: Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
+10 (+ 5 3 4) (- 9 1) (/ 6 2) (+ (* 2 4) (- 4 6)) (define a 3) (define b (+ a 1)) (+ a b (* a b)) (= a b) (if (and (&amp;gt; b a) (&amp;lt; b (* a b))) b a) (cond ((= a 4) 6) ((= b 4) (+ 6 7 a)) (else 25)) (+ 2 (if (&amp;gt; b a) b a)) (* (cond ((&amp;gt; a b) a) ((&amp;lt; a b) b) (else -1)) (+ a 1)) Answer: &amp;gt; 10 10 &amp;gt; (+ 5 3 4) 12 &amp;gt; (- 9 1) 8 &amp;gt; (/ 6 2) 3 &amp;gt; (+ (* 2 4) (- 4 6)) 6 &amp;gt; (define a 3) &amp;gt; (define b (+ a 1)) &amp;gt; (+ a b (* a b)) 19 &amp;gt; (= a b) #f &amp;gt; (if (and (&amp;gt; b a) (&amp;lt; b (* a b))) b a) 4 &amp;gt; (cond ((= a 4) 6) ((= b 4) (+ 6 7 a)) (else 25)) 16 &amp;gt; (+ 2 (if (&amp;gt; b a) b a)) 6 &amp;gt; (* (cond ((&amp;gt; a b) a) ((&amp;lt; a b) b) (else -1)) (+ a 1)) 16 </description>
     </item>
-    
     <item>
       <title>Minecraft tips</title>
       <link>/notes/mctips.html</link>
       <pubDate>Fri, 01 Oct 2021 14:13:46 +0200</pubDate>
-      
       <guid>/notes/mctips.html</guid>
       <description>Hoofden zetten Plaats het hoofd van SpelerNaam in je inventaris: :
- /give @p skull 1 3 {SkullOwner:&amp;#34;SpelerNaam&amp;#34;}   Plaats het hoofd van een ghast in je inventaris: :
- /give @p skull 1 3 {SkullOwner:&amp;#34;MHF_Ghast&amp;#34;}   Voor andere mobs: vervang MHF_Ghast door: :
- MHF_Alex MHF_Blaze MHF_CaveSpider MHF_Chicken MHF_Cow MHF_Creeper MHF_Enderman MHF_Ghast MHF_Golem MHF_Herobrine MHF_LavaSlime MHF_MushroomCow MHF_Ocelot MHF_Pig MHF_PigZombie MHF_Sheep MHF_Skeleton MHF_Slime MHF_Spider MHF_Squid MHF_Steve MHF_Villager MHF_WSkeleton MHF_Zombie   Blokken: :</description>
+/give @p skull 1 3 {SkullOwner:&amp;#34;SpelerNaam&amp;#34;} Plaats het hoofd van een ghast in je inventaris: :
+/give @p skull 1 3 {SkullOwner:&amp;#34;MHF_Ghast&amp;#34;} Voor andere mobs: vervang MHF_Ghast door: :
+MHF_Alex MHF_Blaze MHF_CaveSpider MHF_Chicken MHF_Cow MHF_Creeper MHF_Enderman MHF_Ghast MHF_Golem MHF_Herobrine MHF_LavaSlime MHF_MushroomCow MHF_Ocelot MHF_Pig MHF_PigZombie MHF_Sheep MHF_Skeleton MHF_Slime MHF_Spider MHF_Squid MHF_Steve MHF_Villager MHF_WSkeleton MHF_Zombie Blokken: :
+MHF_Cactus MHF_Cake MHF_Chest MHF_CoconutB MHF_CoconutG MHF_Melon MHF_OakLog MHF_Present1 MHF_Present2 MHF_Pumpkin MHF_TNT MHF_TNT2 Bonus: :</description>
     </item>
-    
     <item>
       <title>Babs</title>
       <link>/notes/babs.html</link>
       <pubDate>Fri, 01 Oct 2021 14:11:28 +0200</pubDate>
-      
       <guid>/notes/babs.html</guid>
       <description>Introduction babs, (an acronym for &amp;#34;babs: a build system&amp;#34;) is a set of Makefiles meant to easily compile &amp;amp; link a set of interdependent modules, containing C/C++ source code, binaries like object files, static or dynamic libraries, etc …​
-   Environment variables In order to do its work, babs needs 3 environment variables:
-   BABS_DIR : the directory where the babs build system is located.
-  SOURCE_DIR : the directory where the source modules are located.</description>
+Environment variables In order to do its work, babs needs 3 environment variables:
+BABS_DIR : the directory where the babs build system is located.
+SOURCE_DIR : the directory where the source modules are located.</description>
     </item>
-    
     <item>
       <title>Headless install of Arch Linux on Raspberry Pi Zero W</title>
       <link>/notes/rp0w.html</link>
       <pubDate>Fri, 01 Oct 2021 14:06:50 +0200</pubDate>
-      
       <guid>/notes/rp0w.html</guid>
-      <description>Prerequisites  Arch Linux, with the following packages  dosfstools wpa_supplicant
-   Micro SD card
- USB stick with slot for Micro SD Card
- Raspberry Pi Zero W
-   Create an Arch Linux ARM system TODO : chroot binfmt qemu
-   Partition Micro SD Card In Linux, list the available devices: :
- sudo fdisk -l   If Linux is running inside VirtualBox, consult the list of devices in: Devices&amp;gt;USB</description>
+      <description>Prerequisites Arch Linux, with the following packages dosfstools wpa_supplicant
+Micro SD card
+USB stick with slot for Micro SD Card
+Raspberry Pi Zero W
+Create an Arch Linux ARM system TODO : chroot binfmt qemu
+Partition Micro SD Card In Linux, list the available devices: :
+sudo fdisk -l If Linux is running inside VirtualBox, consult the list of devices in: Devices&amp;gt;USB
+Insert the Micro SD card in the USB adapter, and insert the adapter in a USB port.</description>
     </item>
-    
     <item>
       <title>Syntax highlighting</title>
       <link>/testbed/highlight.html</link>
       <pubDate>Fri, 01 Oct 2021 14:03:26 +0200</pubDate>
-      
       <guid>/testbed/highlight.html</guid>
-      <description>C++ program #include &amp;lt;iostream&amp;gt; using namespace std; int main() { cout &amp;lt;&amp;lt; &amp;#34;Hello world!&amp;#34; &amp;lt;&amp;lt; endl; return 0; }     C program #include &amp;lt;stdlib.h&amp;gt; #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;dlfcn.h&amp;gt; int main(int argc, char **argv) { void *handle; char *error; void (*fun)(); char fileName[300]; char* buildDir = getenv(&amp;#34;BUILD_DIR&amp;#34;); sprintf(fileName, &amp;#34;%s/toolkit/libtoolkit.so.1.0.0&amp;#34;, buildDir); printf(&amp;#34;fileName = %s\n&amp;#34;, fileName); printf(&amp;#34;mark1\n&amp;#34;); dlerror(); handle = dlopen ( fileName , RTLD_LAZY); if (!handle) { fputs (dlerror(), stderr); printf(&amp;#34;\n&amp;#34;); exit(1); } printf(&amp;#34;mark2\n&amp;#34;); fun = (void (*)()) dlsym(handle, &amp;#34;testfun1&amp;#34;); if ((error = dlerror()) !</description>
+      <description>C++ program #include &amp;lt;iostream&amp;gt; using namespace std; int main() { cout &amp;lt;&amp;lt; &amp;#34;Hello world!&amp;#34; &amp;lt;&amp;lt; endl; return 0; } C program #include &amp;lt;stdlib.h&amp;gt; #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;dlfcn.h&amp;gt; int main(int argc, char **argv) { void *handle; char *error; void (*fun)(); char fileName[300]; char* buildDir = getenv(&amp;#34;BUILD_DIR&amp;#34;); sprintf(fileName, &amp;#34;%s/toolkit/libtoolkit.so.1.0.0&amp;#34;, buildDir); printf(&amp;#34;fileName = %s\n&amp;#34;, fileName); printf(&amp;#34;mark1\n&amp;#34;); dlerror(); handle = dlopen ( fileName , RTLD_LAZY); if (!handle) { fputs (dlerror(), stderr); printf(&amp;#34;\n&amp;#34;); exit(1); } printf(&amp;#34;mark2\n&amp;#34;); fun = (void (*)()) dlsym(handle, &amp;#34;testfun1&amp;#34;); if ((error = dlerror()) !</description>
     </item>
-    
     <item>
       <title>Android</title>
       <link>/notes/android.html</link>
       <pubDate>Fri, 01 Oct 2021 13:54:23 +0200</pubDate>
-      
       <guid>/notes/android.html</guid>
       <description>Nexus 10 Boot in recovery mode https://www.android.gs/how-to-boot-google-nexus-10-recovery-mode/
- Reset to factory defaults https://www.android.gs/how-to-hard-reset-the-google-nexus-10/
-     </description>
+Reset to factory defaults https://www.android.gs/how-to-hard-reset-the-google-nexus-10/</description>
     </item>
-    
     <item>
       <title>Cheatsheet</title>
       <link>/notes/cheatsheet.html</link>
       <pubDate>Fri, 01 Oct 2021 13:26:18 +0200</pubDate>
-      
       <guid>/notes/cheatsheet.html</guid>
-      <description>Check folder size: du -sh foldername/     Clear trash folder (Ubuntu &amp;amp; friends): rm -rf ~/.local/share/Trash/files ~/.local/share/Trash/info     Arch Linux guest VM in VirtualBox: Restore networking: sudo ip link set enp0s8 down &amp;amp;&amp;amp; sudo ip link set enp0s8 up &amp;amp;&amp;amp; curl www.google.com    Mount USB drive Before inserting the USB drive, show list of devices: :
- sudo lsblk -f   Insert USB drive, and select device in VirtualBox GUI menu ( Devices &amp;gt; USB &amp;gt; …​ )</description>
+      <description>Check folder size: du -sh foldername/ Clear trash folder (Ubuntu &amp;amp; friends): rm -rf ~/.local/share/Trash/files ~/.local/share/Trash/info Arch Linux guest VM in VirtualBox: Restore networking: sudo ip link set enp0s8 down &amp;amp;&amp;amp; sudo ip link set enp0s8 up &amp;amp;&amp;amp; curl www.google.com Mount USB drive Before inserting the USB drive, show list of devices: :
+sudo lsblk -f Insert USB drive, and select device in VirtualBox GUI menu ( Devices &amp;gt; USB &amp;gt; …​ )</description>
     </item>
-    
     <item>
       <title>Asciidoc markup</title>
       <link>/testbed/asciidoc.html</link>
       <pubDate>Fri, 01 Oct 2021 10:37:14 +0200</pubDate>
-      
       <guid>/testbed/asciidoc.html</guid>
-      <description>Text formatting     Description Syntax Result Remark     Emphasis, quotes
- One &amp;#39;Two&amp;#39; Three
- One &amp;#39;Two&amp;#39; Three
-    Emphasis, underscores
- One Two Three
- One Two Three
-    Emphasis, quotes, unconstrained
- One&amp;#39;&amp;#39;Two&amp;#39;&amp;#39;Three
- One&amp;#39;&amp;#39;Two&amp;#39;&amp;#39;Three
-    Emphasis, underscores, unconstrained
- OneTwoThree
- OneTwoThree
-    Strong
- One Two Three
- One Two Three</description>
+      <description>Text formatting Description Syntax Result Remark Emphasis, quotes
+One &amp;#39;Two&amp;#39; Three
+One &amp;#39;Two&amp;#39; Three
+Emphasis, underscores
+One Two Three
+One Two Three
+Emphasis, quotes, unconstrained
+One&amp;#39;&amp;#39;Two&amp;#39;&amp;#39;Three
+One&amp;#39;&amp;#39;Two&amp;#39;&amp;#39;Three
+Emphasis, underscores, unconstrained
+OneTwoThree
+OneTwoThree
+Strong
+One Two Three
+One Two Three
+Strong, unconstrained
+OneTwoThree
+OneTwoThree
+Monospace
+One +Two+ Three
+One Two Three
+Monospace, unconstrained
+OneTwoThree
+OneTwoThree
+Single quote
+One `Two´ Three
+One `Two´ Three
+Doesn’t seem to work
+Double quotes
+One ``Two´´ Three</description>
     </item>
-    
     <item>
       <title>Installing Arch Linux on a Hetzner VPS</title>
       <link>/arch/hetzner.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/arch/hetzner.html</guid>
       <description>Boot live iso In the web config panel of the VPS, mount the Arch Linux .iso in your server &amp;amp; reboot. Connect to the server with the web console.
- loadkeys be-latin1   Network should work: :
- curl www.google.com   Syncronize the system clock with NTP :
- timedatectl set-ntp true   Create partition table :
- fdisk -l /dev/sda fdisk /dev/sda   First, create a partition (sda1) of size 32 MB (+32M).</description>
+loadkeys be-latin1 Network should work: :
+curl www.google.com Syncronize the system clock with NTP :
+timedatectl set-ntp true Create partition table :
+fdisk -l /dev/sda fdisk /dev/sda First, create a partition (sda1) of size 32 MB (+32M). Change its type to 1 (EFI System).</description>
     </item>
-    
   </channel>
 </rss>

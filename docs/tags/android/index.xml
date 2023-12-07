@@ -6,17 +6,15 @@
     <description>Recent content in android on hugonotes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Oct 2021 13:54:23 +0200</lastBuildDate><atom:link href="/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Oct 2021 13:54:23 +0200</lastBuildDate>
+    <atom:link href="/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android</title>
       <link>/notes/android.html</link>
       <pubDate>Fri, 01 Oct 2021 13:54:23 +0200</pubDate>
-      
       <guid>/notes/android.html</guid>
       <description>Nexus 10 Boot in recovery mode https://www.android.gs/how-to-boot-google-nexus-10-recovery-mode/
- Reset to factory defaults https://www.android.gs/how-to-hard-reset-the-google-nexus-10/
-     </description>
+Reset to factory defaults https://www.android.gs/how-to-hard-reset-the-google-nexus-10/</description>
     </item>
-    
   </channel>
 </rss>

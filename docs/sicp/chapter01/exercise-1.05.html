@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Question: Ben Bitdiddle has invented a test to determine whether the interpreter he is faced with is using applicative-order evaluation or normal-order evaluation. He defines the following two procedures:
- (define (p) (p)) (define (test x y) (if (= x 0) 0 y))   Then he evaluates the expression
- (test 0 (p))   What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation?">
+(define (p) (p)) (define (test x y) (if (= x 0) 0 y)) Then he evaluates the expression
+(test 0 (p)) What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation?">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="Exercise 1.05" />
 <meta property="og:description" content="Question: Ben Bitdiddle has invented a test to determine whether the interpreter he is faced with is using applicative-order evaluation or normal-order evaluation. He defines the following two procedures:
- (define (p) (p)) (define (test x y) (if (= x 0) 0 y))   Then he evaluates the expression
- (test 0 (p))   What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation?" />
+(define (p) (p)) (define (test x y) (if (= x 0) 0 y)) Then he evaluates the expression
+(test 0 (p)) What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/sicp/chapter01/exercise-1.05.html" /><meta property="article:section" content="sicp" />
 <meta property="article:published_time" content="2021-10-01T15:46:39+02:00" />
@@ -21,7 +21,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.6c2dce7e486690682767f7d6f2b6bf8494ef25496900abdfc87a2e1d218de84f.js" ></script>
+  <script defer src="../../en.search.min.efe2bf6dcb035ba111eda6a1fb14332cd073b9b9cc15cd43f41f1d3bb7dcb966.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -408,7 +408,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -437,7 +437,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+
 
 
 
@@ -539,7 +539,7 @@ is returned.</p>
 
 
 
-  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
@@ -562,7 +562,7 @@ is returned.</p>
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+
 
 
  

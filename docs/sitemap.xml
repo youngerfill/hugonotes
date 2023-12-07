@@ -20,10 +20,10 @@
     <loc>/tags.html</loc>
     <lastmod>2021-10-02T10:10:12+02:00</lastmod>
   </url><url>
-    <loc>/arch.html</loc>
+    <loc>/tags/arch.html</loc>
     <lastmod>2021-10-01T18:21:42+02:00</lastmod>
   </url><url>
-    <loc>/tags/arch.html</loc>
+    <loc>/arch.html</loc>
     <lastmod>2021-10-01T18:21:42+02:00</lastmod>
   </url><url>
     <loc>/arch/vps.html</loc>
@@ -38,10 +38,10 @@
     <loc>/sicp/chapter01/exercise-1.07.html</loc>
     <lastmod>2021-10-01T15:49:32+02:00</lastmod>
   </url><url>
-    <loc>/sicp.html</loc>
+    <loc>/tags/sicp.html</loc>
     <lastmod>2021-10-01T15:49:32+02:00</lastmod>
   </url><url>
-    <loc>/tags/sicp.html</loc>
+    <loc>/sicp.html</loc>
     <lastmod>2021-10-01T15:49:32+02:00</lastmod>
   </url><url>
     <loc>/sicp/chapter01/exercise-1.06.html</loc>
@@ -68,10 +68,10 @@
     <loc>/notes/mctips.html</loc>
     <lastmod>2021-10-01T14:13:46+02:00</lastmod>
   </url><url>
-    <loc>/notes/babs.html</loc>
+    <loc>/tags/babs.html</loc>
     <lastmod>2021-10-01T14:11:28+02:00</lastmod>
   </url><url>
-    <loc>/tags/babs.html</loc>
+    <loc>/notes/babs.html</loc>
     <lastmod>2021-10-01T14:11:28+02:00</lastmod>
   </url><url>
     <loc>/notes/rp0w.html</loc>
@@ -86,10 +86,10 @@
     <loc>/testbed.html</loc>
     <lastmod>2021-10-01T14:03:26+02:00</lastmod>
   </url><url>
-    <loc>/notes/android.html</loc>
+    <loc>/tags/android.html</loc>
     <lastmod>2021-10-01T13:54:23+02:00</lastmod>
   </url><url>
-    <loc>/tags/android.html</loc>
+    <loc>/notes/android.html</loc>
     <lastmod>2021-10-01T13:54:23+02:00</lastmod>
   </url><url>
     <loc>/notes/cheatsheet.html</loc>

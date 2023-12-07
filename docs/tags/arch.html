@@ -15,7 +15,7 @@
 <link rel="icon" href="../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
   <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../en.search.min.6c2dce7e486690682767f7d6f2b6bf8494ef25496900abdfc87a2e1d218de84f.js" ></script>
+  <script defer src="../en.search.min.efe2bf6dcb035ba111eda6a1fb14332cd073b9b9cc15cd43f41f1d3bb7dcb966.js" ></script>
 <link rel="alternate" type="application/rss+xml" href="../tags/arch/index.xml" title="hugonotes" />
 <!--
 Made with Book Theme
@@ -403,7 +403,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -530,11 +530,11 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>1. Base system  Create VPS, pick Debian 9.3 as OS.   -→ didn’t work 2nd time, stuck in 1st reboot  picked centos and worked
-      Copy bootstrap files from M:\vm\isovps2arch to M:\mshare\vps2arch and cd into the latter folder.
- Upload bootstrap files to the newly created VPS:
- scp * root@IP_ADDRESS:   Log into the VPS
- chmod +x vps2arch mv * / &amp;&amp; cd / .
+    <p>1. Base system Create VPS, pick Debian 9.3 as OS. -→ didn’t work 2nd time, stuck in 1st reboot picked centos and worked
+Copy bootstrap files from M:\vm\isovps2arch to M:\mshare\vps2arch and cd into the latter folder.
+Upload bootstrap files to the newly created VPS:
+scp * root@IP_ADDRESS: Log into the VPS
+chmod +x vps2arch mv * / &amp;&amp; cd / ./vps2arch echo HOSTNAME &gt; /etc/hostname sync; reboot -f 2. Create user useradd -m bert groupadd sudoers usermod -aG sudoers bert passwd bert pacman -Syu sudo vim ufw knockd lighttpd git allow group &#39;sudoers&#39; to use sudo (in conf file):
         <a href="../arch/vps.html">...</a>
       
     </p>
@@ -561,14 +561,16 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>1. Arch Linux .iso file  archlinux-2018.02.01-x86_64.iso  from: https://archlinux.cu.be/iso/2018.02.01/archlinux-2018.02.01-x86_64.iso saved at: &#34;M:vmisoarchlinux-2018.02.01-x86_64.iso&#34;
-    2. VirtualBox:   
- This document applies to v5.2.6    Help/About VirtualBox
-  File/Check for updates
-        
- in File/Preferences    General: check vm default location: &#34;M:vm&#34;
-        
- in File/Host Network Manager     +
+    <p>1. Arch Linux .iso file archlinux-2018.02.01-x86_64.iso from: https://archlinux.cu.be/iso/2018.02.01/archlinux-2018.02.01-x86_64.iso saved at: &#34;M:vmisoarchlinux-2018.02.01-x86_64.iso&#34;
+2. VirtualBox: This document applies to v5.2.6 Help/About VirtualBox
+File/Check for updates
+in File/Preferences General: check vm default location: &#34;M:vm&#34;
+in File/Host Network Manager +
+Create host-only network Set the IP address, e.g. : 192.168.236.2
+Network mask : 255.255.255.0
+new vm +
+name: yeba make sure &#34;M:vmyeba&#34; doesn’t exist before creation of VM
+type/version: arch linux 64 bit
         <a href="../arch/virtualbox.html">...</a>
       
     </p>
@@ -596,12 +598,11 @@ https://github.com/alex-shpak/hugo-book
 
 
     <p>This guide explains how to install vanilla Arch Linux on a PC.
- Prerequisites   
- A PC or a laptop, with    a USB port
-  wifi adapter
-  a HDD with contents that are no longer needed
-        A USB stick with contents that are no longer needed.
-  A PC with a working operating system and internet access.
+Prerequisites A PC or a laptop, with a USB port
+wifi adapter
+a HDD with contents that are no longer needed
+A USB stick with contents that are no longer needed.
+A PC with a working operating system and internet access. This may also be the machine we will install Arch Linux on. We will assume a Linux(-like) environment with &#39;curl&#39; and &#39;dd&#39;
         <a href="../arch/pc.html">...</a>
       
     </p>
@@ -627,10 +628,10 @@ https://github.com/alex-shpak/hugo-book
 
 
     <p>Boot live iso In the web config panel of the VPS, mount the Arch Linux .iso in your server &amp; reboot. Connect to the server with the web console.
- loadkeys be-latin1   Network should work: :
- curl www.google.com   Syncronize the system clock with NTP :
- timedatectl set-ntp true   Create partition table :
- fdisk -l /dev/sda fdisk /dev/sda   First, create a partition (sda1) of size 32 MB (+32M).
+loadkeys be-latin1 Network should work: :
+curl www.google.com Syncronize the system clock with NTP :
+timedatectl set-ntp true Create partition table :
+fdisk -l /dev/sda fdisk /dev/sda First, create a partition (sda1) of size 32 MB (+32M). Change its type to 1 (EFI System).
         <a href="../arch/hetzner.html">...</a>
       
     </p>
@@ -653,7 +654,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

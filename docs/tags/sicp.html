@@ -15,7 +15,7 @@
 <link rel="icon" href="../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
   <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../en.search.min.6c2dce7e486690682767f7d6f2b6bf8494ef25496900abdfc87a2e1d218de84f.js" ></script>
+  <script defer src="../en.search.min.efe2bf6dcb035ba111eda6a1fb14332cd073b9b9cc15cd43f41f1d3bb7dcb966.js" ></script>
 <link rel="alternate" type="application/rss+xml" href="../tags/sicp/index.xml" title="hugonotes" />
 <!--
 Made with Book Theme
@@ -403,7 +403,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -530,7 +530,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>Background: Section 1.1.7, Square Roots by Newton’s Method (define (square x) (* x x)) (define (average x y) (/ (+ x y) 2)) (define (improve guess x) (average guess (/ x guess))) (define (good-enough? guess x) (&lt; (abs (- (square guess) x)) 0.001)) (define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) (define (sqrt x) (sqrt-iter 1.0 x))     Question: The good-enough? test used in computing square roots will not be very effective for finding the square roots of very small numbers.
+    <p>Background: Section 1.1.7, Square Roots by Newton’s Method (define (square x) (* x x)) (define (average x y) (/ (+ x y) 2)) (define (improve guess x) (average guess (/ x guess))) (define (good-enough? guess x) (&lt; (abs (- (square guess) x)) 0.001)) (define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) (define (sqrt x) (sqrt-iter 1.0 x)) Question: The good-enough? test used in computing square roots will not be very effective for finding the square roots of very small numbers.
         <a href="../sicp/chapter01/exercise-1.07.html">...</a>
       
     </p>
@@ -557,7 +557,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>Background: Section 1.1.7, Square Roots by Newton’s Method (define (square x) (* x x)) (define (average x y) (/ (+ x y) 2)) (define (improve guess x) (average guess (/ x guess))) (define (good-enough? guess x) (&lt; (abs (- (square guess) x)) 0.001)) (define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) (define (sqrt x) (sqrt-iter 1.0 x))     Question: Alyssa P. Hacker doesn’t see why if needs to be provided as a special form.
+    <p>Background: Section 1.1.7, Square Roots by Newton’s Method (define (square x) (* x x)) (define (average x y) (/ (+ x y) 2)) (define (improve guess x) (average guess (/ x guess))) (define (good-enough? guess x) (&lt; (abs (- (square guess) x)) 0.001)) (define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) (define (sqrt x) (sqrt-iter 1.0 x)) Question: Alyssa P. Hacker doesn’t see why if needs to be provided as a special form.
         <a href="../sicp/chapter01/exercise-1.06.html">...</a>
       
     </p>
@@ -585,8 +585,8 @@ https://github.com/alex-shpak/hugo-book
 
 
     <p>Question: Ben Bitdiddle has invented a test to determine whether the interpreter he is faced with is using applicative-order evaluation or normal-order evaluation. He defines the following two procedures:
- (define (p) (p)) (define (test x y) (if (= x 0) 0 y))   Then he evaluates the expression
- (test 0 (p))   What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation?
+(define (p) (p)) (define (test x y) (if (= x 0) 0 y)) Then he evaluates the expression
+(test 0 (p)) What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation?
         <a href="../sicp/chapter01/exercise-1.05.html">...</a>
       
     </p>
@@ -614,7 +614,7 @@ https://github.com/alex-shpak/hugo-book
 
 
     <p>Question: Observe that our model of evaluation allows for combinations whose operators are compound expressions. Use this observation to describe the behavior of the following procedure:
- (define (a-plus-abs-b a b) ((if (&gt; b 0) + -) a b))     Answer: In the body of a-plus-abs-b a b, the expression (if (&gt; b 0) + -) evaluates to an arithmetic operation (either + or -, depending on the sign of b’s actual argument).
+(define (a-plus-abs-b a b) ((if (&gt; b 0) + -) a b)) Answer: In the body of a-plus-abs-b a b, the expression (if (&gt; b 0) + -) evaluates to an arithmetic operation (either + or -, depending on the sign of b’s actual argument).
         <a href="../sicp/chapter01/exercise-1.04.html">...</a>
       
     </p>
@@ -641,8 +641,8 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>Question: Define a procedure that takes three numbers as arguments and returns the sum of the squares of the two larger numbers.
-   Answer: (define (square x) (* x x)) (define (sum-of-squares x y) (+ (square x) (square y))) (define (sum-squares-larger a b c) (cond ((and (&lt;= a b) (&lt;= a c)) (sum-of-squares b c)) ((and (&lt;= b a) (&lt;= b c)) (sum-of-squares a c)) (else (sum-of-squares a b))))     
+    <p> Question: Define a procedure that takes three numbers as arguments and returns the sum of the squares of the two larger numbers.
+Answer: (define (square x) (* x x)) (define (sum-of-squares x y) (+ (square x) (square y))) (define (sum-squares-larger a b c) (cond ((and (&lt;= a b) (&lt;= a c)) (sum-of-squares b c)) ((and (&lt;= b a) (&lt;= b c)) (sum-of-squares a c)) (else (sum-of-squares a b)))) 
     </p>
   </article>
   
@@ -668,8 +668,7 @@ https://github.com/alex-shpak/hugo-book
 
 
     <p>Question: todo
- (+ 1 2)     Answer: todo
-   
+(+ 1 2) Answer: todo
     </p>
   </article>
   
@@ -694,8 +693,8 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>Question: Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
- 10 (+ 5 3 4) (- 9 1) (/ 6 2) (+ (* 2 4) (- 4 6)) (define a 3) (define b (+ a 1)) (+ a b (* a b)) (= a b) (if (and (&gt; b a) (&lt; b (* a b))) b a) (cond ((= a 4) 6) ((= b 4) (+ 6 7 a)) (else 25)) (+ 2 (if (&gt; b a) b a)) (* (cond ((&gt; a b) a) ((&lt; a b) b) (else -1)) (+ a 1))     Answer: &gt; 10 10 &gt; (+ 5 3 4) 12 &gt; (- 9 1) 8 &gt; (/ 6 2) 3 &gt; (+ (* 2 4) (- 4 6)) 6 &gt; (define a 3) &gt; (define b (+ a 1)) &gt; (+ a b (* a b)) 19 &gt; (= a b) #f &gt; (if (and (&gt; b a) (&lt; b (* a b))) b a) 4 &gt; (cond ((= a 4) 6) ((= b 4) (+ 6 7 a)) (else 25)) 16 &gt; (+ 2 (if (&gt; b a) b a)) 6 &gt; (* (cond ((&gt; a b) a) ((&lt; a b) b) (else -1)) (+ a 1)) 16     
+    <p> Question: Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
+10 (+ 5 3 4) (- 9 1) (/ 6 2) (+ (* 2 4) (- 4 6)) (define a 3) (define b (+ a 1)) (+ a b (* a b)) (= a b) (if (and (&gt; b a) (&lt; b (* a b))) b a) (cond ((= a 4) 6) ((= b 4) (+ 6 7 a)) (else 25)) (+ 2 (if (&gt; b a) b a)) (* (cond ((&gt; a b) a) ((&lt; a b) b) (else -1)) (+ a 1)) Answer: &gt; 10 10 &gt; (+ 5 3 4) 12 &gt; (- 9 1) 8 &gt; (/ 6 2) 3 &gt; (+ (* 2 4) (- 4 6)) 6 &gt; (define a 3) &gt; (define b (+ a 1)) &gt; (+ a b (* a b)) 19 &gt; (= a b) #f &gt; (if (and (&gt; b a) (&lt; b (* a b))) b a) 4 &gt; (cond ((= a 4) 6) ((= b 4) (+ 6 7 a)) (else 25)) 16 &gt; (+ 2 (if (&gt; b a) b a)) 6 &gt; (* (cond ((&gt; a b) a) ((&lt; a b) b) (else -1)) (+ a 1)) 16 
     </p>
   </article>
   
@@ -716,7 +715,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  

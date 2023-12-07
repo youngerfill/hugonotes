@@ -148,6 +148,29 @@ sudo mkdir /media/bigpart
 sudo mount /dev/sda4 /media/bigpart -t ext3
 ....
 
+Auto-mount USB drive at startup. Files owned by user with uid==1000.
+Put this in `/etc/fstab`:
+
+....
+UUID=5F04-234F /media/USB_HDD auto nosuid,nodev,nofail,uid=1000,gid=1000,umask=022,fmask=133,dmask=022 0 0
+....
+
+Remarks:
+
+. The value for UUID can be obtained with the command `blkid`.
+. The mount point (in this case `/media/USB_HDD`) must exist.
+. The octal permission masks are not the same as in `chmod`. Subtract every digit from 7 to convert between the two. See table below.
+
+[cols="1,1,1"]
+|===
+|Symbolic |`chmod` |`fstab`
+
+|`-rw-r--r--` |644 |133
+
+|`rwxr-xr-x` |755|022
+
+|=== 
+
 == bash
 
 === Redirection in bash
