@@ -13,22 +13,14 @@
       <link>/notes/links.html</link>
       <pubDate>Sat, 02 Oct 2021 10:10:12 +0200</pubDate>
       <guid>/notes/links.html</guid>
-      <description>Technical Mobile The Search for a FLOSS Mobile OS (Aug 2021) https://blog.emacsen.net/blog/2021/08/23/floss-mobile-os-aug-2021/ https://news.ycombinator.com/item?id=28296738
-Programming Data Structures and Algorithms in JavaScript https://news.ycombinator.com/item?id=20634409 https://amejiarosario.gumroad.com/l/dsajs
-John Carmack on Functional Programming (2013 https://news.ycombinator.com/item?id=15036591
-A Thought Experiment: Using the ECS Pattern Outside of Game Engines https://news.ycombinator.com/item?id=21892126 https://adventures.michaelfbryan.com/posts/ecs-outside-of-games/ https://en.m.wikipedia.org/wiki/Entity_component_system#Characteristics
-Web HTML, CSS Scrollspy with ‘just JavaScript’ https://medium.com/p1xts-blog/scrollspy-with-just-javascript-3131c114abdc
-TypeSafe CSS https://uglyduck.ca/typesafe-sans-css/
-Ten modern layouts in one line of CSS https://web.dev/one-line-layouts/ https://news.ycombinator.com/item?id=24003385
-My current HTML boilerplate https://www.matuzo.at/blog/html-boilerplate/ https://news.</description>
+      <description>Technical Mobile The Search for a FLOSS Mobile OS (Aug 2021) https://blog.emacsen.net/blog/2021/08/23/floss-mobile-os-aug-2021/ https://news.ycombinator.com/item?id=28296738&#xA;Programming Data Structures and Algorithms in JavaScript https://news.ycombinator.com/item?id=20634409 https://amejiarosario.gumroad.com/l/dsajs&#xA;John Carmack on Functional Programming (2013 https://news.ycombinator.com/item?id=15036591&#xA;A Thought Experiment: Using the ECS Pattern Outside of Game Engines https://news.ycombinator.com/item?id=21892126 https://adventures.michaelfbryan.com/posts/ecs-outside-of-games/ https://en.m.wikipedia.org/wiki/Entity_component_system#Characteristics&#xA;Web HTML, CSS Scrollspy with ‘just JavaScript’ https://medium.com/p1xts-blog/scrollspy-with-just-javascript-3131c114abdc&#xA;TypeSafe CSS https://uglyduck.ca/typesafe-sans-css/&#xA;Ten modern layouts in one line of CSS https://web.dev/one-line-layouts/ https://news.ycombinator.com/item?id=24003385&#xA;My current HTML boilerplate https://www.matuzo.at/blog/html-boilerplate/ https://news.</description>
     </item>
     <item>
       <title>Cheatsheet</title>
       <link>/notes/cheatsheet.html</link>
       <pubDate>Fri, 01 Oct 2021 13:26:18 +0200</pubDate>
       <guid>/notes/cheatsheet.html</guid>
-      <description>Check folder size: du -sh foldername/ Clear trash folder (Ubuntu &amp;amp; friends): rm -rf ~/.local/share/Trash/files ~/.local/share/Trash/info Arch Linux guest VM in VirtualBox: Restore networking: sudo ip link set enp0s8 down &amp;amp;&amp;amp; sudo ip link set enp0s8 up &amp;amp;&amp;amp; curl www.google.com Mount USB drive Before inserting the USB drive, show list of devices: :
-sudo lsblk -f Insert USB drive, and select device in VirtualBox GUI menu ( Devices &amp;gt; USB &amp;gt; …​ )</description>
+      <description>Check folder size: du -sh foldername/ Clear trash folder (Ubuntu &amp;amp; friends): rm -rf ~/.local/share/Trash/files ~/.local/share/Trash/info Arch Linux guest VM in VirtualBox: Restore networking: sudo ip link set enp0s8 down &amp;amp;&amp;amp; sudo ip link set enp0s8 up &amp;amp;&amp;amp; curl www.google.com Mount USB drive Before inserting the USB drive, show list of devices: :&#xA;sudo lsblk -f Insert USB drive, and select device in VirtualBox GUI menu ( Devices &amp;gt; USB &amp;gt; …​ )</description>
     </item>
   </channel>
 </rss>

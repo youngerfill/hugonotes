@@ -13,14 +13,7 @@
       <link>/notes/rp0w.html</link>
       <pubDate>Fri, 01 Oct 2021 14:06:50 +0200</pubDate>
       <guid>/notes/rp0w.html</guid>
-      <description>Prerequisites Arch Linux, with the following packages dosfstools wpa_supplicant
-Micro SD card
-USB stick with slot for Micro SD Card
-Raspberry Pi Zero W
-Create an Arch Linux ARM system TODO : chroot binfmt qemu
-Partition Micro SD Card In Linux, list the available devices: :
-sudo fdisk -l If Linux is running inside VirtualBox, consult the list of devices in: Devices&amp;gt;USB
-Insert the Micro SD card in the USB adapter, and insert the adapter in a USB port.</description>
+      <description>Prerequisites Arch Linux, with the following packages dosfstools wpa_supplicant&#xA;Micro SD card&#xA;USB stick with slot for Micro SD Card&#xA;Raspberry Pi Zero W&#xA;Create an Arch Linux ARM system TODO : chroot binfmt qemu&#xA;Partition Micro SD Card In Linux, list the available devices: :&#xA;sudo fdisk -l If Linux is running inside VirtualBox, consult the list of devices in: Devices&amp;gt;USB&#xA;Insert the Micro SD card in the USB adapter, and insert the adapter in a USB port.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Install Void Linux on VirtualBox [TOC]
+Sources https://linuxiac.com/void-linux-installation/
+https://techviewleo.com/install-void-linux-on-virtualbox-vmware-workstation/
+https://docs.voidlinux.org/installation/guides/chroot.html
+Goals Host OS: Windows
+Virtualization software: VirtualBox
+Guest OS: Void Linux
+Hostname: vivo
+One non-root user with sudo rights, named me
+Network access through the host system
+A tiling window manager: dwm
+Development tools: python, nodejs, gcc, clang, neovim
+Webservers etc running in the VM are reachable from the host system
+Prerequisites VirtualBox: https://www.virtualbox.org/
+A Linux live .iso file, like for instance the ``Void Linux libc base&#39;&#39; one: https://repo-default.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="Install Void Linux on VirtualBox [TOC]
+Sources https://linuxiac.com/void-linux-installation/
+https://techviewleo.com/install-void-linux-on-virtualbox-vmware-workstation/
+https://docs.voidlinux.org/installation/guides/chroot.html
+Goals Host OS: Windows
+Virtualization software: VirtualBox
+Guest OS: Void Linux
+Hostname: vivo
+One non-root user with sudo rights, named me
+Network access through the host system
+A tiling window manager: dwm
+Development tools: python, nodejs, gcc, clang, neovim
+Webservers etc running in the VM are reachable from the host system
+Prerequisites VirtualBox: https://www.virtualbox.org/
+A Linux live .iso file, like for instance the ``Void Linux libc base&#39;&#39; one: https://repo-default." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/voidlinux/virtualbox.html" /><meta property="article:section" content="voidlinux" />
+
+
+
+<title>Virtualbox | hugonotes</title>
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="../favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
+  <script defer src="../flexsearch.min.js"></script>
+  <script defer src="../en.search.min.2449ffb84bce517ef322eae2971d13a82ea0fc1092d182078834a21d04e62898.js" ></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="../"><span>hugonotes</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Notes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/links.html" class="">Links</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/mctips.html" class="">Minecraft tips</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/babs.html" class="">Babs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/rp0w.html" class="">Headless install of Arch Linux on Raspberry Pi Zero W</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/android.html" class="">Android</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../notes/cheatsheet.html" class="">Cheatsheet</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Arch</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../arch/vps.html" class="">Installing Arch Linux on a VPS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../arch/virtualbox.html" class="">Installing Arch Linux in VirtualBox</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../arch/pc.html" class="">Installing Arch Linux on a PC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../arch/hetzner.html" class="">Installing Arch Linux on a Hetzner VPS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Sicp</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.07.html" class="">Exercise 1.07</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.06.html" class="">Exercise 1.06</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.05.html" class="">Exercise 1.05</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.04.html" class="">Exercise 1.04</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.03.html" class="">Exercise 1.03</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.02.html" class="">Exercise 1.02</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../sicp/chapter01/exercise-1.01.html" class="">Exercise 1.01</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Testbed</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../testbed/highlight.html" class="">Syntax highlighting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../testbed/asciidoc.html" class="">Asciidoc markup</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Voidlinux</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../voidlinux/virtualbox.html" class=" active">Virtualbox</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Virtualbox</strong>
+
+  <label for="toc-control">
+    
+    <img src="../svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><div class="sect1">
+<h2 id="_install_void_linux_on_virtualbox">Install Void Linux on VirtualBox</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[TOC]</p>
+</div>
+<div class="sect2">
+<h3 id="_sources">Sources</h3>
+<div class="paragraph">
+<p><a href="https://linuxiac.com/void-linux-installation/" class="bare">https://linuxiac.com/void-linux-installation/</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://techviewleo.com/install-void-linux-on-virtualbox-vmware-workstation/" class="bare">https://techviewleo.com/install-void-linux-on-virtualbox-vmware-workstation/</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.voidlinux.org/installation/guides/chroot.html" class="bare">https://docs.voidlinux.org/installation/guides/chroot.html</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_goals">Goals</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Host OS: Windows</p>
+</li>
+<li>
+<p>Virtualization software: VirtualBox</p>
+</li>
+<li>
+<p>Guest OS: Void Linux</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Hostname: <code>vivo</code></p>
+</li>
+<li>
+<p>One non-root user with <code>sudo</code> rights, named <code>me</code></p>
+</li>
+<li>
+<p>Network access through the host system</p>
+</li>
+<li>
+<p>A tiling window manager: <code>dwm</code></p>
+</li>
+<li>
+<p>Development tools: <code>python</code>, <code>nodejs</code>, <code>gcc</code>, <code>clang</code>, <code>neovim</code></p>
+</li>
+<li>
+<p>Webservers etc running in the VM are reachable from the host system</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_prerequisites">Prerequisites</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>VirtualBox: <a href="https://www.virtualbox.org/" class="bare">https://www.virtualbox.org/</a></p>
+</li>
+<li>
+<p>A Linux live <code>.iso</code> file, like for instance the ``<em>Void Linux libc
+base</em>&#39;&#39; one:
+<a href="https://repo-default.voidlinux.org/live/current/void-live-x86_64-20230628-base.iso" class="bare">https://repo-default.voidlinux.org/live/current/void-live-x86_64-20230628-base.iso</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If the <code>.iso</code> file has been replaced by a new release, see:
+<a href="https://repo-default.voidlinux.org/live/current/" class="bare">https://repo-default.voidlinux.org/live/current/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_disable_notification_sidebar_in_virtualbox_vms">Disable notification sidebar in Virtualbox VMs</h3>
+<div class="paragraph">
+<p>In a Windows command prompt, run the following</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&#34;c:\Program Files\Oracle\VirtualBox\vboxmanage&#34; setextradata global GUI/SuppressMessages confirmGoingFullscreen,remindAboutMouseIntegration,remindAboutAutoCapture</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_disable_mini_toolbar_in_virtualbox_vms">Disable mini toolbar in Virtualbox VMs</h3>
+<div class="paragraph">
+<p>In a Windows command prompt, run the following</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&#34;c:\Program Files\Oracle\VirtualBox\vboxmanage&#34; setextradata global GUI/ShowMiniToolBar false</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_the_vm">Create the VM</h3>
+<div class="sect3">
+<h4 id="_create_dialog">Create dialog</h4>
+<div class="paragraph">
+<p>Click <code><em>New</em>&#39;&#39;, and in the </code><em>Create Virtual Machine</em>&#39;&#39; dialog:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Name and Operating System</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Name: <strong>vivo</strong></p>
+</li>
+<li>
+<p>Folder: <em>Select parent folder of VM</em></p>
+</li>
+<li>
+<p>ISO Image: <em>Select live .iso file</em></p>
+</li>
+<li>
+<p>Type: <strong>Linux</strong></p>
+</li>
+<li>
+<p>Version: <strong>Other Linux (64-bit)</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Unattended Install</p>
+</li>
+<li>
+<p>Hardware</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Base Memory: <strong>4096 MB</strong></p>
+</li>
+<li>
+<p>Processors: <strong>4</strong></p>
+</li>
+<li>
+<p>Enable EFI: <strong>ON</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Hard Disk</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a Virtual Hard Disk Now: <strong>ON</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Location: <em>Let VirtualBox set it</em></p>
+</li>
+<li>
+<p>Size: <strong>20 GB</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Hard Disk File Type and Variant: <strong>VDI</strong></p>
+</li>
+<li>
+<p>Pre-allocate Full Size: <strong>OFF</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click <code><em>Finish</em>&#39;&#39;. This will close the </code><em>Create Virtual Machine</em>&#39;&#39;
+dialog.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_settings_dialog">Settings dialog</h4>
+<div class="paragraph">
+<p>You can review and tweak the settings by selecting the VM <code>vivo&#39;&#39; and
+clicking on the </code><em>Settings</em>&#39;&#39; button:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>General</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Basic</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Name: <strong>vivo</strong></p>
+</li>
+<li>
+<p>Type: <strong>Linux</strong></p>
+</li>
+<li>
+<p>Version: <strong>Other Linux (64-bit)</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Advanced</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Snapshot Folder: <em>Leave as-is</em></p>
+</li>
+<li>
+<p>Shared Clipbaord: change to <strong>Bidirectional</strong></p>
+</li>
+<li>
+<p>Drag’n’Drop: <strong>Disabled</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Description</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Write your description here</em><br/></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Disk Encryption</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Disk Encryption: <strong>OFF</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>System</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Motherboard</p>
+<div class="ulist">
+<ul>
+<li>
+<p>MEM: <strong>4096 MB</strong></p>
+</li>
+<li>
+<p>Boot order: change to <strong>optical, HDD, …</strong></p>
+</li>
+<li>
+<p>Chipset: <strong>PIIX3</strong></p>
+</li>
+<li>
+<p>TPM: <strong>None</strong></p>
+</li>
+<li>
+<p>Pointing device: <strong>PS/2 mouse</strong></p>
+</li>
+<li>
+<p>Extended features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable I/O APIC: <strong>ON</strong></p>
+</li>
+<li>
+<p>Enable Hardware Clock in UTC Time: <strong>ON</strong></p>
+</li>
+<li>
+<p>Enable EFI: <strong>ON</strong></p>
+</li>
+<li>
+<p>Enable Secure Boot: <strong>OFF</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Processor</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Processors: <strong>4</strong></p>
+</li>
+<li>
+<p>Execution Cap: <strong>100%</strong></p>
+</li>
+<li>
+<p>Extended Features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable PAE/NX: <strong>ON</strong></p>
+</li>
+<li>
+<p>Enable Nested VT-x/AMD-V: <strong>OFF</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Acceleration</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Paravirtualization Interface: <strong>Default</strong></p>
+</li>
+<li>
+<p>Enable Nested Paging: <strong>ON</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Display:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Screen</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Video Memory: <strong>16 MB</strong></p>
+</li>
+<li>
+<p>Monitor Count: <strong>1</strong></p>
+</li>
+<li>
+<p>Scale Factor: <strong>100%</strong></p>
+</li>
+<li>
+<p>Graphics controller: <strong>VMSVGA</strong></p>
+</li>
+<li>
+<p>Enable 3D Acceleration: <strong>OFF</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Remote Display</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Server: <strong>OFF</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Recording</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Recording: <strong>OFF</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Storage</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Controller: IDE</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Make sure the live .iso is selected</em></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Controller: SATA</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>The `vivo.vdi`should already be set here</em></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Audio</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Audio: change to <strong>OFF</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Network</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Adapter 1</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Network Adapter: <strong>ON</strong></p>
+</li>
+<li>
+<p>Attached to: <strong>NAT</strong></p>
+</li>
+<li>
+<p>Adapter type: <em>Let VirtualBox pick the type</em></p>
+</li>
+<li>
+<p>Cable Connected: <strong>ON</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Adapter 2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Network Adapter: change to <strong>ON</strong></p>
+</li>
+<li>
+<p>Attached to: change to <strong>Host-only Adapter</strong></p>
+</li>
+<li>
+<p>Promiscuous Mode: <strong>deny</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Serial Ports</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Serial Port: <strong>OFF</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>USB</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable USB Controller: <strong>ON</strong></p>
+</li>
+<li>
+<p>Type: <strong>USB 2.0</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Shared Folders</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>(Create and) select a folder to be shared between host and guest</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Read-only: <strong>OFF</strong></p>
+</li>
+<li>
+<p>Auto-mount: change to <strong>ON</strong></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>User Interface</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Leave it as-is for now</em></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click ``<em>OK</em>&#39;&#39;. This closes the settings dialog.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_enable_hpet">Enable HPET</h4>
+<div class="paragraph">
+<p>In a Windows command prompt, run the following command:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&#34;c:\Program Files\Oracle\VirtualBox\vboxmanage&#34; modifyvm vivo --hpet on</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the documentation at
+<a href="https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm" class="bare">https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm</a> :</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><code>--hpet=on | off</code></p>
+</div>
+<div class="paragraph">
+<p>Enables or disables a High Precision Event Timer (HPET) that can replace
+a legacy system timer. This feature is disabled by default. Note HPET is
+supported on Windows versions starting with Vista.</p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_boot_the_live_iso_in_the_vm">Boot the live <code>.iso</code> in the VM</h3>
+<div class="paragraph">
+<p>In VirtualBox, select the VM <code><em>vivo</em>&#39;&#39; and click the </code><em>Start</em>&#39;&#39;
+button.</p>
+</div>
+<div class="paragraph">
+<p>grub: choose first (default) option</p>
+</div>
+<div class="paragraph">
+<p>Login with: - user: root - pwd: voidlinux</p>
+</div>
+<div class="paragraph">
+<p>Set AZERTY keyboard:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>loadkeys be-latin1</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_install_the_guest_os">Install the guest OS</h4>
+<div class="sect4">
+<h5 id="_basics">Basics</h5>
+<div class="paragraph">
+<p>Partitioning</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>fdisk /dev/sda</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Inside fdisk:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    --&gt; g : create empty partition table
+    --&gt; n : new partition
+    --&gt; enter : partition #1
+    --&gt; enter : default first sector
+    --&gt; +550MB : the partition size instead of the requested last sector
+    (--&gt; Y : if fdisk asks to remove signature)
+    --&gt; t : change partition type
+    --&gt; 1 : EFI system partition
+    --&gt; n : new partition
+    --&gt; enter : partition #2
+    --&gt; enter : default first sector
+    --&gt; enter : default last sector
+    (--&gt; Y or N: if fdisk asks to remove signature)
+    --&gt; w : write partition table</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>TODO : document manual config steps: - format - xchroot - locale - hw
+clock - enable dhcpcd - … ???</p>
+</div>
+<div class="paragraph">
+<p>Write simple <code>/etc/sudoers</code> file. Grant <code>sudo</code> rights to <code>root</code> user and
+<code>wheel</code> group. Grant rights to <code>wheel</code> group to run <code>shutdown</code> and
+<code>reboot</code> without password. Note: the first line allows <code>root</code> to run
+commands as another user: <code>sudo --user=NAME …​</code></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>echo &#34;root ALL=(ALL) ALL&#34; &gt; /etc/sudoers
+echo &#34;%wheel ALL=(ALL) ALL&#34; &gt;&gt; /etc/sudoers
+echo &#34;%wheel ALL=NOPASSWD: /usr/bin/reboot, /usr/bin/shutdown&#34; &gt;&gt; /etc/sudoers</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make sure group <code>vboxsf</code> exists:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>groupadd -f vboxsf</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add user <code>me</code> and add it to the <code>wheel</code> and `vboxsf`groups:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>useradd -m me
+usermod -aG wheel,vboxsf me
+passwd me</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install some packages</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo xbps-install -Su time tmux curl wget zip unzip dos2unix ripgrep fzf lazygit htop base-devel clang python go nodejs git vim neovim dialog openssh ffmpeg lighttpd asciidoc ruby-asciidocter hugo shellcheck moreutils xtools virtualbox-ose-guest</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Enable vboxservice</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo ln -s /etc/sv/vboxservice /var/service/</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_window_manager">Window manager</h5>
+<div class="paragraph">
+<p>Install xorg related packages:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo xbps-install -Su xorg xinit xfontsel unclutter numlockx font-inconsolata-otf font-firacode</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install <code>dwm</code>/<code>dmenu</code>/<code>st</code> dependencies:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo xbps-install -Su libXinerama-devel libXft-devel freetype-devel fontconfig-devel</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Install modified version of <code>dwm</code>/<code>dmenu</code>/<code>st</code>. As user <code>me</code>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cd
+mkdir tools &amp;&amp; cd tools
+git clone https://github.com/bergoid/dwm.git
+sudo ./rebuild</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create <code>~/.xinit</code>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VBoxClient --vmsvga
+VBoxClient --clipboard
+xrandr --output Virtual1 --mode 1920x1080
+setxkbmap be
+numlockx &amp;
+unclutter -jitter 2 -noevents -root &amp;
+exec dwm</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note 2024-01-07: I needed to downgrade the package
+<code>libgudev-238_1.x86_64.xbps</code> to <code>libgudev-237_1.x86_64.xbps</code>, for <code>xorg</code>
+to start properly. This got fixed in Void Linux a couple of days later.</p>
+</div>
+<div class="paragraph">
+<p>Set resolution of VM. First, power off VM. Next, in Windows command
+prompt:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&#34;c:\Program Files\Oracle\VirtualBox\vboxmanage&#34; setextradata &#34;vivo&#34; &#34;CustomVideoMode1&#34; &#34;1920x1080x24&#34;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Start VM again.</p>
+</div>
+<div class="paragraph">
+<p>Configure <code>grub</code>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudoedit /etc/default/grub</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Find and set the variables as follows:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>...
+GRUB_TIMEOUT=0
+...
+GRUB_CMDLINE_LINUX_DEFAULT=&#34;loglevel=4 quiet video=1920x1080&#34;
+...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Update grub with the new config :</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sudo grub-mkconfig -o /boot/grub/grub.cfg</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_automatic_login">Automatic login</h5>
+<div class="paragraph">
+<p>(From:
+<a href="https://wiki.voidlinux.org/voidlinux_en_all_2021-04/A/Automatic_Login_to_Graphical_Environment" class="bare">https://wiki.voidlinux.org/voidlinux_en_all_2021-04/A/Automatic_Login_to_Graphical_Environment</a>)</p>
+</div>
+<div class="paragraph">
+<p>As <code>root</code>:</p>
+</div>
+<div class="paragraph">
+<p>Create new autologin service. Copy from existing <code>tty1</code> service:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> cp -R /etc/sv/agetty-tty1 /etc/sv/agetty-autologin-tty1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Edit <code>/etc/sv/agetty-autologin-tty1/conf</code>, change the value of the
+variable <code>GETTY_ARGS</code> into: <code>--autologin me --noclear</code></p>
+</div>
+<div class="paragraph">
+<p>If you are logged in on <code>tty1</code> right now, logout, switch to <code>tty2</code> (with
+CTRL+ALT+F2) and re-login there.</p>
+</div>
+<div class="paragraph">
+<p>Disable the regular <code>tty1</code> service and enable autologin:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>rm /var/service/agetty-tty1
+ln -s /etc/sv/agetty-autologin-tty1 /var/service</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now switch to <code>tty1</code> and you should already be logged in there
+automatically.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_todo">TODO</h5>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>hugonotes</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>unpushed changes at <code>hopi</code>?</p>
+<div class="ulist">
+<ul>
+<li>
+<p>no</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>gtclone</code> it</p>
+</li>
+<li>
+<p>live server, monitoring changes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>look in <code>hopi</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>hugo serve</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>convert this <code>.md</code> to <code>.adoc</code> and add it</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>kickstart.nvim</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>install it</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>nerdfonts</p>
+</li>
+<li>
+<p><code>dwm</code>/<code>st</code>/<code>dmenu</code>/</p>
+<div class="ulist">
+<ul>
+<li>
+<p>get latest versions</p>
+</li>
+<li>
+<p>apply patches:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>dwm</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>clipboard?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>st</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>clipboard?</p>
+</li>
+<li>
+<p>scrollback</p>
+</li>
+<li>
+<p>colorschemes</p>
+</li>
+<li>
+<p>wide glyph support</p>
+</li>
+<li>
+<p>undercurl</p>
+</li>
+<li>
+<p>copy command-line to clipboard with keyboard shortcut</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>dmenu</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>?</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>add to dotfiles</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect5">
+<h6 id="_knockd">knockd</h6>
+<div class="paragraph">
+<p>Add it to dotfiles</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_vmwgfx_error_during_startup_see"><code>vmwgfx</code> error during startup. See:</h6>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://old.reddit.com/r/virtualbox/comments/16s6dcl/suddenly_getting_error_vmwgfx_seems_to_be_running/" class="bare">https://old.reddit.com/r/virtualbox/comments/16s6dcl/suddenly_getting_error_vmwgfx_seems_to_be_running/</a></p>
+</li>
+<li>
+<p><a href="https://forums.virtualbox.org/viewtopic.php?t=99390" class="bare">https://forums.virtualbox.org/viewtopic.php?t=99390</a></p>
+</li>
+<li>
+<p><a href="https://pastebin.com/Rq35KZNY" class="bare">https://pastebin.com/Rq35KZNY</a></p>
+</li>
+<li>
+<p><code>dmesg.log</code>:</p>
+</li>
+</ul>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[    1.637912] vmwgfx 0000:00:02.0: vgaarb: deactivate vga console
+[    1.638934] vmwgfx 0000:00:02.0: [drm] FIFO at 0x00000000e1400000 size is 2048 kiB
+[    1.638955] vmwgfx 0000:00:02.0: [drm] VRAM at 0x00000000e0000000 size is 16384 kiB
+[    1.638963] vmwgfx 0000:00:02.0: [drm] Running on SVGA version 2.
+[    1.638968] vmwgfx 0000:00:02.0: [drm] Capabilities: rect copy, cursor, cursor bypass, cursor bypass 2, alpha cursor, extended fifo, pitchlock, irq mask, gmr, traces, gmr2, screen object 2, command buffers,
+[    1.638971] vmwgfx 0000:00:02.0: [drm] *ERROR* vmwgfx seems to be running on an unsupported hypervisor.
+[    1.638976] fbcon: Taking over console
+[    1.638983] vmwgfx 0000:00:02.0: [drm] *ERROR* This configuration is likely broken.
+[    1.638987] vmwgfx 0000:00:02.0: [drm] *ERROR* Please switch to a supported graphics device to avoid problems.
+[    1.638992] vmwgfx 0000:00:02.0: [drm] DMA map mode: Caching DMA mappings.
+[    1.639028] vmwgfx 0000:00:02.0: [drm] Legacy memory limits: VRAM = 16384 kB, FIFO = 2048 kB, surface = 507904 kB
+[    1.639031] vmwgfx 0000:00:02.0: [drm] MOB limits: max mob size = 0 kB, max mob pages = 0
+[    1.639033] vmwgfx 0000:00:02.0: [drm] Max GMR ids is 8192
+[    1.639034] vmwgfx 0000:00:02.0: [drm] Max number of GMR pages is 1048576
+[    1.639035] vmwgfx 0000:00:02.0: [drm] Maximum display memory size is 16384 kiB
+[    1.639467] vmwgfx 0000:00:02.0: [drm] Screen Object display unit initialized
+[    1.639914] vmwgfx 0000:00:02.0: [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+[    1.641133] vmwgfx 0000:00:02.0: [drm] Using command buffers with DMA pool.
+[    1.641145] vmwgfx 0000:00:02.0: [drm] Available shader model: Legacy.
+[    1.641988] [drm] Initialized vmwgfx 2.20.0 20211206 for 0000:00:02.0 on minor 0
+[    1.645881] fbcon: vmwgfxdrmfb (fb0) is primary devicel
+
+[    1.646063] Console: switching to colour frame buffer device 240x67
+[    1.649915] vmwgfx 0000:00:02.0: [drm] fb0: vmwgfxdrmfb frame buffer device</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -20,36 +20,7 @@
       <link>/testbed/asciidoc.html</link>
       <pubDate>Fri, 01 Oct 2021 10:37:14 +0200</pubDate>
       <guid>/testbed/asciidoc.html</guid>
-      <description>Text formatting Description Syntax Result Remark Emphasis, quotes
-One &amp;#39;Two&amp;#39; Three
-One &amp;#39;Two&amp;#39; Three
-Emphasis, underscores
-One Two Three
-One Two Three
-Emphasis, quotes, unconstrained
-One&amp;#39;&amp;#39;Two&amp;#39;&amp;#39;Three
-One&amp;#39;&amp;#39;Two&amp;#39;&amp;#39;Three
-Emphasis, underscores, unconstrained
-OneTwoThree
-OneTwoThree
-Strong
-One Two Three
-One Two Three
-Strong, unconstrained
-OneTwoThree
-OneTwoThree
-Monospace
-One +Two+ Three
-One Two Three
-Monospace, unconstrained
-OneTwoThree
-OneTwoThree
-Single quote
-One `Two´ Three
-One `Two´ Three
-Doesn’t seem to work
-Double quotes
-One ``Two´´ Three</description>
+      <description>Text formatting Description Syntax Result Remark Emphasis, quotes&#xA;One &amp;#39;Two&amp;#39; Three&#xA;One &amp;#39;Two&amp;#39; Three&#xA;Emphasis, underscores&#xA;One Two Three&#xA;One Two Three&#xA;Emphasis, quotes, unconstrained&#xA;One&amp;#39;&amp;#39;Two&amp;#39;&amp;#39;Three&#xA;One&amp;#39;&amp;#39;Two&amp;#39;&amp;#39;Three&#xA;Emphasis, underscores, unconstrained&#xA;OneTwoThree&#xA;OneTwoThree&#xA;Strong&#xA;One Two Three&#xA;One Two Three&#xA;Strong, unconstrained&#xA;OneTwoThree&#xA;OneTwoThree&#xA;Monospace&#xA;One +Two+ Three&#xA;One Two Three&#xA;Monospace, unconstrained&#xA;OneTwoThree&#xA;OneTwoThree&#xA;Single quote&#xA;One `Two´ Three&#xA;One `Two´ Three&#xA;Doesn’t seem to work&#xA;Double quotes&#xA;One ``Two´´ Three</description>
     </item>
   </channel>
 </rss>

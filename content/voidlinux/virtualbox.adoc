@@ -1,0 +1,428 @@
+== Install Void Linux on VirtualBox
+
+{empty}[TOC]
+
+=== Sources
+
+https://linuxiac.com/void-linux-installation/
+
+https://techviewleo.com/install-void-linux-on-virtualbox-vmware-workstation/
+
+https://docs.voidlinux.org/installation/guides/chroot.html
+
+=== Goals
+
+* Host OS: Windows
+* Virtualization software: VirtualBox
+* Guest OS: Void Linux
+** Hostname: `vivo`
+** One non-root user with `sudo` rights, named `me`
+** Network access through the host system
+** A tiling window manager: `dwm`
+** Development tools: `python`, `nodejs`, `gcc`, `clang`, `neovim`
+** Webservers etc running in the VM are reachable from the host system
+
+=== Prerequisites
+
+[arabic]
+. VirtualBox: https://www.virtualbox.org/
+. A Linux live `.iso` file, like for instance the ``__Void Linux libc
+base__'' one:
+https://repo-default.voidlinux.org/live/current/void-live-x86_64-20230628-base.iso
+
+If the `.iso` file has been replaced by a new release, see:
+https://repo-default.voidlinux.org/live/current/
+
+=== Disable notification sidebar in Virtualbox VMs
+
+In a Windows command prompt, run the following
+
+....
+"c:\Program Files\Oracle\VirtualBox\vboxmanage" setextradata global GUI/SuppressMessages confirmGoingFullscreen,remindAboutMouseIntegration,remindAboutAutoCapture
+....
+
+=== Disable mini toolbar in Virtualbox VMs
+
+In a Windows command prompt, run the following
+
+....
+"c:\Program Files\Oracle\VirtualBox\vboxmanage" setextradata global GUI/ShowMiniToolBar false
+....
+
+=== Create the VM
+
+==== Create dialog
+
+Click ``__New__'', and in the ``__Create Virtual Machine__'' dialog:
+
+* Name and Operating System
+** Name: *vivo*
+** Folder: _Select parent folder of VM_
+** ISO Image: _Select live .iso file_
+** Type: *Linux*
+** Version: *Other Linux (64-bit)*
+* Unattended Install
+* Hardware
+** Base Memory: *4096 MB*
+** Processors: *4*
+** Enable EFI: *ON*
+* Hard Disk
+** Create a Virtual Hard Disk Now: *ON*
+*** Location: _Let VirtualBox set it_
+*** Size: *20 GB*
+** Hard Disk File Type and Variant: *VDI*
+** Pre-allocate Full Size: *OFF*
+
+Click ``__Finish__''. This will close the ``__Create Virtual Machine__''
+dialog.
+
+==== Settings dialog
+
+You can review and tweak the settings by selecting the VM ``vivo'' and
+clicking on the ``__Settings__'' button:
+
+* General
+** Basic
+*** Name: *vivo*
+*** Type: *Linux*
+*** Version: *Other Linux (64-bit)*
+** Advanced
+*** Snapshot Folder: _Leave as-is_
+*** Shared Clipbaord: change to *Bidirectional*
+*** Drag’n’Drop: *Disabled*
+** Description
+*** _Write your description here_ +
+** Disk Encryption
+*** Enable Disk Encryption: *OFF*
+* System
+** Motherboard
+*** MEM: *4096 MB*
+*** Boot order: change to *optical, HDD, …*
+*** Chipset: *PIIX3*
+*** TPM: *None*
+*** Pointing device: *PS/2 mouse*
+*** Extended features:
+**** Enable I/O APIC: *ON*
+**** Enable Hardware Clock in UTC Time: *ON*
+**** Enable EFI: *ON*
+**** Enable Secure Boot: *OFF*
+** Processor
+*** Processors: *4*
+*** Execution Cap: *100%*
+*** Extended Features:
+**** Enable PAE/NX: *ON*
+**** Enable Nested VT-x/AMD-V: *OFF*
+** Acceleration
+*** Paravirtualization Interface: *Default*
+*** Enable Nested Paging: *ON*
+* Display:
+** Screen
+*** Video Memory: *16 MB*
+*** Monitor Count: *1*
+*** Scale Factor: *100%*
+*** Graphics controller: *VMSVGA*
+*** Enable 3D Acceleration: *OFF*
+** Remote Display
+*** Enable Server: *OFF*
+** Recording
+*** Enable Recording: *OFF*
+* Storage
+** Controller: IDE
+*** _Make sure the live .iso is selected_
+** Controller: SATA
+*** _The `vivo.vdi`should already be set here_
+* Audio
+** Enable Audio: change to *OFF*
+* Network
+** Adapter 1
+*** Enable Network Adapter: *ON*
+*** Attached to: *NAT*
+*** Adapter type: _Let VirtualBox pick the type_
+*** Cable Connected: *ON*
+** Adapter 2
+*** Enable Network Adapter: change to *ON*
+*** Attached to: change to *Host-only Adapter*
+*** Promiscuous Mode: *deny*
+* Serial Ports
+** Enable Serial Port: *OFF*
+* USB
+** Enable USB Controller: *ON*
+** Type: *USB 2.0*
+* Shared Folders
+** _(Create and) select a folder to be shared between host and guest_
+*** Read-only: *OFF*
+*** Auto-mount: change to *ON*
+* User Interface
+** _Leave it as-is for now_
+
+Click ``__OK__''. This closes the settings dialog.
+
+==== Enable HPET
+
+In a Windows command prompt, run the following command:
+
+....
+"c:\Program Files\Oracle\VirtualBox\vboxmanage" modifyvm vivo --hpet on
+....
+
+From the documentation at
+https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm :
+
+____
+`--hpet=on | off`
+
+Enables or disables a High Precision Event Timer (HPET) that can replace
+a legacy system timer. This feature is disabled by default. Note HPET is
+supported on Windows versions starting with Vista.
+____
+
+=== Boot the live `.iso` in the VM
+
+In VirtualBox, select the VM ``__vivo__'' and click the ``__Start__''
+button.
+
+grub: choose first (default) option
+
+Login with: - user: root - pwd: voidlinux
+
+Set AZERTY keyboard:
+
+....
+loadkeys be-latin1
+....
+
+==== Install the guest OS
+
+===== Basics
+
+Partitioning
+
+....
+fdisk /dev/sda
+....
+
+Inside fdisk:
+
+....
+    --> g : create empty partition table
+    --> n : new partition
+    --> enter : partition #1
+    --> enter : default first sector
+    --> +550MB : the partition size instead of the requested last sector
+    (--> Y : if fdisk asks to remove signature)
+    --> t : change partition type
+    --> 1 : EFI system partition
+    --> n : new partition
+    --> enter : partition #2
+    --> enter : default first sector
+    --> enter : default last sector
+    (--> Y or N: if fdisk asks to remove signature)
+    --> w : write partition table
+....
+
+TODO : document manual config steps: - format - xchroot - locale - hw
+clock - enable dhcpcd - … ???
+
+Write simple `/etc/sudoers` file. Grant `sudo` rights to `root` user and
+`wheel` group. Grant rights to `wheel` group to run `shutdown` and
+`reboot` without password. Note: the first line allows `root` to run
+commands as another user: `sudo --user=NAME ...`
+
+....
+echo "root ALL=(ALL) ALL" > /etc/sudoers
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+echo "%wheel ALL=NOPASSWD: /usr/bin/reboot, /usr/bin/shutdown" >> /etc/sudoers
+....
+
+Make sure group `vboxsf` exists:
+
+....
+groupadd -f vboxsf
+....
+
+Add user `me` and add it to the `wheel` and `vboxsf`groups:
+
+....
+useradd -m me
+usermod -aG wheel,vboxsf me
+passwd me
+....
+
+Install some packages
+
+....
+sudo xbps-install -Su time tmux curl wget zip unzip dos2unix ripgrep fzf lazygit htop base-devel clang python go nodejs git vim neovim dialog openssh ffmpeg lighttpd asciidoc ruby-asciidocter hugo shellcheck moreutils xtools virtualbox-ose-guest
+....
+
+Enable vboxservice
+
+....
+sudo ln -s /etc/sv/vboxservice /var/service/
+....
+
+===== Window manager
+
+Install xorg related packages:
+
+....
+sudo xbps-install -Su xorg xinit xfontsel unclutter numlockx font-inconsolata-otf font-firacode
+....
+
+Install `dwm`/`dmenu`/`st` dependencies:
+
+....
+sudo xbps-install -Su libXinerama-devel libXft-devel freetype-devel fontconfig-devel
+....
+
+Install modified version of `dwm`/`dmenu`/`st`. As user `me`:
+
+....
+cd
+mkdir tools && cd tools
+git clone https://github.com/bergoid/dwm.git
+sudo ./rebuild
+....
+
+Create `~/.xinit`:
+
+....
+VBoxClient --vmsvga
+VBoxClient --clipboard
+xrandr --output Virtual1 --mode 1920x1080
+setxkbmap be
+numlockx &
+unclutter -jitter 2 -noevents -root &
+exec dwm
+....
+
+Note 2024-01-07: I needed to downgrade the package
+`libgudev-238_1.x86_64.xbps` to `libgudev-237_1.x86_64.xbps`, for `xorg`
+to start properly. This got fixed in Void Linux a couple of days later.
+
+Set resolution of VM. First, power off VM. Next, in Windows command
+prompt:
+
+....
+"c:\Program Files\Oracle\VirtualBox\vboxmanage" setextradata "vivo" "CustomVideoMode1" "1920x1080x24"
+....
+
+Start VM again.
+
+Configure `grub`:
+
+....
+sudoedit /etc/default/grub
+....
+
+Find and set the variables as follows:
+
+....
+...
+GRUB_TIMEOUT=0
+...
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=4 quiet video=1920x1080"
+...
+....
+
+Update grub with the new config :
+
+....
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+....
+
+===== Automatic login
+
+(From:
+https://wiki.voidlinux.org/voidlinux_en_all_2021-04/A/Automatic_Login_to_Graphical_Environment)
+
+As `root`:
+
+Create new autologin service. Copy from existing `tty1` service:
+
+....
+ cp -R /etc/sv/agetty-tty1 /etc/sv/agetty-autologin-tty1
+....
+
+Edit `/etc/sv/agetty-autologin-tty1/conf`, change the value of the
+variable `GETTY_ARGS` into: `--autologin me --noclear`
+
+If you are logged in on `tty1` right now, logout, switch to `tty2` (with
+CTRL+ALT+F2) and re-login there.
+
+Disable the regular `tty1` service and enable autologin:
+
+....
+rm /var/service/agetty-tty1
+ln -s /etc/sv/agetty-autologin-tty1 /var/service
+....
+
+Now switch to `tty1` and you should already be logged in there
+automatically.
+
+===== TODO
+
+[arabic]
+. `hugonotes`
+* unpushed changes at `hopi`?
+** no
+* `gtclone` it
+* live server, monitoring changes
+** look in `hopi`
+*** `hugo serve`
+* convert this `.md` to `.adoc` and add it
+. `kickstart.nvim`
+* install it
+. nerdfonts
+. `dwm`/`st`/`dmenu`/
+* get latest versions
+* apply patches:
+** `dwm`:
+*** clipboard?
+** `st`:
+*** clipboard?
+*** scrollback
+*** colorschemes
+*** wide glyph support
+*** undercurl
+*** copy command-line to clipboard with keyboard shortcut
+** `dmenu`:
+*** ?
+* add to dotfiles
+
+====== knockd
+
+Add it to dotfiles
+
+====== `vmwgfx` error during startup. See:
+
+* https://old.reddit.com/r/virtualbox/comments/16s6dcl/suddenly_getting_error_vmwgfx_seems_to_be_running/
+* https://forums.virtualbox.org/viewtopic.php?t=99390
+* https://pastebin.com/Rq35KZNY
+* `dmesg.log`:
+
+....
+[    1.637912] vmwgfx 0000:00:02.0: vgaarb: deactivate vga console
+[    1.638934] vmwgfx 0000:00:02.0: [drm] FIFO at 0x00000000e1400000 size is 2048 kiB
+[    1.638955] vmwgfx 0000:00:02.0: [drm] VRAM at 0x00000000e0000000 size is 16384 kiB
+[    1.638963] vmwgfx 0000:00:02.0: [drm] Running on SVGA version 2.
+[    1.638968] vmwgfx 0000:00:02.0: [drm] Capabilities: rect copy, cursor, cursor bypass, cursor bypass 2, alpha cursor, extended fifo, pitchlock, irq mask, gmr, traces, gmr2, screen object 2, command buffers, 
+[    1.638971] vmwgfx 0000:00:02.0: [drm] *ERROR* vmwgfx seems to be running on an unsupported hypervisor.
+[    1.638976] fbcon: Taking over console
+[    1.638983] vmwgfx 0000:00:02.0: [drm] *ERROR* This configuration is likely broken.
+[    1.638987] vmwgfx 0000:00:02.0: [drm] *ERROR* Please switch to a supported graphics device to avoid problems.
+[    1.638992] vmwgfx 0000:00:02.0: [drm] DMA map mode: Caching DMA mappings.
+[    1.639028] vmwgfx 0000:00:02.0: [drm] Legacy memory limits: VRAM = 16384 kB, FIFO = 2048 kB, surface = 507904 kB
+[    1.639031] vmwgfx 0000:00:02.0: [drm] MOB limits: max mob size = 0 kB, max mob pages = 0
+[    1.639033] vmwgfx 0000:00:02.0: [drm] Max GMR ids is 8192
+[    1.639034] vmwgfx 0000:00:02.0: [drm] Max number of GMR pages is 1048576
+[    1.639035] vmwgfx 0000:00:02.0: [drm] Maximum display memory size is 16384 kiB
+[    1.639467] vmwgfx 0000:00:02.0: [drm] Screen Object display unit initialized
+[    1.639914] vmwgfx 0000:00:02.0: [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+[    1.641133] vmwgfx 0000:00:02.0: [drm] Using command buffers with DMA pool.
+[    1.641145] vmwgfx 0000:00:02.0: [drm] Available shader model: Legacy.
+[    1.641988] [drm] Initialized vmwgfx 2.20.0 20211206 for 0000:00:02.0 on minor 0
+[    1.645881] fbcon: vmwgfxdrmfb (fb0) is primary devicel
+
+[    1.646063] Console: switching to colour frame buffer device 240x67
+[    1.649915] vmwgfx 0000:00:02.0: [drm] fb0: vmwgfxdrmfb frame buffer device
+....

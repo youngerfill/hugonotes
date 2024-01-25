@@ -13,10 +13,7 @@
       <link>/notes/babs.html</link>
       <pubDate>Fri, 01 Oct 2021 14:11:28 +0200</pubDate>
       <guid>/notes/babs.html</guid>
-      <description>Introduction babs, (an acronym for &amp;#34;babs: a build system&amp;#34;) is a set of Makefiles meant to easily compile &amp;amp; link a set of interdependent modules, containing C/C++ source code, binaries like object files, static or dynamic libraries, etc …​
-Environment variables In order to do its work, babs needs 3 environment variables:
-BABS_DIR : the directory where the babs build system is located.
-SOURCE_DIR : the directory where the source modules are located.</description>
+      <description>Introduction babs, (an acronym for &amp;#34;babs: a build system&amp;#34;) is a set of Makefiles meant to easily compile &amp;amp; link a set of interdependent modules, containing C/C++ source code, binaries like object files, static or dynamic libraries, etc …​&#xA;Environment variables In order to do its work, babs needs 3 environment variables:&#xA;BABS_DIR : the directory where the babs build system is located.&#xA;SOURCE_DIR : the directory where the source modules are located.</description>
     </item>
   </channel>
 </rss>

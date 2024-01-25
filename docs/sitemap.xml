@@ -101,8 +101,12 @@
     <loc>/testbed/asciidoc.html</loc>
     <lastmod>2021-10-01T10:37:14+02:00</lastmod>
   </url><url>
+    <loc>/voidlinux/virtualbox.html</loc>
+  </url><url>
     <loc>/categories.html</loc>
   </url><url>
     <loc>/arch/hetzner.html</loc>
+  </url><url>
+    <loc>/voidlinux.html</loc>
   </url>
 </urlset>
