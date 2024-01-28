@@ -6,6 +6,7 @@ tags:
 
 = Install Void Linux on VirtualBox
 :toc:
+:toclevels: 5
 
 == Sources
 
@@ -196,9 +197,9 @@ Set AZERTY keyboard:
 loadkeys be-latin1
 ....
 
-==== Install the guest OS
+=== Install the guest OS
 
-===== Basics
+==== Basics
 
 Partitioning
 
@@ -265,7 +266,7 @@ Enable vboxservice
 sudo ln -s /etc/sv/vboxservice /var/service/
 ....
 
-===== Window manager
+==== Window manager
 
 Install xorg related packages:
 
@@ -335,7 +336,7 @@ Update grub with the new config :
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ....
 
-===== Automatic login
+==== Automatic login
 
 (From:
 https://wiki.voidlinux.org/voidlinux_en_all_2021-04/A/Automatic_Login_to_Graphical_Environment)
@@ -364,7 +365,7 @@ ln -s /etc/sv/agetty-autologin-tty1 /var/service
 Now switch to `tty1` and you should already be logged in there
 automatically.
 
-===== TODO
+==== TODO
 
 [arabic]
 . `hugonotes`
@@ -395,11 +396,11 @@ automatically.
 *** ?
 * add to dotfiles
 
-===== knockd
+==== knockd
 
 Add it to dotfiles
 
-===== `vmwgfx` error during startup. See:
+==== `vmwgfx` error during startup. See:
 
 * https://old.reddit.com/r/virtualbox/comments/16s6dcl/suddenly_getting_error_vmwgfx_seems_to_be_running/
 * https://forums.virtualbox.org/viewtopic.php?t=99390
