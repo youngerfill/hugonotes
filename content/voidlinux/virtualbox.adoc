@@ -1,8 +1,13 @@
-== Install Void Linux on VirtualBox
+---
+title: "Install Void Linux on VirtualBox"
+tags:
+- voidlinux
+---
 
-{empty}[TOC]
+= Install Void Linux on VirtualBox
+:toc:
 
-=== Sources
+== Sources
 
 https://linuxiac.com/void-linux-installation/
 
@@ -22,7 +27,7 @@ https://docs.voidlinux.org/installation/guides/chroot.html
 ** Development tools: `python`, `nodejs`, `gcc`, `clang`, `neovim`
 ** Webservers etc running in the VM are reachable from the host system
 
-=== Prerequisites
+== Prerequisites
 
 [arabic]
 . VirtualBox: https://www.virtualbox.org/
@@ -33,7 +38,7 @@ https://repo-default.voidlinux.org/live/current/void-live-x86_64-20230628-base.i
 If the `.iso` file has been replaced by a new release, see:
 https://repo-default.voidlinux.org/live/current/
 
-=== Disable notification sidebar in Virtualbox VMs
+== Disable notification sidebar in Virtualbox VMs
 
 In a Windows command prompt, run the following
 
@@ -41,7 +46,7 @@ In a Windows command prompt, run the following
 "c:\Program Files\Oracle\VirtualBox\vboxmanage" setextradata global GUI/SuppressMessages confirmGoingFullscreen,remindAboutMouseIntegration,remindAboutAutoCapture
 ....
 
-=== Disable mini toolbar in Virtualbox VMs
+== Disable mini toolbar in Virtualbox VMs
 
 In a Windows command prompt, run the following
 
@@ -49,9 +54,9 @@ In a Windows command prompt, run the following
 "c:\Program Files\Oracle\VirtualBox\vboxmanage" setextradata global GUI/ShowMiniToolBar false
 ....
 
-=== Create the VM
+== Create the VM
 
-==== Create dialog
+=== Create dialog
 
 Click ``__New__'', and in the ``__Create Virtual Machine__'' dialog:
 
@@ -76,7 +81,7 @@ Click ``__New__'', and in the ``__Create Virtual Machine__'' dialog:
 Click ``__Finish__''. This will close the ``__Create Virtual Machine__''
 dialog.
 
-==== Settings dialog
+=== Settings dialog
 
 You can review and tweak the settings by selecting the VM ``vivo'' and
 clicking on the ``__Settings__'' button:
@@ -157,7 +162,7 @@ clicking on the ``__Settings__'' button:
 
 Click ``__OK__''. This closes the settings dialog.
 
-==== Enable HPET
+=== Enable HPET
 
 In a Windows command prompt, run the following command:
 
@@ -176,7 +181,7 @@ a legacy system timer. This feature is disabled by default. Note HPET is
 supported on Windows versions starting with Vista.
 ____
 
-=== Boot the live `.iso` in the VM
+== Boot the live `.iso` in the VM
 
 In VirtualBox, select the VM ``__vivo__'' and click the ``__Start__''
 button.
@@ -390,11 +395,11 @@ automatically.
 *** ?
 * add to dotfiles
 
-====== knockd
+===== knockd
 
 Add it to dotfiles
 
-====== `vmwgfx` error during startup. See:
+===== `vmwgfx` error during startup. See:
 
 * https://old.reddit.com/r/virtualbox/comments/16s6dcl/suddenly_getting_error_vmwgfx_seems_to_be_running/
 * https://forums.virtualbox.org/viewtopic.php?t=99390

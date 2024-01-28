@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Install Void Linux on VirtualBox [TOC]
-Sources https://linuxiac.com/void-linux-installation/
+<meta name="description" content="Sources https://linuxiac.com/void-linux-installation/
 https://techviewleo.com/install-void-linux-on-virtualbox-vmware-workstation/
 https://docs.voidlinux.org/installation/guides/chroot.html
 Goals Host OS: Windows
@@ -19,9 +18,8 @@ Webservers etc running in the VM are reachable from the host system
 Prerequisites VirtualBox: https://www.virtualbox.org/
 A Linux live .iso file, like for instance the ``Void Linux libc base&#39;&#39; one: https://repo-default.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="Install Void Linux on VirtualBox [TOC]
-Sources https://linuxiac.com/void-linux-installation/
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Install Void Linux on VirtualBox" />
+<meta property="og:description" content="Sources https://linuxiac.com/void-linux-installation/
 https://techviewleo.com/install-void-linux-on-virtualbox-vmware-workstation/
 https://docs.voidlinux.org/installation/guides/chroot.html
 Goals Host OS: Windows
@@ -40,12 +38,12 @@ A Linux live .iso file, like for instance the ``Void Linux libc base&#39;&#39; o
 
 
 
-<title>Virtualbox | hugonotes</title>
+<title>Install Void Linux on VirtualBox | hugonotes</title>
 <link rel="manifest" href="../manifest.json">
 <link rel="icon" href="../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
   <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../en.search.min.2449ffb84bce517ef322eae2971d13a82ea0fc1092d182078834a21d04e62898.js" ></script>
+  <script defer src="../en.search.min.7aaa4678d7b4df60fb52f23345f8e0cc64e605dbcc78716d54a97bce7ca1891e.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -431,7 +429,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../voidlinux/virtualbox.html" class=" active">Virtualbox</a>
+    <a href="../voidlinux/virtualbox.html" class=" active">Install Void Linux on VirtualBox</a>
   
 
         </li>
@@ -478,7 +476,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="../svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Virtualbox</strong>
+  <strong>Install Void Linux on VirtualBox</strong>
 
   <label for="toc-control">
     
@@ -492,7 +490,30 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#_sources">Sources</a>
+      <ul>
+        <li><a href="#_goals">Goals</a></li>
+      </ul>
+    </li>
+    <li><a href="#_prerequisites">Prerequisites</a></li>
+    <li><a href="#_disable_notification_sidebar_in_virtualbox_vms">Disable notification sidebar in Virtualbox VMs</a></li>
+    <li><a href="#_disable_mini_toolbar_in_virtualbox_vms">Disable mini toolbar in Virtualbox VMs</a></li>
+    <li><a href="#_create_the_vm">Create the VM</a>
+      <ul>
+        <li><a href="#_create_dialog">Create dialog</a></li>
+        <li><a href="#_settings_dialog">Settings dialog</a></li>
+        <li><a href="#_enable_hpet">Enable HPET</a></li>
+      </ul>
+    </li>
+    <li><a href="#_boot_the_live_iso_in_the_vm">Boot the live <code>.iso</code> in the VM</a>
+      <ul>
+        <li><a href="#_install_the_guest_os">Install the guest OS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
 
@@ -503,14 +524,10 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><div class="sect1">
-<h2 id="_install_void_linux_on_virtualbox">Install Void Linux on VirtualBox</h2>
+  <article class="markdown">
+<div class="sect1">
+<h2 id="_sources">Sources</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>[TOC]</p>
-</div>
-<div class="sect2">
-<h3 id="_sources">Sources</h3>
 <div class="paragraph">
 <p><a href="https://linuxiac.com/void-linux-installation/" class="bare">https://linuxiac.com/void-linux-installation/</a></p>
 </div>
@@ -519,7 +536,6 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <div class="paragraph">
 <p><a href="https://docs.voidlinux.org/installation/guides/chroot.html" class="bare">https://docs.voidlinux.org/installation/guides/chroot.html</a></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_goals">Goals</h3>
@@ -559,8 +575,11 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_prerequisites">Prerequisites</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prerequisites">Prerequisites</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -578,8 +597,10 @@ base</em>&#39;&#39; one:
 <a href="https://repo-default.voidlinux.org/live/current/" class="bare">https://repo-default.voidlinux.org/live/current/</a></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_disable_notification_sidebar_in_virtualbox_vms">Disable notification sidebar in Virtualbox VMs</h3>
+</div>
+<div class="sect1">
+<h2 id="_disable_notification_sidebar_in_virtualbox_vms">Disable notification sidebar in Virtualbox VMs</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>In a Windows command prompt, run the following</p>
 </div>
@@ -589,8 +610,10 @@ base</em>&#39;&#39; one:
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_disable_mini_toolbar_in_virtualbox_vms">Disable mini toolbar in Virtualbox VMs</h3>
+</div>
+<div class="sect1">
+<h2 id="_disable_mini_toolbar_in_virtualbox_vms">Disable mini toolbar in Virtualbox VMs</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>In a Windows command prompt, run the following</p>
 </div>
@@ -600,10 +623,12 @@ base</em>&#39;&#39; one:
 </div>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_create_the_vm">Create the VM</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_create_the_vm">Create the VM</h3>
-<div class="sect3">
-<h4 id="_create_dialog">Create dialog</h4>
+<h3 id="_create_dialog">Create dialog</h3>
 <div class="paragraph">
 <p>Click <code><em>New</em>&#39;&#39;, and in the </code><em>Create Virtual Machine</em>&#39;&#39; dialog:</p>
 </div>
@@ -683,8 +708,8 @@ base</em>&#39;&#39; one:
 dialog.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_settings_dialog">Settings dialog</h4>
+<div class="sect2">
+<h3 id="_settings_dialog">Settings dialog</h3>
 <div class="paragraph">
 <p>You can review and tweak the settings by selecting the VM <code>vivo&#39;&#39; and
 clicking on the </code><em>Settings</em>&#39;&#39; button:</p>
@@ -1024,8 +1049,8 @@ clicking on the </code><em>Settings</em>&#39;&#39; button:</p>
 <p>Click ``<em>OK</em>&#39;&#39;. This closes the settings dialog.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_enable_hpet">Enable HPET</h4>
+<div class="sect2">
+<h3 id="_enable_hpet">Enable HPET</h3>
 <div class="paragraph">
 <p>In a Windows command prompt, run the following command:</p>
 </div>
@@ -1052,8 +1077,10 @@ supported on Windows versions starting with Vista.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_boot_the_live_iso_in_the_vm">Boot the live <code>.iso</code> in the VM</h3>
+</div>
+<div class="sect1">
+<h2 id="_boot_the_live_iso_in_the_vm">Boot the live <code>.iso</code> in the VM</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>In VirtualBox, select the VM <code><em>vivo</em>&#39;&#39; and click the </code><em>Start</em>&#39;&#39;
 button.</p>
@@ -1145,7 +1172,7 @@ passwd me</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>sudo xbps-install -Su time tmux curl wget zip unzip dos2unix ripgrep fzf lazygit htop base-devel clang python go nodejs git vim neovim dialog openssh ffmpeg lighttpd asciidoc ruby-asciidocter hugo shellcheck moreutils xtools virtualbox-ose-guest</pre>
+<pre>sudo xbps-install -Su time tmux curl wget zip unzip dos2unix fd ripgrep fzf lazygit htop base-devel clang python3 python3-pip go nodejs git vim neovim dialog openssh ffmpeg lighttpd asciidoc ruby-asciidocter hugo shellcheck moreutils xtools virtualbox-ose-guest</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1360,6 +1387,9 @@ automatically.</p>
 <li>
 <p>clipboard?</p>
 </li>
+<li>
+<p>KB-layout agnostic keyboard shortcuts</p>
+</li>
 </ul>
 </div>
 </li>
@@ -1409,14 +1439,15 @@ automatically.</p>
 </li>
 </ol>
 </div>
-<div class="sect5">
-<h6 id="_knockd">knockd</h6>
+</div>
+<div class="sect4">
+<h5 id="_knockd">knockd</h5>
 <div class="paragraph">
 <p>Add it to dotfiles</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_vmwgfx_error_during_startup_see"><code>vmwgfx</code> error during startup. See:</h6>
+<div class="sect4">
+<h5 id="_vmwgfx_error_during_startup_see"><code>vmwgfx</code> error during startup. See:</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1465,8 +1496,6 @@ automatically.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
 </article>
  
       
@@ -1506,7 +1535,30 @@ automatically.</p>
       <div class="book-toc-content">
         
   
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#_sources">Sources</a>
+      <ul>
+        <li><a href="#_goals">Goals</a></li>
+      </ul>
+    </li>
+    <li><a href="#_prerequisites">Prerequisites</a></li>
+    <li><a href="#_disable_notification_sidebar_in_virtualbox_vms">Disable notification sidebar in Virtualbox VMs</a></li>
+    <li><a href="#_disable_mini_toolbar_in_virtualbox_vms">Disable mini toolbar in Virtualbox VMs</a></li>
+    <li><a href="#_create_the_vm">Create the VM</a>
+      <ul>
+        <li><a href="#_create_dialog">Create dialog</a></li>
+        <li><a href="#_settings_dialog">Settings dialog</a></li>
+        <li><a href="#_enable_hpet">Enable HPET</a></li>
+      </ul>
+    </li>
+    <li><a href="#_boot_the_live_iso_in_the_vm">Boot the live <code>.iso</code> in the VM</a>
+      <ul>
+        <li><a href="#_install_the_guest_os">Install the guest OS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
  
