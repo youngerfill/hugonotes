@@ -43,7 +43,7 @@ A Linux live .iso file, like for instance the ``Void Linux libc base&#39;&#39; o
 <link rel="icon" href="../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
   <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../en.search.min.7aaa4678d7b4df60fb52f23345f8e0cc64e605dbcc78716d54a97bce7ca1891e.js" ></script>
+  <script defer src="../en.search.min.2f81735e8cb99c034a988391e0640fe4fe24caf598448baccbe24ce9ff96d465.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1099,10 +1099,10 @@ button.</p>
 <pre>loadkeys be-latin1</pre>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_install_the_guest_os">Install the guest OS</h3>
 <div class="sect3">
-<h4 id="_install_the_guest_os">Install the guest OS</h4>
-<div class="sect4">
-<h5 id="_basics">Basics</h5>
+<h4 id="_basics">Basics</h4>
 <div class="paragraph">
 <p>Partitioning</p>
 </div>
@@ -1158,7 +1158,7 @@ echo &#34;%wheel ALL=NOPASSWD: /usr/bin/reboot, /usr/bin/shutdown&#34; &gt;&gt; 
 </div>
 </div>
 <div class="paragraph">
-<p>Add user <code>me</code> and add it to the <code>wheel</code> and `vboxsf`groups:</p>
+<p>Add user <code>me</code> and add it to the <code>wheel</code> and <code>vboxsf</code> groups:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -1184,14 +1184,14 @@ passwd me</pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_window_manager">Window manager</h5>
+<div class="sect3">
+<h4 id="_window_manager">Window manager</h4>
 <div class="paragraph">
 <p>Install xorg related packages:</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>sudo xbps-install -Su xorg xinit xfontsel unclutter numlockx font-inconsolata-otf font-firacode</pre>
+<pre>sudo xbps-install -Su xorg xinit xfontsel unclutter numlockx font-inconsolata-otf font-firacode vim-x11</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1273,8 +1273,8 @@ GRUB_CMDLINE_LINUX_DEFAULT=&#34;loglevel=4 quiet video=1920x1080&#34;
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_automatic_login">Automatic login</h5>
+<div class="sect3">
+<h4 id="_automatic_login">Automatic login</h4>
 <div class="paragraph">
 <p>(From:
 <a href="https://wiki.voidlinux.org/voidlinux_en_all_2021-04/A/Automatic_Login_to_Graphical_Environment" class="bare">https://wiki.voidlinux.org/voidlinux_en_all_2021-04/A/Automatic_Login_to_Graphical_Environment</a>)</p>
@@ -1312,60 +1312,28 @@ ln -s /etc/sv/agetty-autologin-tty1 /var/service</pre>
 automatically.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_todo">TODO</h5>
+<div class="sect3">
+<h4 id="_todo">TODO</h4>
+<div class="paragraph">
+<p><a href="https://old.reddit.com/r/suckless/comments/reax9f/st_terminal_font/" class="bare">https://old.reddit.com/r/suckless/comments/reax9f/st_terminal_font/</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.archlinux.org/title/Font_configuration" class="bare">https://wiki.archlinux.org/title/Font_configuration</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://gist.github.com/madrobby/5265845" class="bare">https://gist.github.com/madrobby/5265845</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.ubuntu.com/Fonts" class="bare">https://wiki.ubuntu.com/Fonts</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.freedesktop.org/software/fontconfig/fontconfig-user.html" class="bare">https://www.freedesktop.org/software/fontconfig/fontconfig-user.html</a></p>
+</div>
+<div class="paragraph">
+<p><code>man fonts-conf</code></p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
-<li>
-<p><code>hugonotes</code></p>
-<div class="ulist">
-<ul>
-<li>
-<p>unpushed changes at <code>hopi</code>?</p>
-<div class="ulist">
-<ul>
-<li>
-<p>no</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><code>gtclone</code> it</p>
-</li>
-<li>
-<p>live server, monitoring changes</p>
-<div class="ulist">
-<ul>
-<li>
-<p>look in <code>hopi</code></p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>hugo serve</code></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>convert this <code>.md</code> to <code>.adoc</code> and add it</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><code>kickstart.nvim</code></p>
-<div class="ulist">
-<ul>
-<li>
-<p>install it</p>
-</li>
-</ul>
-</div>
-</li>
 <li>
 <p>nerdfonts</p>
 </li>
@@ -1440,14 +1408,14 @@ automatically.</p>
 </ol>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_knockd">knockd</h5>
+<div class="sect3">
+<h4 id="_knockd">knockd</h4>
 <div class="paragraph">
 <p>Add it to dotfiles</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_vmwgfx_error_during_startup_see"><code>vmwgfx</code> error during startup. See:</h5>
+<div class="sect3">
+<h4 id="_vmwgfx_error_during_startup_see"><code>vmwgfx</code> error during startup. See:</h4>
 <div class="ulist">
 <ul>
 <li>

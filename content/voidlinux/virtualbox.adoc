@@ -246,7 +246,7 @@ Make sure group `vboxsf` exists:
 groupadd -f vboxsf
 ....
 
-Add user `me` and add it to the `wheel` and `vboxsf`groups:
+Add user `me` and add it to the `wheel` and `vboxsf` groups:
 
 ....
 useradd -m me
@@ -271,7 +271,7 @@ sudo ln -s /etc/sv/vboxservice /var/service/
 Install xorg related packages:
 
 ....
-sudo xbps-install -Su xorg xinit xfontsel unclutter numlockx font-inconsolata-otf font-firacode
+sudo xbps-install -Su xorg xinit xfontsel unclutter numlockx font-inconsolata-otf font-firacode vim-x11
 ....
 
 Install `dwm`/`dmenu`/`st` dependencies:
@@ -367,17 +367,19 @@ automatically.
 
 ==== TODO
 
+https://old.reddit.com/r/suckless/comments/reax9f/st_terminal_font/
+
+https://wiki.archlinux.org/title/Font_configuration
+
+https://gist.github.com/madrobby/5265845
+
+https://wiki.ubuntu.com/Fonts
+
+https://www.freedesktop.org/software/fontconfig/fontconfig-user.html
+
+`man fonts-conf`
+
 [arabic]
-. `hugonotes`
-* unpushed changes at `hopi`?
-** no
-* `gtclone` it
-* live server, monitoring changes
-** look in `hopi`
-*** `hugo serve`
-* convert this `.md` to `.adoc` and add it
-. `kickstart.nvim`
-* install it
 . nerdfonts
 . `dwm`/`st`/`dmenu`/
 * get latest versions
