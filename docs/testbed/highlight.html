@@ -5,19 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="C&#43;&#43; program #include &lt;iostream&gt; using namespace std; int main() { cout &lt;&lt; &#34;Hello world!&#34; &lt;&lt; endl; return 0; } C program #include &lt;stdlib.h&gt; #include &lt;stdio.h&gt; #include &lt;dlfcn.h&gt; int main(int argc, char **argv) { void *handle; char *error; void (*fun)(); char fileName[300]; char* buildDir = getenv(&#34;BUILD_DIR&#34;); sprintf(fileName, &#34;%s/toolkit/libtoolkit.so.1.0.0&#34;, buildDir); printf(&#34;fileName = %s\n&#34;, fileName); printf(&#34;mark1\n&#34;); dlerror(); handle = dlopen ( fileName , RTLD_LAZY); if (!handle) { fputs (dlerror(), stderr); printf(&#34;\n&#34;); exit(1); } printf(&#34;mark2\n&#34;); fun = (void (*)()) dlsym(handle, &#34;testfun1&#34;); if ((error = dlerror()) !">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Syntax highlighting" />
-<meta property="og:description" content="C&#43;&#43; program #include &lt;iostream&gt; using namespace std; int main() { cout &lt;&lt; &#34;Hello world!&#34; &lt;&lt; endl; return 0; } C program #include &lt;stdlib.h&gt; #include &lt;stdio.h&gt; #include &lt;dlfcn.h&gt; int main(int argc, char **argv) { void *handle; char *error; void (*fun)(); char fileName[300]; char* buildDir = getenv(&#34;BUILD_DIR&#34;); sprintf(fileName, &#34;%s/toolkit/libtoolkit.so.1.0.0&#34;, buildDir); printf(&#34;fileName = %s\n&#34;, fileName); printf(&#34;mark1\n&#34;); dlerror(); handle = dlopen ( fileName , RTLD_LAZY); if (!handle) { fputs (dlerror(), stderr); printf(&#34;\n&#34;); exit(1); } printf(&#34;mark2\n&#34;); fun = (void (*)()) dlsym(handle, &#34;testfun1&#34;); if ((error = dlerror()) !" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/testbed/highlight.html" /><meta property="article:section" content="testbed" />
-<meta property="article:published_time" content="2021-10-01T14:03:26+02:00" />
-<meta property="article:modified_time" content="2021-10-01T14:03:26+02:00" />
-
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/testbed/highlight.html">
+  <meta property="og:site_name" content="hugonotes">
+  <meta property="og:title" content="Syntax highlighting">
+  <meta property="og:description" content="C&#43;&#43; program #include &lt;iostream&gt; using namespace std; int main() { cout &lt;&lt; &#34;Hello world!&#34; &lt;&lt; endl; return 0; } C program #include &lt;stdlib.h&gt; #include &lt;stdio.h&gt; #include &lt;dlfcn.h&gt; int main(int argc, char **argv) { void *handle; char *error; void (*fun)(); char fileName[300]; char* buildDir = getenv(&#34;BUILD_DIR&#34;); sprintf(fileName, &#34;%s/toolkit/libtoolkit.so.1.0.0&#34;, buildDir); printf(&#34;fileName = %s\n&#34;, fileName); printf(&#34;mark1\n&#34;); dlerror(); handle = dlopen ( fileName , RTLD_LAZY); if (!handle) { fputs (dlerror(), stderr); printf(&#34;\n&#34;); exit(1); } printf(&#34;mark2\n&#34;); fun = (void (*)()) dlsym(handle, &#34;testfun1&#34;); if ((error = dlerror()) !">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="testbed">
+    <meta property="article:published_time" content="2021-10-01T14:03:26+02:00">
+    <meta property="article:modified_time" content="2021-10-01T14:03:26+02:00">
 <title>Syntax highlighting | hugonotes</title>
 <link rel="manifest" href="../manifest.json">
 <link rel="icon" href="../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
   <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../en.search.min.2f81735e8cb99c034a988391e0640fe4fe24caf598448baccbe24ce9ff96d465.js" ></script>
+  <script defer src="../en.search.min.71058f7fa39360b177ed0792f5bcef49045630e9f70530bf86397504cd25dc2b.js" ></script>
+
+  
+
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book

@@ -257,7 +257,7 @@ passwd me
 Install some packages
 
 ....
-sudo xbps-install -Su time tmux curl wget zip unzip dos2unix fd ripgrep fzf lazygit htop base-devel clang python3 python3-pip go nodejs git vim neovim dialog openssh ffmpeg lighttpd asciidoc ruby-asciidocter hugo shellcheck moreutils xtools virtualbox-ose-guest
+sudo xbps-install -Su time tmux curl wget zip unzip dos2unix fd ripgrep fzf lazygit htop base-devel clang automake autoconf python3 python3-pip go nodejs git vim neovim dialog openssh ffmpeg lighttpd asciidoc ruby-asciidocter hugo shellcheck moreutils xtools virtualbox-ose-guest
 ....
 
 Enable vboxservice

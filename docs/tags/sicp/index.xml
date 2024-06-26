@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sicp on hugonotes</title>
+    <title>Sicp on hugonotes</title>
     <link>/tags/sicp.html</link>
-    <description>Recent content in sicp on hugonotes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Sicp on hugonotes</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Oct 2021 15:49:32 +0200</lastBuildDate>
     <atom:link href="/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
