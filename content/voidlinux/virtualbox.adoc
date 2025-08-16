@@ -257,7 +257,7 @@ passwd me
 Install some packages
 
 ....
-sudo xbps-install -Su time tmux curl wget zip unzip dos2unix fd ripgrep fzf lazygit htop base-devel clang automake autoconf python3 python3-pip go nodejs git vim neovim dialog openssh ffmpeg lighttpd asciidoc ruby-asciidocter hugo shellcheck moreutils xtools virtualbox-ose-guest
+sudo xbps-install -Su time tmux curl wget zip unzip dos2unix fd ripgrep fzf lazygit htop base-devel clang automake autoconf libpcap-devel python3 python3-pip go nodejs git vim neovim dialog openssh ffmpeg lighttpd asciidoc ruby-asciidocter hugo shellcheck moreutils xtools virtualbox-ose-guest
 ....
 
 Enable vboxservice
@@ -400,7 +400,11 @@ https://www.freedesktop.org/software/fontconfig/fontconfig-user.html
 
 ==== knockd
 
-Add it to dotfiles
+TODO: Add it to dotfiles
+
+https://github.com/jvinet/knock
+
+To build it: make sure automake, autoconf, libpcap-devel are installed
 
 ==== `vmwgfx` error during startup. See:
 
