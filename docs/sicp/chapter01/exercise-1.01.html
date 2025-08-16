@@ -3,14 +3,43 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content=" Question: Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
-10 (&#43; 5 3 4) (- 9 1) (/ 6 2) (&#43; (* 2 4) (- 4 6)) (define a 3) (define b (&#43; a 1)) (&#43; a b (* a b)) (= a b) (if (and (&gt; b a) (&lt; b (* a b))) b a) (cond ((= a 4) 6) ((= b 4) (&#43; 6 7 a)) (else 25)) (&#43; 2 (if (&gt; b a) b a)) (* (cond ((&gt; a b) a) ((&lt; a b) b) (else -1)) (&#43; a 1)) Answer: &gt; 10 10 &gt; (&#43; 5 3 4) 12 &gt; (- 9 1) 8 &gt; (/ 6 2) 3 &gt; (&#43; (* 2 4) (- 4 6)) 6 &gt; (define a 3) &gt; (define b (&#43; a 1)) &gt; (&#43; a b (* a b)) 19 &gt; (= a b) #f &gt; (if (and (&gt; b a) (&lt; b (* a b))) b a) 4 &gt; (cond ((= a 4) 6) ((= b 4) (&#43; 6 7 a)) (else 25)) 16 &gt; (&#43; 2 (if (&gt; b a) b a)) 6 &gt; (* (cond ((&gt; a b) a) ((&lt; a b) b) (else -1)) (&#43; a 1)) 16 ">
+<meta name="description" content="
+Question:
+
+
+Below is a sequence of expressions. What is the result printed by the
+interpreter in response to each expression? Assume that the sequence is
+to be evaluated in the order in which it is presented.
+
+
+
+10
+(&#43; 5 3 4)
+(- 9 1)
+(/ 6 2)
+(&#43; (* 2 4) (- 4 6))
+(define a 3)
+(define b (&#43; a 1))
+(&#43; a b (* a b))
+(= a b)
+(if (and (&gt; b a) (&lt; b (* a b)))
+    b
+    a)
+(cond ((= a 4) 6)
+      ((= b 4) (&#43; 6 7 a))
+      (else 25))
+(&#43; 2 (if (&gt; b a) b a))
+(* (cond ((&gt; a b) a)
+         ((&lt; a b) b)
+         (else -1))
+   (&#43; a 1))
+">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="/sicp/chapter01/exercise-1.01.html">
   <meta property="og:site_name" content="hugonotes">
   <meta property="og:title" content="Exercise 1.01">
-  <meta property="og:description" content=" Question: Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
-10 (&#43; 5 3 4) (- 9 1) (/ 6 2) (&#43; (* 2 4) (- 4 6)) (define a 3) (define b (&#43; a 1)) (&#43; a b (* a b)) (= a b) (if (and (&gt; b a) (&lt; b (* a b))) b a) (cond ((= a 4) 6) ((= b 4) (&#43; 6 7 a)) (else 25)) (&#43; 2 (if (&gt; b a) b a)) (* (cond ((&gt; a b) a) ((&lt; a b) b) (else -1)) (&#43; a 1)) Answer: &gt; 10 10 &gt; (&#43; 5 3 4) 12 &gt; (- 9 1) 8 &gt; (/ 6 2) 3 &gt; (&#43; (* 2 4) (- 4 6)) 6 &gt; (define a 3) &gt; (define b (&#43; a 1)) &gt; (&#43; a b (* a b)) 19 &gt; (= a b) #f &gt; (if (and (&gt; b a) (&lt; b (* a b))) b a) 4 &gt; (cond ((= a 4) 6) ((= b 4) (&#43; 6 7 a)) (else 25)) 16 &gt; (&#43; 2 (if (&gt; b a) b a)) 6 &gt; (* (cond ((&gt; a b) a) ((&lt; a b) b) (else -1)) (&#43; a 1)) 16 ">
+  <meta property="og:description" content="Question: Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
+10 (&#43; 5 3 4) (- 9 1) (/ 6 2) (&#43; (* 2 4) (- 4 6)) (define a 3) (define b (&#43; a 1)) (&#43; a b (* a b)) (= a b) (if (and (&gt; b a) (&lt; b (* a b))) b a) (cond ((= a 4) 6) ((= b 4) (&#43; 6 7 a)) (else 25)) (&#43; 2 (if (&gt; b a) b a)) (* (cond ((&gt; a b) a) ((&lt; a b) b) (else -1)) (&#43; a 1))">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="sicp">
@@ -22,10 +51,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.71058f7fa39360b177ed0792f5bcef49045630e9f70530bf86397504cd25dc2b.js" ></script>
-
-  
-
+  <script defer src="../../en.search.min.b861ddf0942235042afdf58c0548068b9e25575295b8dfdfec32d3dfc9473ee9.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -41,7 +67,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="../../"><span>hugonotes</span>
+  <a class="flex align-center" href="../../index.html"><span>hugonotes</span>
   </a>
 </h2>
 

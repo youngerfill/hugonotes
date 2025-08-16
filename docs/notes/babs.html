@@ -3,10 +3,37 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Introduction babs, (an acronym for &#34;babs: a build system&#34;) is a set of Makefiles meant to easily compile &amp; link a set of interdependent modules, containing C/C&#43;&#43; source code, binaries like object files, static or dynamic libraries, etc …​
-Environment variables In order to do its work, babs needs 3 environment variables:
+<meta name="description" content="
+Introduction
+
+
+babs, (an acronym for &#34;babs: a build system&#34;) is a set
+of Makefiles meant to easily compile &amp; link a set of interdependent
+modules, containing C/C&#43;&#43; source code, binaries like object files,
+static or dynamic libraries, etc …​
+
+
+
+
+Environment variables
+
+
+In order to do its work, babs needs 3 environment variables:
+
+
+
+
 BABS_DIR : the directory where the babs build system is located.
-SOURCE_DIR : the directory where the source modules are located.">
+
+
+SOURCE_DIR : the directory where the source modules are located.
+
+
+BUILD_DIR : the directory where all target and intermediate files
+are saved during the build process.
+
+
+">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="/notes/babs.html">
   <meta property="og:site_name" content="hugonotes">
@@ -14,7 +41,8 @@ SOURCE_DIR : the directory where the source modules are located.">
   <meta property="og:description" content="Introduction babs, (an acronym for &#34;babs: a build system&#34;) is a set of Makefiles meant to easily compile &amp; link a set of interdependent modules, containing C/C&#43;&#43; source code, binaries like object files, static or dynamic libraries, etc …​
 Environment variables In order to do its work, babs needs 3 environment variables:
 BABS_DIR : the directory where the babs build system is located.
-SOURCE_DIR : the directory where the source modules are located.">
+SOURCE_DIR : the directory where the source modules are located.
+BUILD_DIR : the directory where all target and intermediate files are saved during the build process.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
@@ -26,10 +54,7 @@ SOURCE_DIR : the directory where the source modules are located.">
 <link rel="icon" href="../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
   <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../en.search.min.71058f7fa39360b177ed0792f5bcef49045630e9f70530bf86397504cd25dc2b.js" ></script>
-
-  
-
+  <script defer src="../en.search.min.b861ddf0942235042afdf58c0548068b9e25575295b8dfdfec32d3dfc9473ee9.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -45,7 +70,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="../"><span>hugonotes</span>
+  <a class="flex align-center" href="../index.html"><span>hugonotes</span>
   </a>
 </h2>
 

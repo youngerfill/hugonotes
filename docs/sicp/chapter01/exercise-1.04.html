@@ -3,14 +3,38 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Question: Observe that our model of evaluation allows for combinations whose operators are compound expressions. Use this observation to describe the behavior of the following procedure:
-(define (a-plus-abs-b a b) ((if (&gt; b 0) &#43; -) a b)) Answer: In the body of a-plus-abs-b a b, the expression (if (&gt; b 0) &#43; -) evaluates to an arithmetic operation (either &#43; or -, depending on the sign of b’s actual argument).">
+<meta name="description" content="
+Question:
+
+
+Observe that our model of evaluation allows for combinations whose
+operators are compound expressions. Use this observation to describe the
+behavior of the following procedure:
+
+
+
+(define (a-plus-abs-b a b)
+    ((if (&gt; b 0) &#43; -) a b))
+
+
+
+
+
+Answer:
+
+
+In the body of a-plus-abs-b a b, the expression (if (&gt; b 0) &#43; -)
+evaluates to an arithmetic operation (either &#43; or -, depending on
+the sign of b’s actual argument). The interpreter obtains a primitive
+procedure that it applies to the arguments replacing the formal
+parameters `a and b.
+">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="/sicp/chapter01/exercise-1.04.html">
   <meta property="og:site_name" content="hugonotes">
   <meta property="og:title" content="Exercise 1.04">
   <meta property="og:description" content="Question: Observe that our model of evaluation allows for combinations whose operators are compound expressions. Use this observation to describe the behavior of the following procedure:
-(define (a-plus-abs-b a b) ((if (&gt; b 0) &#43; -) a b)) Answer: In the body of a-plus-abs-b a b, the expression (if (&gt; b 0) &#43; -) evaluates to an arithmetic operation (either &#43; or -, depending on the sign of b’s actual argument).">
+(define (a-plus-abs-b a b) ((if (&gt; b 0) &#43; -) a b)) Answer: In the body of a-plus-abs-b a b, the expression (if (&gt; b 0) &#43; -) evaluates to an arithmetic operation (either &#43; or -, depending on the sign of b’s actual argument). The interpreter obtains a primitive procedure that it applies to the arguments replacing the formal parameters `a and b.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="sicp">
@@ -22,10 +46,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.71058f7fa39360b177ed0792f5bcef49045630e9f70530bf86397504cd25dc2b.js" ></script>
-
-  
-
+  <script defer src="../../en.search.min.b861ddf0942235042afdf58c0548068b9e25575295b8dfdfec32d3dfc9473ee9.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -41,7 +62,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="../../"><span>hugonotes</span>
+  <a class="flex align-center" href="../../index.html"><span>hugonotes</span>
   </a>
 </h2>
 

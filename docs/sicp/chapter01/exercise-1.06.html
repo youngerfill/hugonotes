@@ -3,12 +3,48 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Background: Section 1.1.7, Square Roots by Newton’s Method (define (square x) (* x x)) (define (average x y) (/ (&#43; x y) 2)) (define (improve guess x) (average guess (/ x guess))) (define (good-enough? guess x) (&lt; (abs (- (square guess) x)) 0.001)) (define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) (define (sqrt x) (sqrt-iter 1.0 x)) Question: Alyssa P. Hacker doesn’t see why if needs to be provided as a special form.">
+<meta name="description" content="
+Background: Section 1.1.7, Square Roots by Newton’s Method
+
+
+
+(define (square x) (* x x))
+
+(define (average x y)
+  (/ (&#43; x y) 2))
+
+(define (improve guess x)
+  (average guess (/ x guess)))
+
+(define (good-enough? guess x)
+  (&lt; (abs (- (square guess) x)) 0.001))
+
+(define (sqrt-iter guess x)
+  (if (good-enough? guess x)
+      guess
+      (sqrt-iter (improve guess x)
+                 x)))
+
+(define (sqrt x)
+  (sqrt-iter 1.0 x))
+
+
+
+
+
+Question:
+
+
+Alyssa P. Hacker doesn’t see why if needs to be provided as a special
+form. &#34;Why can’t I just define it as an ordinary procedure in terms of
+cond?&#34; she asks. Alyssa’s friend Eva Lu Ator claims this can indeed be
+done, and she defines a new version of if:
+">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="/sicp/chapter01/exercise-1.06.html">
   <meta property="og:site_name" content="hugonotes">
   <meta property="og:title" content="Exercise 1.06">
-  <meta property="og:description" content="Background: Section 1.1.7, Square Roots by Newton’s Method (define (square x) (* x x)) (define (average x y) (/ (&#43; x y) 2)) (define (improve guess x) (average guess (/ x guess))) (define (good-enough? guess x) (&lt; (abs (- (square guess) x)) 0.001)) (define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) (define (sqrt x) (sqrt-iter 1.0 x)) Question: Alyssa P. Hacker doesn’t see why if needs to be provided as a special form.">
+  <meta property="og:description" content="Background: Section 1.1.7, Square Roots by Newton’s Method (define (square x) (* x x)) (define (average x y) (/ (&#43; x y) 2)) (define (improve guess x) (average guess (/ x guess))) (define (good-enough? guess x) (&lt; (abs (- (square guess) x)) 0.001)) (define (sqrt-iter guess x) (if (good-enough? guess x) guess (sqrt-iter (improve guess x) x))) (define (sqrt x) (sqrt-iter 1.0 x)) Question: Alyssa P. Hacker doesn’t see why if needs to be provided as a special form. &#34;Why can’t I just define it as an ordinary procedure in terms of cond?&#34; she asks. Alyssa’s friend Eva Lu Ator claims this can indeed be done, and she defines a new version of if:">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="sicp">
@@ -20,10 +56,7 @@
 <link rel="icon" href="../../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
   <script defer src="../../flexsearch.min.js"></script>
-  <script defer src="../../en.search.min.71058f7fa39360b177ed0792f5bcef49045630e9f70530bf86397504cd25dc2b.js" ></script>
-
-  
-
+  <script defer src="../../en.search.min.b861ddf0942235042afdf58c0548068b9e25575295b8dfdfec32d3dfc9473ee9.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -39,7 +72,7 @@ https://github.com/alex-shpak/hugo-book
         
   <nav>
 <h2 class="book-brand">
-  <a class="flex align-center" href="../../"><span>hugonotes</span>
+  <a class="flex align-center" href="../../index.html"><span>hugonotes</span>
   </a>
 </h2>
 
