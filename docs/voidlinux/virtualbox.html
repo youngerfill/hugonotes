@@ -95,9 +95,9 @@ A Linux live .iso file, like for instance the ``Void Linux libc base&#39;&#39; o
 <title>Install Void Linux on VirtualBox | hugonotes</title>
 <link rel="manifest" href="../manifest.json">
 <link rel="icon" href="../favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="../book.min.24ba39b33a10dd9f6a768885584c4f6ec2ab504d5074e6a6b3d680e059d723a2.css" >
+<link rel="stylesheet" href="../book.min.85864fe0f1eb56363b249b9811b66a1b72fcd8b1ba43665226f04bb3ae738145.css" >
   <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../en.search.min.b861ddf0942235042afdf58c0548068b9e25575295b8dfdfec32d3dfc9473ee9.js" ></script>
+  <script defer src="../en.search.min.2cdebb8655f1b1a935f4f452e99dbca9a0301e6ecbb402352cfe0929ba464c78.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1157,9 +1157,8 @@ button.</p>
 <h3 id="_install_the_guest_os">Install the guest OS</h3>
 <div class="sect3">
 <h4 id="_basics">Basics</h4>
-<div class="paragraph">
-<p>Partitioning</p>
-</div>
+<div class="sect4">
+<h5 id="_partitioning">Partitioning</h5>
 <div class="literalblock">
 <div class="content">
 <pre>fdisk /dev/sda</pre>
@@ -1190,6 +1189,9 @@ button.</p>
 <p>TODO : document manual config steps: - format - xchroot - locale - hw
 clock - enable dhcpcd - … ???</p>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_sudo">Sudo</h5>
 <div class="paragraph">
 <p>Write simple <code>/etc/sudoers</code> file. Grant <code>sudo</code> rights to <code>root</code> user and
 <code>wheel</code> group. Grant rights to <code>wheel</code> group to run <code>shutdown</code> and
@@ -1203,27 +1205,43 @@ echo &#34;%wheel ALL=(ALL) ALL&#34; &gt;&gt; /etc/sudoers
 echo &#34;%wheel ALL=NOPASSWD: /usr/bin/reboot, /usr/bin/shutdown&#34; &gt;&gt; /etc/sudoers</pre>
 </div>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_virtualbox_integration">VirtualBox integration</h5>
 <div class="paragraph">
-<p>Make sure group <code>vboxsf</code> exists:</p>
+<p>Make sure groups <code>vboxsf</code> and <code>vbox</code> exist:</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>groupadd -f vboxsf</pre>
+<pre>groupadd -f vboxsf
+groupadd -f vbox</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Add user <code>me</code> and add it to the <code>wheel</code> and <code>vboxsf</code> groups:</p>
+<p>Create a file <code>/usr/lib/udev/rules.d/60-virtualbox.rules</code> with the contents:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>KERNEL==&#34;vboxguest&#34;, GROUP=&#34;vbox&#34;, MODE=&#34;0660&#34;
+KERNEL==&#34;vboxuser&#34;, GROUP=&#34;vbox&#34;, MODE=&#34;0660&#34;</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_add_user">Add user</h5>
+<div class="paragraph">
+<p>Add user <code>me</code> and add it to the <code>wheel</code>, <code>vbox</code> and <code>vboxsf</code> groups:</p>
 </div>
 <div class="literalblock">
 <div class="content">
 <pre>useradd -m me
-usermod -aG wheel,vboxsf me
+usermod -aG wheel,vboxsf,vbox me
 passwd me</pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Install some packages</p>
 </div>
+<div class="sect4">
+<h5 id="_install_some_packages">Install some packages</h5>
 <div class="literalblock">
 <div class="content">
 <pre>sudo xbps-install -Su time tmux curl wget zip unzip moreutils xtools psmisc dos2unix fd ripgrep fzf lazygit htop base-devel clang automake autoconf libpcap-devel python3 python3-pip go nodejs git vim neovim lua-language-server dialog openssh ffmpeg lighttpd asciidoc ruby-asciidoctor hugo shellcheck virtualbox-ose-guest</pre>
@@ -1235,6 +1253,7 @@ passwd me</pre>
 <div class="literalblock">
 <div class="content">
 <pre>sudo ln -s /etc/sv/vboxservice /var/service/</pre>
+</div>
 </div>
 </div>
 </div>
