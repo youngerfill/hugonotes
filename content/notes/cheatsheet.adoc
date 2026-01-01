@@ -1151,3 +1151,57 @@ int main(int argc, char **argv)
 --
 
 This is equivalent to the run-time argument: `--gtest_filter=testSuiteName.testName`
+
+
+== Void Linux
+
+=== Package management
+
+==== xbps
+
+Install a package (`clang` as an example):
+
+[source,bash]
+--
+sudo xbps-install -Su clang
+--
+
+Remove a package:
+
+[source,bash]
+--
+sudo xbps-remove clang
+--
+
+Check if a package is installed:
+
+[source,bash]
+--
+xbps-query -l | grep clang
+--
+
+Do a system update:
+
+[source,bash]
+--
+sudo xbps-install -u xbps && sudo xbps-install -Su
+--
+
+==== xtools
+
+Find the package to which the given file belongs:
+
+[source,bash]
+--
+xlocate -F /usr/share/nvim/runtime/indent.vim
+--
+
+List all packages that were manually installed:
+
+[source,bash]
+--
+xpkg -m
+--
+
+=== runit
+TODO

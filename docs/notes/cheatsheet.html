@@ -65,7 +65,7 @@ sudo lsblk -f Insert USB drive, and select device in VirtualBox GUI menu ( Devic
 <link rel="icon" href="../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../book.min.85864fe0f1eb56363b249b9811b66a1b72fcd8b1ba43665226f04bb3ae738145.css" >
   <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../en.search.min.2cdebb8655f1b1a935f4f452e99dbca9a0301e6ecbb402352cfe0929ba464c78.js" ></script>
+  <script defer src="../en.search.min.394368cf5af91eea93eced5447e4427b79411fcd57bb469cf8755d58fac26678.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -443,6 +443,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../voidlinux/virtman.html" class="">Install Void Linux on virt-manager</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -2061,6 +2074,74 @@ pg_restore --username=MYUSERNAME --clean --dbname=DBNAME MYDUMPFILE</code></pre>
 </div>
 <div class="paragraph">
 <p>This is equivalent to the run-time argument: <code>--gtest_filter=testSuiteName.testName</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_void_linux">Void Linux</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_package_management_2">Package management</h3>
+<div class="sect3">
+<h4 id="_xbps">xbps</h4>
+<div class="paragraph">
+<p>Install a package (<code>clang</code> as an example):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo xbps-install -Su clang</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Remove a package:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo xbps-remove clang</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check if a package is installed:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">xbps-query -l | grep clang</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Do a system update:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo xbps-install -u xbps &amp;&amp; sudo xbps-install -Su</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_xtools">xtools</h4>
+<div class="paragraph">
+<p>Find the package to which the given file belongs:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">xlocate -F /usr/share/nvim/runtime/indent.vim</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>List all packages that were manually installed:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">xpkg -m</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_runit">runit</h3>
+<div class="paragraph">
+<p>TODO</p>
 </div>
 </div>
 </div>

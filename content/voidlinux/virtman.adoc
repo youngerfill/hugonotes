@@ -1,0 +1,89 @@
+---
+title: "Install Void Linux on virt-manager"
+tags:
+- voidlinux
+---
+
+= Install Void Linux on virt-manager
+:toc:
+:toclevels: 5
+
+== Sources
+
+
+== Goals
+
+* Host OS: Void Linux
+* Virtualization software: Virtual Machine Manager (virt-manager)
+* Guest OS: Void Linux
+** Hostname: `vogu`
+** One non-root user with `sudo` rights, named `me`
+** Network access through the host system
+** Dotfiles, with custom built Suckless tools: `dwm`, `st`, `dmenu`
+** Development tools: `python`, `nodejs`, `gcc`, `clang`, `neovim`, `zig`
+** Webservers etc running in the VM are reachable from the host system
+
+== Prerequisites
+
+- A running Void Linux host system
+- The folllowing Void Linux live .iso: https://repo-default.voidlinux.org/live/current/void-live-x86_64-20250202-base.iso
+
+== Installation
+
+Install necessary packages on host OS:
+
+[source, sh]
+----
+sudo xbps-install -Su polkit libvirt qemu virt-manager
+----
+
+Enable libvirt services:
+
+[source, sh]
+----
+sudo ln -s /etc/sv/libvirtd/ /var/service/
+sudo ln -s /etc/sv/virtlockd/ /var/service/
+sudo ln -s /etc/sv/virtlogd/ /var/service/
+----
+
+Start libvirt services (redundant):
+
+[source, sh]
+----
+sudo sv up libvirtd
+sudo sv up virtlockd
+sudo sv up virtlogd
+----
+
+Make sure your user is part of the `libvirt` and `kvm` groups (redundant):
+
+[source, sh]
+----
+sudo usermod -aG libvirt,kvm $(whoami)
+----
+
+== Create VM
+
+* Start `virt-manager`.
+* Create a new virtual machine
+* Local install media
+* Architecture: `x86_64`
+* Press "Forward"
+* Press "Browse..." and "Browse local" to select .iso file
+* Press "Forward"
+* Give the emulator search permissions, if prompted
+* Choose memory (e.g. 8192 MiB) and number of CPUs (e.g. 4)
+* Press "Forward"
+* Enable storage and set storage size (e.g. 30 GiB)
+* Press "Forward"
+* Name: `vogu`
+* Customize configuration before install
+* Press "Finish"
+
+The VM boots from the live .iso
+
+== Install guest OS
+
+* Login with username `root` and password `voidlinux`
+* 
+

@@ -4,84 +4,84 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="
-C&#43;&#43; program
-
-
-
-#include &lt;iostream&gt;
-
-using namespace std;
-
-int main()
-{
-  cout &lt;&lt; &#34;Hello world!&#34; &lt;&lt; endl;
-  return 0;
-}
+Sources
 
 
 
 
 
-C program
+Goals
 
 
 
-#include &lt;stdlib.h&gt;
-#include &lt;stdio.h&gt;
-#include &lt;dlfcn.h&gt;
+
+Host OS: Void Linux
 
 
-int main(int argc, char **argv)
-{
-  void *handle;
-  char *error;
-  void (*fun)();
-  char fileName[300];
-  char* buildDir = getenv(&#34;BUILD_DIR&#34;);
+Virtualization software: Virtual Machine Manager (virt-manager)
 
-  sprintf(fileName, &#34;%s/toolkit/libtoolkit.so.1.0.0&#34;, buildDir);
-  printf(&#34;fileName = %s\n&#34;, fileName);
 
-  printf(&#34;mark1\n&#34;);
+Guest OS: Void Linux
 
-  dlerror();
-  handle = dlopen ( fileName , RTLD_LAZY);
-  if (!handle) {
-      fputs (dlerror(), stderr);
-        printf(&#34;\n&#34;);
-      exit(1);
-  }
 
-  printf(&#34;mark2\n&#34;);
 
-  fun = (void (*)()) dlsym(handle, &#34;testfun1&#34;);
-  if ((error = dlerror()) != NULL)  {
-      fputs(error, stderr);
-        printf(&#34;\n&#34;);
-      exit(1);
-  }
+Hostname: vogu
 
-  printf(&#34;mark3\n&#34;);
 
-  (*fun)();
+One non-root user with sudo rights, named me
 
-  printf(&#34;mark4\n&#34;);
 
-  dlclose(handle);
+Network access through the host system
 
-}
+
+Dotfiles, with custom built Suckless tools: dwm, st, dmenu
+
+
+Development tools: python, nodejs, gcc, clang, neovim, zig
+
+
+Webservers etc running in the VM are reachable from the host system
+
+
+
+
+
+
+
+
+
+Prerequisites
+
+
+
+
+A running Void Linux host system
+
+
+The folllowing Void Linux live .iso: https://repo-default.voidlinux.org/live/current/void-live-x86_64-20250202-base.iso
+
+
 ">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="/testbed/highlight.html">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/voidlinux/virtman.html">
   <meta property="og:site_name" content="hugonotes">
-  <meta property="og:title" content="Syntax highlighting">
-  <meta property="og:description" content="C&#43;&#43; program #include &lt;iostream&gt; using namespace std; int main() { cout &lt;&lt; &#34;Hello world!&#34; &lt;&lt; endl; return 0; } C program #include &lt;stdlib.h&gt; #include &lt;stdio.h&gt; #include &lt;dlfcn.h&gt; int main(int argc, char **argv) { void *handle; char *error; void (*fun)(); char fileName[300]; char* buildDir = getenv(&#34;BUILD_DIR&#34;); sprintf(fileName, &#34;%s/toolkit/libtoolkit.so.1.0.0&#34;, buildDir); printf(&#34;fileName = %s\n&#34;, fileName); printf(&#34;mark1\n&#34;); dlerror(); handle = dlopen ( fileName , RTLD_LAZY); if (!handle) { fputs (dlerror(), stderr); printf(&#34;\n&#34;); exit(1); } printf(&#34;mark2\n&#34;); fun = (void (*)()) dlsym(handle, &#34;testfun1&#34;); if ((error = dlerror()) != NULL) { fputs(error, stderr); printf(&#34;\n&#34;); exit(1); } printf(&#34;mark3\n&#34;); (*fun)(); printf(&#34;mark4\n&#34;); dlclose(handle); }">
+  <meta property="og:title" content="Install Void Linux on virt-manager">
+  <meta property="og:description" content="Sources Goals Host OS: Void Linux
+Virtualization software: Virtual Machine Manager (virt-manager)
+Guest OS: Void Linux
+Hostname: vogu
+One non-root user with sudo rights, named me
+Network access through the host system
+Dotfiles, with custom built Suckless tools: dwm, st, dmenu
+Development tools: python, nodejs, gcc, clang, neovim, zig
+Webservers etc running in the VM are reachable from the host system
+Prerequisites A running Void Linux host system
+The folllowing Void Linux live .iso: https://repo-default.voidlinux.org/live/current/void-live-x86_64-20250202-base.iso">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="testbed">
-    <meta property="article:published_time" content="2021-10-01T14:03:26+02:00">
-    <meta property="article:modified_time" content="2021-10-01T14:03:26+02:00">
-<title>Syntax highlighting | hugonotes</title>
+    <meta property="article:section" content="voidlinux">
+    <meta property="article:tag" content="Voidlinux">
+<title>Install Void Linux on virt-manager | hugonotes</title>
 <link rel="manifest" href="../manifest.json">
 <link rel="icon" href="../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../book.min.85864fe0f1eb56363b249b9811b66a1b72fcd8b1ba43665226f04bb3ae738145.css" >
@@ -428,7 +428,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../testbed/highlight.html" class=" active">Syntax highlighting</a>
+    <a href="../testbed/highlight.html" class="">Syntax highlighting</a>
   
 
         </li>
@@ -472,7 +472,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="../voidlinux/virtman.html" class="">Install Void Linux on virt-manager</a>
+    <a href="../voidlinux/virtman.html" class=" active">Install Void Linux on virt-manager</a>
   
 
         </li>
@@ -532,7 +532,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="../svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Syntax highlighting</strong>
+  <strong>Install Void Linux on virt-manager</strong>
 
   <label for="toc-control">
     
@@ -546,7 +546,16 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#_sources">Sources</a></li>
+    <li><a href="#_goals">Goals</a></li>
+    <li><a href="#_prerequisites">Prerequisites</a></li>
+    <li><a href="#_installation">Installation</a></li>
+    <li><a href="#_create_vm">Create VM</a></li>
+    <li><a href="#_install_guest_os">Install guest OS</a></li>
+  </ul>
+</nav>
 
 
 
@@ -557,134 +566,176 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><div class="sect1">
-<h2 id="_c_program">C++ program</h2>
+  <article class="markdown">
+<div class="sect1">
+<h2 id="_sources">Sources</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_goals">Goals</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Host OS: Void Linux</p>
+</li>
+<li>
+<p>Virtualization software: Virtual Machine Manager (virt-manager)</p>
+</li>
+<li>
+<p>Guest OS: Void Linux</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Hostname: <code>vogu</code></p>
+</li>
+<li>
+<p>One non-root user with <code>sudo</code> rights, named <code>me</code></p>
+</li>
+<li>
+<p>Network access through the host system</p>
+</li>
+<li>
+<p>Dotfiles, with custom built Suckless tools: <code>dwm</code>, <code>st</code>, <code>dmenu</code></p>
+</li>
+<li>
+<p>Development tools: <code>python</code>, <code>nodejs</code>, <code>gcc</code>, <code>clang</code>, <code>neovim</code>, <code>zig</code></p>
+</li>
+<li>
+<p>Webservers etc running in the VM are reachable from the host system</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prerequisites">Prerequisites</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>A running Void Linux host system</p>
+</li>
+<li>
+<p>The folllowing Void Linux live .iso: <a href="https://repo-default.voidlinux.org/live/current/void-live-x86_64-20250202-base.iso" class="bare">https://repo-default.voidlinux.org/live/current/void-live-x86_64-20250202-base.iso</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation">Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Install necessary packages on host OS:</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c++" data-lang="c++">#include &lt;iostream&gt;
-
-using namespace std;
-
-int main()
-{
-  cout &lt;&lt; &#34;Hello world!&#34; &lt;&lt; endl;
-  return 0;
-}</code></pre>
+<pre class="highlight"><code class="language-sh" data-lang="sh">sudo xbps-install -Su polkit libvirt qemu virt-manager</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Enable libvirt services:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-sh" data-lang="sh">sudo ln -s /etc/sv/libvirtd/ /var/service/
+sudo ln -s /etc/sv/virtlockd/ /var/service/
+sudo ln -s /etc/sv/virtlogd/ /var/service/</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Start libvirt services (redundant):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-sh" data-lang="sh">sudo sv up libvirtd
+sudo sv up virtlockd
+sudo sv up virtlogd</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make sure your user is part of the <code>libvirt</code> and <code>kvm</code> groups (redundant):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-sh" data-lang="sh">sudo usermod -aG libvirt,kvm $(whoami)</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_c_program_2">C program</h2>
+<h2 id="_create_vm">Create VM</h2>
 <div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">#include &lt;stdlib.h&gt;
-#include &lt;stdio.h&gt;
-#include &lt;dlfcn.h&gt;
-
-
-int main(int argc, char **argv)
-{
-  void *handle;
-  char *error;
-  void (*fun)();
-  char fileName[300];
-  char* buildDir = getenv(&#34;BUILD_DIR&#34;);
-
-  sprintf(fileName, &#34;%s/toolkit/libtoolkit.so.1.0.0&#34;, buildDir);
-  printf(&#34;fileName = %s\n&#34;, fileName);
-
-  printf(&#34;mark1\n&#34;);
-
-  dlerror();
-  handle = dlopen ( fileName , RTLD_LAZY);
-  if (!handle) {
-      fputs (dlerror(), stderr);
-        printf(&#34;\n&#34;);
-      exit(1);
-  }
-
-  printf(&#34;mark2\n&#34;);
-
-  fun = (void (*)()) dlsym(handle, &#34;testfun1&#34;);
-  if ((error = dlerror()) != NULL)  {
-      fputs(error, stderr);
-        printf(&#34;\n&#34;);
-      exit(1);
-  }
-
-  printf(&#34;mark3\n&#34;);
-
-  (*fun)();
-
-  printf(&#34;mark4\n&#34;);
-
-  dlclose(handle);
-
-}</code></pre>
+<div class="ulist">
+<ul>
+<li>
+<p>Start <code>virt-manager</code>.</p>
+</li>
+<li>
+<p>Create a new virtual machine</p>
+</li>
+<li>
+<p>Local install media</p>
+</li>
+<li>
+<p>Architecture: <code>x86_64</code></p>
+</li>
+<li>
+<p>Press &#34;Forward&#34;</p>
+</li>
+<li>
+<p>Press &#34;Browse…​&#34; and &#34;Browse local&#34; to select .iso file</p>
+</li>
+<li>
+<p>Press &#34;Forward&#34;</p>
+</li>
+<li>
+<p>Give the emulator search permissions, if prompted</p>
+</li>
+<li>
+<p>Choose memory (e.g. 8192 MiB) and number of CPUs (e.g. 4)</p>
+</li>
+<li>
+<p>Press &#34;Forward&#34;</p>
+</li>
+<li>
+<p>Enable storage and set storage size (e.g. 30 GiB)</p>
+</li>
+<li>
+<p>Press &#34;Forward&#34;</p>
+</li>
+<li>
+<p>Name: <code>vogu</code></p>
+</li>
+<li>
+<p>Customize configuration before install</p>
+</li>
+<li>
+<p>Press &#34;Finish&#34;</p>
+</li>
+</ul>
 </div>
+<div class="paragraph">
+<p>The VM boots from the live .iso</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_python_program">Python program</h2>
+<h2 id="_install_guest_os">Install guest OS</h2>
 <div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">def my_function():
-    &#34;just a test&#34;
-    print 8/2</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_bash_script">bash script</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">#!/bin/bash
-
-if [ -z &#34;$1&#34; ]; then
-  echo &#34;Usage: $(basename $0) COMMAND&#34;
-  exit 0
-fi
-
-. ~/tools/common.sh
-if [ &#34;$?&#34; -ne &#34;0&#34; ]; then
-  echo &#34;$0: Error while sourcing ~/tools/common.sh&#34; &gt;&amp;2
-  exit 1
-fi
-
-checkPrereq ~/tools/timestamp_id
-checkPrereq ~/tools/fullts
-
-logDir=${LOGOP_DIR:-~/log}
-fileName=&#34;$(timestamp_id).txt&#34;
-logFile=&#34;$logDir/$fileName&#34;
-
-# Obtain path to external time command, to avoid having to use
-# the limited shell built-in command.
-timeCmd=$(which time)
-
-# Print header
-echo ====  Start log: `date &#39;+%Y-%m-%d %H:%M:%S&#39;` | tee -a &#34;$logFile&#34;
-echo ==== Command: $*  | tee -a &#34;$logFile&#34;
-echo ==== Logfile: $logFile | tee -a &#34;$logFile&#34;
-echo ==== Logscript: $(readlink -f $0)  | tee -a &#34;$logFile&#34;
-echo  | tee -a &#34;$logFile&#34;
-
-# Run the command and log its output
-$timeCmd -f &#34;\n==== Exit status: %x\n==== Elapsed: %e seconds&#34; $* 2&gt;&amp;1 | tee -a &#34;$logFile&#34;
-
-# Print footer
-echo ====  End log: `date &#39;+%Y-%m-%d %H:%M:%S&#39;` | tee -a &#34;$logFile&#34;
-
-# Update symlink &#39;latest.txt&#39; to point to latest logfile
-ln -sf &#34;$fileName&#34; &#34;$logDir/latest.txt&#34;</code></pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Login with username <code>root</code> and password <code>voidlinux</code>
+*</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -727,7 +778,16 @@ ln -sf &#34;$fileName&#34; &#34;$logDir/latest.txt&#34;</code></pre>
       <div class="book-toc-content">
         
   
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#_sources">Sources</a></li>
+    <li><a href="#_goals">Goals</a></li>
+    <li><a href="#_prerequisites">Prerequisites</a></li>
+    <li><a href="#_installation">Installation</a></li>
+    <li><a href="#_create_vm">Create VM</a></li>
+    <li><a href="#_install_guest_os">Install guest OS</a></li>
+  </ul>
+</nav>
 
 
  

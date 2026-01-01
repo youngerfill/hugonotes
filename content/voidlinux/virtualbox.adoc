@@ -16,7 +16,7 @@ https://techviewleo.com/install-void-linux-on-virtualbox-vmware-workstation/
 
 https://docs.voidlinux.org/installation/guides/chroot.html
 
-=== Goals
+== Goals
 
 * Host OS: Windows
 * Virtualization software: VirtualBox
