@@ -1187,6 +1187,15 @@ Do a system update:
 sudo xbps-install -u xbps && sudo xbps-install -Su
 --
 
+Clean up xbps cache, orpaned packages and old kernels:
+
+[source,bash]
+--
+sudo xbps-remove -yO
+sudo xbps-remove -yo
+sudo vkpurge rm all
+--
+
 ==== xtools
 
 Find the package to which the given file belongs:
