@@ -1187,7 +1187,7 @@ Do a system update:
 sudo xbps-install -u xbps && sudo xbps-install -Su
 --
 
-Clean up xbps cache, orpaned packages and old kernels:
+Clean up `xbps` cache, orphaned packages and old kernels:
 
 [source,bash]
 --
