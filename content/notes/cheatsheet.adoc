@@ -1105,6 +1105,15 @@ List iptables rules:
 sudo iptables -L -n
 --
 
+Mount SMB folder shared on a LAN:
+
+[source,bash]
+--
+sudo mount -t cifs -o username=myusrname,uid=1000,gid=1000,vers=1.0 //192.168.1.10/public_folder /mnt/mysmbmount/
+--
+
+
+
 == postgresql
 
 === .pgpass file

@@ -65,7 +65,7 @@ sudo lsblk -f Insert USB drive, and select device in VirtualBox GUI menu ( Devic
 <link rel="icon" href="../favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="../book.min.85864fe0f1eb56363b249b9811b66a1b72fcd8b1ba43665226f04bb3ae738145.css" >
   <script defer src="../flexsearch.min.js"></script>
-  <script defer src="../en.search.min.700083718ce881f738af3b09364122712660290685d60d8c0006f7db92dc66ad.js" ></script>
+  <script defer src="../en.search.min.c31b4dfc69bfda0be3faf4241f58fa750d44b09a734f06c89147faf3e8c8ef6f.js" ></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -2015,6 +2015,14 @@ git checkout master</pre>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">sudo iptables -L -n</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mount SMB folder shared on a LAN:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo mount -t cifs -o username=myusrname,uid=1000,gid=1000,vers=1.0 //192.168.1.10/public_folder /mnt/mysmbmount/</code></pre>
 </div>
 </div>
 </div>
